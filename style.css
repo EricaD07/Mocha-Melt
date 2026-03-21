@@ -9,6 +9,74 @@
     box-sizing: border-box;
     font-family: 'Jost';
 }
+h2 {
+    font-size: 50px;
+    color: rgb(16, 24, 40);
+    line-height: 2;
+    text-align: center;
+}
+
+
+/********* NAV ****************/
+h1 {
+    color: #6b1a21;
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 80px;   
+    background-color: #fefcfa;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+}
+
+.nav-menu{
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   gap: 60px
+}
+
+.nav-link {
+    transition: 0.7s;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #6b1a21;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;       
+    padding: 0;  
+    gap: 30px;
+    align-items: center;
+}
+.navbar a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #b72d2c;
+}
+.navbar a:hover {
+    color: #741818;
+}
 
 .contact-hero {
     background: #b89d7d;
