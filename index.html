@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mocha Melt | Artisan Chocolate Desserts</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">Mocha <span>Melt</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu-highlight.html">Menu</a></li>
+        <li><a href="visit.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section (home) -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">✦ handmade with love ✦</div>
+          <h1 class="hero-title">Your Daily<br>Dose of<br>Decadence</h1>
+          <p class="hero-desc">Handcrafted chocolate desserts made with natural ingredients.</p>
+          <a href="#menu-highlight" class="btn">View Our Menu <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+        <!-- <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&auto=format" alt="Decadent chocolate dessert">
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy block (the meaningful ingredients paragraph) -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="philosophy-card">
+        <div class="quote-icon"><i class="fas fa-seedling"></i></div>
+        <p>At Mocha Melt, we believe dessert should be both delicious and meaningful. Every treat is carefully crafted using high-quality, ethically sourced ingredients to ensure rich flavor and responsible sourcing.</p>
+        <p style="margin-top: 1rem; font-style: italic; font-weight: 500;">— pure indulgence, conscious craft —</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us section with Learn More & View Our Menu buttons -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>Mocha Melt began with a simple vision: to bring soulful, handcrafted chocolate creations to those who crave authentic flavor. Every recipe is developed in-house, blending tradition with modern flair.</p>
+          <p>From single-origin cocoa to farm-fresh dairy, we partner with local purveyors who share our passion for sustainability. Our cozy shop invites you to slow down, savor, and celebrate the art of chocolate.</p>
+          <div class="button-group">
+            <a href="#" class="btn btn-outline" id="learnMoreBtn">Learn More <i class="fas fa-heart" style="margin-left: 6px;"></i></a>
+            <a href="#menu-highlight" class="btn">View Our Menu</a>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&auto=format" alt="Barista preparing chocolate drink">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ready to Treat Yourself? Menu Highlights (Drinks, Pastries, Cake) -->
+  <section id="menu-highlight" class="menu-highlight">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ready to Treat Yourself?</h2>
+        <p>Explore our menu and find your new favorite dessert today.<br>Browse a variety of chocolate desserts, baked goods, and specialty drinks.</p>
+      </div>
+      <div class="cards-grid">
+        <!-- Drinks card -->
+        <div class="menu-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&auto=format" alt="Hot chocolate drink">
+          </div>
+          <div class="card-content">
+            <h3>Drinks</h3>
+            <p>Silky mochas, spiced hot chocolate, affogato, and signature cocoa blends — all topped with house-made whipped cream.</p>
+            <span class="card-tag"><i class="fas fa-mug-hot"></i> 12 flavors</span>
+          </div>
+        </div>
+        <!-- Pastries card -->
+        <div class="menu-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&auto=format" alt="Chocolate croissant">
+          </div>
+          <div class="card-content">
+            <h3>Pastries</h3>
+            <p>Buttery chocolate croissants, double-chocolate scones, brownie pockets & daily-baked pain au chocolat.</p>
+            <span class="card-tag"><i class="fas fa-bread-slice"></i> fresh daily</span>
+          </div>
+        </div>
+        <!-- Cake card -->
+        <div class="menu-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1578985545063-69928b1a958e?w=600&auto=format" alt="Decadent chocolate cake">
+          </div>
+          <div class="card-content">
+            <h3>Cake</h3>
+            <p>Molten lava cake, flourless chocolate torte, layered mousse cake & seasonal specialties. Pure indulgence.</p>
+            <span class="card-tag"><i class="fas fa-cake-candles"></i> made from scratch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Come Visit Us! Hours + location and large party reservation -->
+  <section id="visit" class="visit-section">
+    <div class="container">
+      <div class="visit-grid">
+        <div class="visit-info">
+          <h3><i class="fas fa-store"></i> Come Visit Us!</h3>
+          <p>Stop by our shop and enjoy our treats in a warm and inviting space.</p>
+          <ul class="hours-list">
+            <li><span>Mon – Fri</span> <strong>9 AM – 8 PM</strong></li>
+            <li><span>Sat – Sun</span> <strong>10 AM – 9 PM</strong></li>
+          </ul>
+          <div class="address">
+            <i class="fas fa-map-pin"></i> 1159 Choco Ave,<br> K1S 5B6
+          </div>
+          <div style="margin-top: 1rem;">
+            <i class="fas fa-phone-alt"></i> (555) 342-8765
+          </div>
+        </div>
+        <div class="reservation-card">
+          <h3><i class="fas fa-champagne-glasses"></i> Group Celebrations</h3>
+          <p>Have a large party? Mocha Melt can set up a reservation with custom dessert tastings and a private cocoa bar.</p>
+          <a href="#contact" class="btn btn-light">Contact Us Here <i class="fas fa-envelope"></i></a>
+          <p style="font-size: 0.85rem; margin-top: 1.5rem;">✨ Book 48h in advance for groups of 6+ ✨</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section (for reservation / inquiries) -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Let's connect</h3>
+          <p>Reach out for reservations, catering, or just to say hello. Our team will reply within 24 hours.</p>
+          <div class="contact-detail">
+            <p><i class="fas fa-envelope"></i> hello@mochamelt.com</p>
+            <p><i class="fas fa-phone"></i> (555) 342-8765</p>
+            <p><i class="fas fa-clock"></i> Open 7 days a week</p>
+          </div>
+          <div class="social-icons" style="margin-top: 1.5rem;">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="#" method="post">
+            <div class="input-group">
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="Email address" required>
+            </div>
+            <div class="input-group">
+              <textarea rows="3" placeholder="Tell us about your party or ask anything..."></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+          <p style="margin-top: 1rem; font-size: 0.8rem;">*For large parties, we’ll reach out to confirm availability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>© 2025 Mocha Melt — Artisanal chocolate café</div>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+    <div style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.7;">Handcrafted with cocoa & love — ethically sourced ingredients</div>
+  </div>
+</footer>
+
+<!-- small interactive for Learn More alert (optional but adds charm) -->
+<script>
+  document.getElementById('learnMoreBtn')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    alert("✨ Mocha Melt story: Founded in 2018, we combine french patisserie techniques with premium Latin American cacao. Our kitchen is nut-free dedicated and we support fair trade cooperatives. Visit us to taste the difference!");
+  });
+
+  // smooth form demo (prevent actual submit for demo purpose)
+  const contactForm = document.querySelector('.contact-form form');
+  if(contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for reaching out! Our team will get back to you soon to arrange your reservation or answer any questions.');
+      contactForm.reset();
+    });
+  }
+</script>
+</body>
+</html>
