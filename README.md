@@ -1,11 +1,4 @@
 # Mocha Melt
-- About: Ashley
-- Menu: Erica
-- Contact: Weiyi
-
-## AI Usage
--  tools used, what for, what was generated
-# Mocha Melt
 - Erica Dionne #101382857
 - Ashley Barrantes #101389155
 - Weiyi Zhang #101380271
@@ -30,3 +23,10 @@ The website is designed for chocolate enthusiasts, students, adults, and those w
   
 **HTML + CSS
 - Home Page: Linhan
+- About: Ashley
+- Menu: Erica
+- Contact: Weiyi
+
+## AI Usage
+-  tools used, what for, what was generated
+
