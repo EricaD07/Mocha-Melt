@@ -21,7 +21,7 @@ The website is designed for chocolate enthusiasts, students, adults, and those w
 - Design Document: All
 - Mockup: Erica, Weiyi
   
-**HTML + CSS
+HTML + CSS
 - Home Page: Linhan
 - About: Ashley
 - Menu: Erica
