@@ -3,9 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MochaMelt Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H1>Hello World</H1></H1>
+
+
+<!------- Navigation attributes ------->
+<header class="navbar">
+    <div class="logo">MochaMat</div>
+
+    <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </nav>
+</header>
+
+<!----------- About Page Elements ------------>
+<main>
+    <!--------- Our homepage section ------>
+    <section class="hero">
+        <div class="hero-Content">
+            <h2> - About Us -<h2>
+                <p> <br>Where Every Bite Tells Our Story.<p>
+        </div>
+     </section>
+ 
+     <!-------- Next page Our story section page -------->
+    <section class="Story-section>
+        <h2>Our Story"</h2>
+
+         <!--- First section - Our story --->
+        <div class="OurStory">                    
+            <img src=Assets\team.png alt="Mocha melt Team">
+            <p>
+                Mocha Melt was founded with the idea that dessert can be more than just a treat—it can be an experience. Our goal is to bring people together through rich flavors, comforting drinks, and a warm, welcoming atmosphere.
+                <p></p>
+                <br>We’re passionate about creating desserts that not only taste amazing but also reflect our values. What started as a simple love for chocolate has grown into a café dedicated to quality, creativity, and sustainability. 
+                <p></p>
+                <br>We specialize in chocolate-based desserts, baked goods, and specialty drinks, all crafted with carefully selected ingredients. By using ethically sourced cocoa and natural products, we ensure that every item we serve is both delicious and responsibly made.
+                <p></p>
+        </div>
+    </section>    
+
+    <section>
+        <!--- Second section - Making Treats --->    
+        <div  class="MakingTreats">
+            <!--First image place holder, adding its js later-->
+            <img src="Assets\craftingwcare.png" alt="Crafting with care">        
+            <h2>How We make our Treats</h2>
+            <p>At Mocha Melt, every dessert and drink is crafted with care from start to finish.
+            <br>We focus on quality, freshness, and attention to detail in every step of our process.
+            </p>
+
+            <!--- Sections accordion --->  
+            <ul class="Treats-accordion">
+                <!-- Fist one - Sourcing quality ingridients -->    
+                <li>
+                    <input type = "radio" name = "Treats-accordion" id="acc-1" checked>        
+                    <label for="acc-1"><h2> 1.Sourcing quality infridients</h2></label>
+                    <div class="content">
+                        <p>We begin by selecting ethically sourced cocoa and high-quality natural ingredients.
+                        <br>This ensures rich flavor while supporting responsible and sustainable practices.
+                        </p>
+                    </div>
+                </li>
+                        
+                <!------ Second one- Sourcing quality ingridients ------->   
+                <li>
+                    <input type="radio" name="Treats-accordion" id="acc-2" checked>
+                    <label for="acc-2"><h2> 2.Fresh Peperation</h2></label>
+                    <div class="content">
+                        <p>All of our desserts and baked goods are made fresh daily.
+                        <br>From melting chocolate to baking and decorating, each step is done with precision and care.</p>
+                    </div>
+                </li>
+
+                <!-- Third one - Sourcing quality ingridients -->   
+                <li>
+                    <input type = "radio" name = "Treats-accordion" id="acc-3" checked>
+                    <label for="acc-3"><h2>3.Crafting with care</h2></label>
+                    <div class="content">
+                        <p>Our team carefully prepares each item to balance flavor, texture, and presentation.
+                        <br>Whether it’s a drink or a dessert, we make sure every product meets our standards.</p>
+                    </div>
+                </li>
+                            
+                <!-- Fouth one  - Sourcing quality ingridients -->   
+                <li>
+                    <input type="radio" name="Treats-accordion" id="acc-4" checked>
+                    <label for="acc-4"><h2> 4.Serving with Care</h2></label>
+                    <div class="content">
+                        <p>Before serving, we ensure each item looks as good as it tastes.
+                        <br>We also provide clear ingredient information so customers can enjoy their treats with confidence.</p>
+                    </div>                    
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!---------- Our Values Section page ----------->
+
+
+
+
+
+    <!------- Frequently asked questions/accordion section page ------>
+    <section class="Story-section>
+        <h2>Frequently Asked Questions"</h2>
+        <!---This accordion format is in subject to change => this format or Ericak format --->
+        <div class="Asked-Questions">
+            <h2>How We make our Treats</h2>
+
+                <!-----Sections accordion-------->  
+                <ul class="Frequent-QNA">
+                
+                    <!-- Fist one - Sourcing quality ingridients -->    
+                <li>
+                    <input type = "radio" name = "Treats-accordion" id="acc-1" checked>        
+                    <label for="acc-1"><h2> 1.Sourcing quality infridients</h2></label>
+                    <div class="content">
+                        <p>We begin by selecting ethically sourced cocoa and high-quality natural ingredients.
+                        <br>This ensures rich flavor while supporting responsible and sustainable practices.
+                        </p>
+                    </div>
+                </li>
+                        
+                <!------ Second one- Sourcing quality ingridients ------->   
+                <li>
+                    <input type="radio" name="Treats-accordion" id="acc-2" checked>
+                    <label for="acc-2"><h2> 2.Fresh Peperation</h2></label>
+                    <div class="content">
+                        <p>All of our desserts and baked goods are made fresh daily.
+                        <br>From melting chocolate to baking and decorating, each step is done with precision and care.</p>
+                    </div>
+                </li>
+
+                <!-- Third one - Sourcing quality ingridients -->   
+                <li>
+                    <input type = "radio" name = "Treats-accordion" id="acc-3" checked>
+                    <label for="acc-3"><h2>3.Crafting with care</h2></label>
+                    <div class="content">
+                        <p>Our team carefully prepares each item to balance flavor, texture, and presentation.
+                        <br>Whether it’s a drink or a dessert, we make sure every product meets our standards.</p>
+                    </div>
+                </li>
+                            
+                <!-- Fouth one  - Sourcing quality ingridients -->   
+                <li>
+                    <input type="radio" name="Treats-accordion" id="acc-4" checked>
+                    <label for="acc-4"><h2> 4.Serving with Care</h2></label>
+                    <div class="content">
+                        <p>Before serving, we ensure each item looks as good as it tastes.
+                        <br>We also provide clear ingredient information so customers can enjoy their treats with confidence.</p>
+                    </div>                    
+                </li>
+            </ul>
+        </div>
+    </section>
+
+                
+
+
+
+    </main>
+    
 </body>
 </html>
