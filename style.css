@@ -310,3 +310,34 @@ h1 {
     }
 }
 
+.contact-hero {
+    background: #b89d7d;
+    height: 330px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-hero-curve {
+    position: absolute;
+    top: 70px;
+    background: #e9e6e1;
+    width: 520px;
+    height: 260px;
+    border-top-left-radius: 260px;
+    border-top-right-radius: 260px;
+    border: 5px solid #9a7c39;
+    border-bottom: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-family: "The Seasons";
+    color: #7b2b2b;
+    font-size: 42px;
+}
