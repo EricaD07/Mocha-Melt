@@ -1,51 +1,90 @@
 @font-face{
     font-family: 'Jost';
     src: url('fonts/Jost-VariableFont_wght.ttf');
+
+    font-family: 'The Seasons';
+    src: url('fonts/Fontspring-DEMO-theseasons-reg.otf');
+
+    font-family: 'The Seasons bdit';
+    src: url('fonts/Fontspring-DEMO-theseasons-bdit.otf');
 }  
+
+
   /********* Universal ****************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Jost';
 }
 h2 {
-    font-size: 50px;
-    color: rgb(16, 24, 40);
+    font-size: 55px;
+    color: #6b1a21;
     line-height: 2;
     text-align: center;
+    font-weight: 30;
+    font-family: 'The Seasons';
+    letter-spacing: 3px;
 }
+p {
+    font-family: 'Jost';
+    font-size: 16px;
+}
+h3{
+    font-family: 'The Seasons';
+    font-size: 45px;
+}
+
+
+
 
 
 /********* NAV ****************/
 h1 {
     color: #6b1a21;
-    font-size: 22px;
+    font-size: 35px;
     font-weight: bold;
+    letter-spacing: 0.3px;
+    font-family: 'The Seasons bdit';
+    font-weight: 150;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 80px;   
+    padding: 12px 60px;    
     background-color: #fefcfa;
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgb(0,0,0,0.1);
 }
 
-.nav-menu{
-   display: flex; 
-   justify-content: space-between;
-   align-items: center;
-   gap: 60px
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-.nav-link {
-    transition: 0.7s;
+.navbar a {
+    font-size: 20px;
+    font-family: 'Jost';   
+    text-decoration: none;
+    color: #b72d2c;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;       
+    padding: 0;  
+    gap: 50px;
+    align-items: center;
+}
+.navbar a:hover {
+    color: #651010;
 }
 
+/*Hamburger*/
 .hamburger{
     display: none;
     cursor: pointer;
@@ -59,22 +98,215 @@ h1 {
     background-color: #6b1a21;
 }
 
-.navbar ul {
+/*Hero for all non-home pages*/
+/* Background section */
+.extra-hero {
+    background-color: #c1a485; 
+    height: 300px;
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: flex-end; /*AI-Assisted: how to push the circle down */
+}
+.circle p {
+    color: #a38b54;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.circle {
+    background-color: #f2ecde; 
+    width: 600px;
+    height: 250px;
+    border-radius: 500px 500px 0 0; 
+    border-color:#926f1b ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+
+
+
+/*other code here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********* FOOTER ****************/
+.footer {
+    background-image: url("Assets/Footerbg.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Jost';
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 165px;
+    gap: 20px;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #f7e2cb;
+    font-family: 'The Seasons bdit';
+    letter-spacing: 1px;
+}
+.footer-column p {
+    font-family: 'Jost';
+    color: #c1a485;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Other columns  */
+.footer-column h4 {
+    margin-bottom: 20px;
+    color: #f7e2cb;
+}
+.footer-column ul {
     list-style: none;
-    margin: 0;       
-    padding: 0;  
-    gap: 30px;
-    align-items: center;
 }
-.navbar a {
+.footer-column li {
+    margin-bottom: 12px;
+    color: #c1a485;
+}
+.footer-column a {
+    color: #c1a485;
+    text-decoration: none;
+}
+.footer-column a:hover {
+    color: #fefcfa;
+}
+
+/* Socials */
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.socials img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Bottom */
+.footer-bottom {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #651010;
+    padding: 20px 165px;
+    font-size: 13px;
+    color: #c1a485;
+}
+.footer-bottom a {
+    color:#c1a485
+}
+.footer-bottom a:hover {
+    color: #f7e2cb;
+    margin-left: 20px;
+}
+
+
+
+/*********JS*******/
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #651010;
+    color: white;
+    font-size: 25px;
+    border: none;
     display: flex;
     align-items: center;
-    font-size: 18px;
-    text-decoration: none;
-    color: #b72d2c;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.4s;
 }
-.navbar a:hover {
-    color: #741818;
+
+#back-to-top:hover {
+    background-color: rgb(228, 61, 0);
+}
+
+#back-to-top.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*RESPONSIVENESS*/
+
+@media (max-width: 768px) {   /* PHONES */
+    .hamburger{
+        display:block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar {
+        padding: 12px 20px;
+    }
+    .nav-menu{
+        position:fixed;
+        left: -100%;
+        top: 60px;
+        gap:0;
+        flex-direction: column;
+        background-color: rgb(255, 254, 249);
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+/*footer*/
+        .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
 

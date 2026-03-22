@@ -21,7 +21,7 @@ const menu_items = [
     category: ["cakes"],
     calories: "520 cal",
     price: "$6.50",
-    img: "cake1.png",
+    img: "Assets/cake1.png",
     desc: "Rich chocolate cake layered with smooth fudge and silky ganache"
   },
   {
@@ -29,7 +29,7 @@ const menu_items = [
     category: ["cakes", "fruit"],
     calories: "480 cal",
     price: "$6.75",
-    img: "cake2.png",
+    img: "Assets/cake2.png",
     desc: "Smooth dark chocolate filling topped with light cream and fresh raspberry"
   },
   {
@@ -37,7 +37,7 @@ const menu_items = [
     category: ["cakes"],
     calories: "540 cal",
     price: "$7.00",
-    img: "cake3.png",
+    img: "Assets/cake3.png",
     desc: "Creamy chocolate cheesecake finished with a luscious caramel drizzle"
   },
   {
@@ -45,7 +45,7 @@ const menu_items = [
     category: ["cakes"],
     calories: "510 cal",
     price: "$6.80",
-    img: "cake4.png",
+    img: "Assets/cake4.png",
     desc: "Soft chocolate layers filled with velvety chocolate cream and glaze"
   },
   {
@@ -53,7 +53,7 @@ const menu_items = [
     category: ["cakes", "fruit"],
     calories: "500 cal",
     price: "$6.95",
-    img: "cake6.png",
+    img: "Assets/cake6.png",
     desc: "Rich chocolate base topped with fresh berries and smooth chocolate cream"
   },
   {
@@ -61,7 +61,7 @@ const menu_items = [
     category: ["pastries"],
     calories: "470 cal",
     price: "$6.60",
-    img: "cake7.png",
+    img: "Assets/cake7.png",
     desc: "Buttery tart filled with silky chocolate and coated in glossy chocolate glaze"
   },
   {
@@ -69,7 +69,7 @@ const menu_items = [
     category: ["pastries"],
     calories: "430 cal",
     price: "$5.25",
-    img: "cake8.png",
+    img: "Assets/cake8.png",
     desc: "Fluffy donut filled with rich chocolate cream and finished with drizzle"
   },
   {
@@ -77,7 +77,7 @@ const menu_items = [
     category: ["drinks", "hot"],
     calories: "320 cal",
     price: "$4.50",
-    img: "drink1.png",
+    img: "Assets/drink1.png",
     desc: "Warm, velvety melted chocolate blended into a rich and comforting drink"
   },
   {
@@ -85,7 +85,7 @@ const menu_items = [
     category: ["drinks", "hot"],
     calories: "350 cal",
     price: "$5.25",
-    img: "drink2.png",
+    img: "Assets/drink2.png",
     desc: "Bold espresso mixed with smooth chocolate and creamy steamed milk"
   },
   {
@@ -93,7 +93,7 @@ const menu_items = [
     category: ["drinks", "cold"],
     calories: "420 cal",
     price: "$5.75",
-    img: "drink3.png",
+    img: "Assets/drink3.png",
     desc: "Thick and creamy chocolate shake made with rich cocoa and ice"
   },
   {
@@ -101,7 +101,7 @@ const menu_items = [
     category: ["drinks", "cold"],
     calories: "450 cal",
     price: "$5.95",
-    img: "drink4.png",
+    img: "Assets/drink4.png",
     desc: "Icy blended drink loaded with chocolate cookies and smooth chocolate cream"
   }
 ];
@@ -163,4 +163,24 @@ for (let i = 0; i < filterButtons.length; i++) {
 
     renderMenu(filteredItems);
   });
+}
+
+
+
+//Back to Top Button //
+const backToTop = document.querySelector("#back-to-top");
+
+if (backToTop) {
+
+    // Show  button when user scrolls down
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add("active");
+        } else {
+            backToTop.classList.remove("active");
+        }
+    });
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 }
