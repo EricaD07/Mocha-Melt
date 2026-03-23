@@ -162,7 +162,7 @@ h1 {
 
 /********************* First Accordion - Section: Making Treats *****************/
 
-/* Main Container: Centers the accordion and sets its total width */
+/* Main/Parent Container: Centers the accordion and sets its total width */
 .accordion-container {
     display: flex;
     align-items: flex-start; /* Keeps the image from stretching */
@@ -339,54 +339,56 @@ h4{
 /************ Second Accordion- Section: Frequent asked question **********/
 
 
-/* Main Container: Centers the accordion and sets its total width */
+/* Main/parent Container: Centers the accordion and sets its total width */
 .Asked-Questions {
     display: flex;
-    flex-direction: column; /* Stack vertically since there's no image */
-    align-items: center;   /* Center the accordion horizontally */
-    justify-content: center;
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
-    width: 100%;   /* Ensure it takes full available width to center from */
-}
-
-/* THE ACCORDION LIST SIDE */
-.Asked-Questions{
-    flex: 1; 
-    padding: 0;
-    margin: 0;
+    flex-direction: column; 
+    align-items: center;      /* Centers horizontally (X-axis) */
+    justify-content: center;   /* Centers vertically (Y-axis) */
+    
+    min-height: 100vh;        /* Forces the section to be at least full-screen height */
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fefcfa;
 }
 
 /*--------- INDIVIDUAL ITEMS labels of the accordion ----------*/
 
+/*The FAQ List: This is where the 'gap' fix happens */
 .Frequent-QNA {
-    width: 100%;           
-    max-width: 800px;      
-    margin: 0 auto;
-}
-
-/* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
-.Frequent-QNA li{
+    width: 100%;               /* Fill the parent flex container */
+    max-width: 1100px;         /* The "Sweet spot" for readability */
+    margin: 0 auto;           /* Redundant but safe for centering */
+    padding: 0;
     list-style: none;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 7px;
-    background-color:#f2ecde;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358); /*the first rgba is the shadow on the right and botton, the second one is the "light capture shadow" the up and left*/
+    text-align: left;         /* Keeps text inside the boxes aligned left */
 }
 
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
-.Frequent-QNA li label{
-    display:flex;
-    align-items: center;
+.Frequent-QNA li {
+    width: 100%;
+    margin-bottom: 20px;
     padding: 10px;
+    border-radius: 7px;
+    background-color: #f2ecde;
+    border-radius: 7px;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.2);
+}
+
+/* The Clickable Label */
+.Frequent-QNA li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;            /* Increased padding for better touch/click targets */
     cursor: pointer;
-    font-size:large;
+    font-size: 18px;
     font-weight: bold;
     color: #651010;
     font-family: "Jost";
-} 
+    width: 100%;              /* Ensures the whole bar is clickable */
+}
+
 
 /* Icon: Adds the '+' sign before the label text */
 label::before{
@@ -412,9 +414,9 @@ input[type="radio"]{
 }
 
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
-.Frequent-QNA input[type='radio']:checked + label + .content{
+.Frequent-QNA input[type='radio']:checked + label + .content {
     max-height: 500px;
-    padding:10px 10px 20px 10px;
+    padding:10px 10px 20px 10px;          /* Adds padding only when open */
 }
 
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
@@ -443,14 +445,13 @@ input[type="radio"]{
 @media (max-width: 768px) {
     .Asked-Questions {
         margin: 20px auto;
-        padding: 0 15px;    /* Slightly tighter padding for small phones */
+        padding: 60 20px;    /* Slightly tighter padding for small phones */
     }
 
     .Frequent-QNA {
         width: 100%;        /* Ensures it fills the phone screen */
     }
 }
-
 
 
 

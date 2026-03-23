@@ -68,16 +68,14 @@
 
 
          <!--- First section - Our story --->
-        <div class="OurStory">                    
-            <img src=Assets\team.png alt="Mocha melt Team">
-            <p>
-                Mocha Melt was founded with the idea that dessert can be more than just a treat—it can be an experience. Our goal is to bring people together through rich flavors, comforting drinks, and a warm, welcoming atmosphere.
-                <p></p>
-                <br>We’re passionate about creating desserts that not only taste amazing but also reflect our values. What started as a simple love for chocolate has grown into a café dedicated to quality, creativity, and sustainability.
-                <p></p>
-                <br>We specialize in chocolate-based desserts, baked goods, and specialty drinks, all crafted with carefully selected ingredients. By using ethically sourced cocoa and natural products, we ensure that every item we serve is both delicious and responsibly made.
-                <p></p>
+        <div class="OurStory">
+            <img src="Assets/team.png" alt="Mocha melt Team">
+        <div class="story-text">
+            <p>Mocha Melt was founded with the idea that dessert can be more than just a treat—it can be an experience. Our goal is to bring people together through rich flavors, comforting drinks, and a warm, welcoming atmosphere.<br></p>
+            <p>We’re passionate about creating desserts that not only taste amazing but also reflect our values. What started as a simple love for chocolate has grown into a café dedicated to quality, creativity, and sustainability.<br></p>
+            <p>We specialize in chocolate-based desserts, baked goods, and specialty drinks, all crafted with carefully selected ingredients. By using ethically sourced cocoa and natural products, we ensure that every item we serve is both delicious and responsibly made.<br></p>
         </div>
+</div>
     </section>    
 
 
@@ -152,6 +150,8 @@
     
 
 
+
+
     
     <!---------- Our Values Section page ----------->
     <section class=" OurValues">
@@ -191,61 +191,59 @@
 
     
     <!------- Frequently asked questions/2.accordion section page ------>
-    <section class="Story-section">
+    <section class="FAQ-Wrapper">
         <div class="Asked-Questions">
             <h2>Frequently Asked Questions</h2>
-            
-                <!-----Sections accordion-------->  
-                <ul class="Frequent-QNA">
-
-                    <!-- Fist one - ingridients  origin -->    
-                    <li>
-                        <input type = "radio" name = "Frequent-QNA" id="first" checked>        
-                        <label for="first">Where do your ingridients come from?</label>
-                        <div class="content">
-                            <p>We believe great dessert starts at the source. Our cocoa beans are ethically sourced from sustainable farms in West Africa and South America, while our dairy and seasonal fruits are delivered fresh from local farmers every morning here in Ontario.</p>
-                        </div>
-                    </li>
+            <!-----Sections accordion-------->  
+            <ul class="Frequent-QNA">
+                <!-- Fist one - ingridients  origin -->    
+                <li>
+                    <input type = "radio" name = "Frequent-QNA" id="first" checked>        
+                    <label for="first">Where do your ingridients come from?</label>
+                    <div class="content">
+                        <p>We believe great dessert starts at the source. Our cocoa beans are ethically sourced from sustainable farms in West Africa and South America, while our dairy and seasonal fruits are delivered fresh from local farmers every morning here in Ontario.</p>
+                    </div>
+                </li>
                        
-                    <!------ Second one - offors for people w/ allergies ------->  
-                    <li>
-                        <input type="radio" name="Frequent-QNA" id="second">
-                        <label for="second">Do you offer options for people with allergies?</label>
-                        <div class="content">
-                            <p>Everyone deserves a treat! We offer a variety of gluten-free pastries and nut-free chocolate options. Please inform our staff of any specific allergies so we can ensure your order is prepared with the utmost safety.</p>
-                        </div>
-                    </li>
+                <!------ Second one - offors for people w/ allergies ------->  
+                <li>
+                    <input type="radio" name="Frequent-QNA" id="second">
+                    <label for="second">Do you offer options for people with allergies?</label>
+                    <div class="content">
+                        <p>Everyone deserves a treat! We offer a variety of gluten-free pastries and nut-free chocolate options. Please inform our staff of any specific allergies so we can ensure your order is prepared with the utmost safety.</p>
+                    </div>
+                </li>
 
 
-                    <!-- Third one - reservation -->  
-                    <li>
-                        <input type = "radio" name = "Frequent-QNA" id="third">
-                        <label for="third">How can I make a reservation?</label>
-                        <div class="content">
-                            <p>While we love walk-ins, you can secure a cozy corner by visiting our 'Location' page or giving us a call. For large groups or special chocolate-tasting events, we recommend booking at least 48 hours in advance.</p>
-                        </div>
-                    </li>
+                <!-- Third one - reservation -->  
+                <li>
+                    <input type = "radio" name = "Frequent-QNA" id="third">
+                    <label for="third">How can I make a reservation?</label>
+                    <div class="content">
+                        <p>While we love walk-ins, you can secure a cozy corner by visiting our 'Location' page or giving us a call. For large groups or special chocolate-tasting events, we recommend booking at least 48 hours in advance.</p>
+                    </div>
+                </li>
                            
-                    <!-- Fouth one - Are your products made fresh?-->  
-                    <li>
-                        <input type="radio" name= "Frequent-QNA" id="fourth">
-                        <label for="fourth">Are your products made fresh?</label>
-                        <div class="content">
-                            <p>"Absolutely. Our ovens start warming up long before our doors open. Every croissant is laminated by hand, and every ganache is whipped fresh daily to ensure that 'melt-in-your-mouth' quality we’re named for.</p>
-                        </div>                    
-                    </li>
+                <!-- Fouth one - Are your products made fresh?-->  
+                <li>
+                    <input type="radio" name= "Frequent-QNA" id="fourth">
+                    <label for="fourth">Are your products made fresh?</label>
+                    <div class="content">
+                        <p>"Absolutely. Our ovens start warming up long before our doors open. Every croissant is laminated by hand, and every ganache is whipped fresh daily to ensure that 'melt-in-your-mouth' quality we’re named for.</p>
+                    </div>                    
+                </li>
 
 
-                    <!-- Fifth one - Do you offer takeaway or online ordering? -->  
-                    <li>
-                        <input type="radio" name= "Frequent-QNA" id="Fifth">
-                        <label for="Fifth"> Do you offer takeaway or online ordering?</label>
-                        <div class="content">
-                            <p>Yes! You can take the MochaMelt experience home. Most of our menu is available for takeaway, and you can place online orders through our website for quick, contact-free pickup.</p>
-                        </div>                  
-                    </li>
-                </ul>
-            </div>
+                <!-- Fifth one - Do you offer takeaway or online ordering? -->  
+                <li>
+                    <input type="radio" name= "Frequent-QNA" id="Fifth">
+                    <label for="Fifth"> Do you offer takeaway or online ordering?</label>
+                    <div class="content">
+                        <p>Yes! You can take the MochaMelt experience home. Most of our menu is available for takeaway, and you can place online orders through our website for quick, contact-free pickup.</p>
+                    </div>                  
+                </li>
+            </ul>
+        </div>
     </section>
 </main>
 
