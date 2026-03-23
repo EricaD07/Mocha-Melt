@@ -657,7 +657,7 @@ form {
   flex-direction: column;
 }
 
-label {
+name {
   font-size: 13px;
   margin: 10px 0 4px;
 }
