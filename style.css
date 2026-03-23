@@ -657,3 +657,28 @@ input[type="radio"]{
     color: #7b2b2b;
     font-size: 42px;
 }
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-btn {
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn a:hover {
+    background-color: #333;
+}
