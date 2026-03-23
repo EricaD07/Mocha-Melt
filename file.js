@@ -1,4 +1,4 @@
-// Hamburger Menu //
+//----------- Responsive Hamburger Menu ---------//
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -14,7 +14,7 @@ const navLinks = document.querySelectorAll(".nav-item a").forEach(n=> n.addEvent
 
 
 
-//Dynamic Content Rendering from Data //
+//----------- Dynamic Content Rendering ---------//
 const menu_items = [
   {
     name: "Triple Chocolate Fudge",
@@ -65,15 +65,15 @@ const menu_items = [
     desc: "Buttery tart filled with silky chocolate and coated in glossy chocolate glaze"
   },
   {
-    name: "Chocolate Cream Donut",
-    category: ["pastries"],
+    name: "Blackberry Chocolate Cream Donut",
+    category: ["pastries", "fruit"],
     calories: "430 cal",
     price: "$5.25",
     img: "Assets/cake8.png",
     desc: "Fluffy donut filled with rich chocolate cream and finished with drizzle"
   },
   {
-    name: "Classic Hot Chocolate",
+    name: "Cinnamon Hot Chocolate",
     category: ["drinks", "hot"],
     calories: "320 cal",
     price: "$4.50",
@@ -103,6 +103,14 @@ const menu_items = [
     price: "$5.95",
     img: "Assets/drink4.png",
     desc: "Icy blended drink loaded with chocolate cookies and smooth chocolate cream"
+  },
+  {
+    name: "Häagen-Dazs Ice Cream",
+    category: ["cold"],
+    calories: "250 cal",
+    price: "$3.95 each",
+    img: "Assets/icecream.png",
+    desc: "Creamy ice cream bars coated in a rich chocolate shell, available in a variety of indulgent flavours for the perfect refreshing treat."
   }
 ];
 
@@ -121,7 +129,7 @@ function renderMenu(items) {
         <img src="${items[i].img}" alt="${items[i].name}">
         
         <div class="menu-header">
-          <h3>${items[i].name}</h3>
+          <h4>${items[i].name}</h4>
           <span class="price">${items[i].price}</span>
         </div>
 
@@ -135,7 +143,7 @@ function renderMenu(items) {
 renderMenu(menu_items);
 
 
-// Filter Buttons
+//----------- Filter Buttons ---------//
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 for (let i = 0; i < filterButtons.length; i++) {
@@ -167,7 +175,7 @@ for (let i = 0; i < filterButtons.length; i++) {
 
 
 
-//Back to Top Button //
+//----------- Back to Top Button-----//
 const backToTop = document.querySelector("#back-to-top");
 
 if (backToTop) {

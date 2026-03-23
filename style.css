@@ -118,7 +118,7 @@ h1 {
     width: 600px;
     height: 250px;
     border-radius: 500px 500px 0 0; 
-    border-color:#926f1b ;
+    border: 2px solid #926f1b ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,24 +128,7 @@ h1 {
 }
 
 
-
-
-/*other code here
-
-
-
-
-
-
-
-
-
-
-
-
-/*Philipians 4:13*/
 /********************* ABOUT PAGE ATTRIBUTES ********************/
-
 
 
 /*------------ Story Section CSS attributes --------------*/
@@ -305,6 +288,93 @@ input[type="radio"]{
     }
 }
 
+
+
+/***------------ Menu Page --------------***/
+/*CARDS*/
+.menu-gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 40px;
+}
+.menu-card {
+    background: rgb(255, 254, 249);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+.menu-card img {
+    width: 300px; 
+    height: 300px;
+    object-fit: cover;
+    background-color: #651010;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    align-self: center;
+}
+.menu-card .button {
+    align-self: center;
+    padding: 15px 130px;
+}
+
+/********INFO********/
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.menu-header h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #651010;
+}
+.calories {
+    color: #651010;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.price{
+    color: #651010;
+    font-size: 17px;
+    font-family: 'Jost';
+}
+.desc{
+    color: #651010;
+    font-size: 16px;    
+}
+
+
+/*** Filter buttons container ****/
+.filter-buttons {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; 
+    gap: 10px;
+}
+
+/* Filter buttons */
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #c1a485;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.filter-btn:hover {
+    background-color: #8c6d4c;
+}
+.filter-btn.active {
+    background-color: #c1a485;
+}
 
 
 
@@ -590,6 +660,9 @@ input[type="radio"]{
     }
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar ul{
+        gap: 15px;
     }
     .navbar {
         padding: 12px 20px;
