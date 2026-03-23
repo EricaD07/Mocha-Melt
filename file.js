@@ -189,8 +189,8 @@ if (backToTop) {
 
 //----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all radio buttons inside the Treats-accordion
-    const accordionRadios = document.querySelectorAll('.Treats-accordion input[type="radio"]');
+    // Corrected: Combined selectors into ONE string separated by a comma
+    const accordionRadios = document.querySelectorAll('.Treats-accordion input[type="radio"], .Frequent-QNA input[type="radio"]');
 
     accordionRadios.forEach((radio) => {
         radio.addEventListener('click', () => {
@@ -200,6 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 radio.dataset.wasChecked = 'false';
             } else {
                 // Clear state for all others and set this one to true
+                // Note: This resets all accordions on the page. 
+                // If you want them to behave independently, let me know!
                 accordionRadios.forEach(r => r.dataset.wasChecked = 'false');
                 radio.dataset.wasChecked = 'true';
             }

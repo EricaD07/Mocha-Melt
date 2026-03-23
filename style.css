@@ -139,8 +139,7 @@ h1 {
 /********* ABOUT PAGE ATTRIBUTES ****************/
 
 
-/*First Accordion - Section: Making Treats*/
-
+/*------------ First Accordion - Section: Making Treats --------------*/
 /* Main Container: Centers the accordion and sets its total width */
 .Treats-accordion{
     margin: 60px auto;
@@ -154,7 +153,7 @@ h1 {
     padding: 10px;
     border-radius: 7px;
     background-color:#f2ecde;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358); /*the first rgba is the shadow on the right and botton, the second one is the "light capture shadow" the up and left*/
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358); /*the first rgba is the shadow on the right and botton*/
 }
 
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
@@ -205,8 +204,23 @@ input[type="radio"]{
 
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
 .Treats-accordion input[type='radio']:checked + label::before{
-    content: '---'
+    content: '---';
 }
+
+
+/* Word Color Change: Changes the label text color when the radio is checked */
+.Treats-accordion input[type='radio']:checked + label {
+    color: #a33f00; /* This changes the text color */
+    transition: color 0.3s ease; /* Makes the color change smooth */
+}
+
+
+/* This targets the <li> container when the radio inside it is checked */
+.Treats-accordion li:has(input[type='radio']:checked) {
+    background-color: #ffecc1;
+    transition: background-color 0.4s ease; /* Makes the color fade in nicely */
+}
+
 
 /* Inner Text: Styles the paragraph inside the opened content area */
 .Treats-accordion .content p {
@@ -218,14 +232,110 @@ input[type="radio"]{
 
 
 
-/*Second Accordion- Section: */
 
 
 
+/************* Values attributes *************/
 h4{
     font-family: 'Jost';
     font-size: 15px;
     color: #6b1a21
+}
+
+
+
+
+
+
+
+/************ Second Accordion- Section **********/
+
+/* Main Container: Centers the accordion and sets its total width */
+.Frequent-QNA{
+    margin: 60px auto;
+    width: 600px;
+}
+
+/* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
+.Frequent-QNA li{
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color:#f2ecde;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358); /*the first rgba is the shadow on the right and botton, the second one is the "light capture shadow" the up and left*/
+}
+
+/* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
+.Frequent-QNA li label{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size:large;
+    font-weight: bold;
+    color: #651010;
+    font-family: "Jost";
+} 
+
+
+/* Icon: Adds the '+' sign before the label text */
+label::before{
+    content: '+';
+    margin-right: 10px;
+}
+
+
+/* Functional: Hides the actual radio button circles so they don't clutter the design */
+input[type="radio"]{
+    display: none;
+}
+
+
+/* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
+.Frequent-QNA .content{
+    color: rgb(134, 98, 98);
+    padding: 0 20px; /* Base horizontal padding */
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #ffffffa9; /* Makes the inside slightly lighter/different from the label */
+    border-radius: 7px;
+    transition:max-height 0.7s ease-out;
+}
+
+
+/* Opening Logic: When a radio button is clicked, expand the content box below it */
+.Frequent-QNA input[type='radio']:checked + label + .content{
+    max-height: 500px;
+    padding:10px 10px 20px 10px;
+}
+
+
+/* Icon Change: Swaps the '+' for '---' when the section is active/open */
+.Frequent-QNA input[type='radio']:checked + label::before{
+    content: '---';
+}
+
+
+/* Word Color Change: Changes the label text color when the radio is checked */
+.Frequent-QNA input[type='radio']:checked + label {
+    color: #a33f00; /* This changes the text color */
+    transition: color 0.3s ease; /* Makes the color change smooth */
+}
+
+
+/* This targets the <li> container when the radio inside it is checked */
+.Frequent-QNA li:has(input[type='radio']:checked) {
+    background-color: #ffecc1;
+    transition: background-color 0.4s ease; /* Makes the color fade in nicely */
+}
+
+
+/* Inner Text: Styles the paragraph inside the opened content area */
+.Frequent-QNA .content p {
+    margin: 20px 10px 1px 13px ; /* vertical space and horizontal space*/
+    font-weight: normal; /* Ensures the description isn't bold like the label */
 }
 
 
