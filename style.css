@@ -627,9 +627,10 @@ input[type="radio"]{
 
 /********* CONTACTS ****************/
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 120px 0 80px;
+    background-color:#f2ecde;
+    display: flex;
+    justify-content: center;
+    padding: 120px 0 80px;
 }
 
 .form-card {
