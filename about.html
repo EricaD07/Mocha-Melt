@@ -12,7 +12,7 @@
 
 
 <!------- Navigation attributes ------->
-<header
+<header>
  <nav class="navbar">
         <a href="index.html">
             <h1>MochaMelt</h1></a>
@@ -63,7 +63,7 @@
     </section>
  
      <!-------- Next page Our story section page -------->
-    <section class="Story-section>
+    <section class="Story-section">
         <h2>Our Story"</h2>
 
 
@@ -81,65 +81,77 @@
     </section>    
 
 
+    
+
 
     <section>
-        <!--- Second section - Making Treats --->    
+        <!--- Second section - Making Treats, 1.accordion --->    
         <div  class="MakingTreats">
             <!--First image place holder, adding its js later-->
-            <img src="Assets\craftingwcare.png" alt="Crafting with care">        
             <h3>How We make our Treats</h3>
             <p>At Mocha Melt, every dessert and drink is crafted with care from start to finish.
             <br>We focus on quality, freshness, and attention to detail in every step of our process.
             </p>
 
+            <div class="accordion-container">
+                <!-- First Image that is gonna be shown first-->
+                <div class="accordion-image-side">
+                    <img src="Assets\Local-market.png" id="main-accordion-img" alt="Crafting with care">
+                </div>
 
-            <!----- Sections accordion ---->  
-            <ul class="Treats-accordion">
-                <!-- Fist one - Sourcing quality ingridients -->    
-                <li>
-                    <input type = "radio" name = "Treats-accordion" id="acc-1" checked>        
-                    <label for="acc-1">1.Sourcing quality infridients</label>
-                    <div class="content">
-                        <p>We begin by selecting ethically sourced cocoa and high-quality natural ingredients.
-                        <br>This ensures rich flavor while supporting responsible and sustainable practices.
-                        </p>
-                    </div>
-                </li>
-                       
-                <!-- Second one - Sourcing quality ingridients -->  
-                <li>
-                    <input type="radio" name="Treats-accordion" id="acc-2">
-                    <label for="acc-2">2.Fresh Peperation</label>
-                    <div class="content">
-                        <p>All of our desserts and baked goods are made fresh daily.
-                        <br>From melting chocolate to baking and decorating, each step is done with precision and care.</p>
-                    </div>
-                </li>
+                <!----- Sections, accordion ---->  
+                <ul class="Treats-accordion">
 
 
-                <!-- Third one - Sourcing quality ingridients -->  
-                <li>
-                    <input type = "radio" name = "Treats-accordion" id="acc-3">
-                    <label for="acc-3">3.Crafting with care</label>
-                    <div class="content">
-                        <p>Our team carefully prepares each item to balance flavor, texture, and presentation.
-                        <br>Whether it’s a drink or a dessert, we make sure every product meets our standards.</p>
-                    </div>
-                </li>
-                           
-                <!-- Fouth one - Sourcing quality ingridients -->  
-                <li>
-                    <input type="radio" name="Treats-accordion" id="acc-4">
-                    <label for="acc-4">4.Serving with Care</label>
-                    <div class="content">
-                        <p>Before serving, we ensure each item looks as good as it tastes.
-                        <br>We also provide clear ingredient information so customers can enjoy their treats with confidence.</p>
-                    </div>                    
-                </li>
-            </ul>
+                    <!-- Fist one - Sourcing quality ingridients -->    
+                    <li>
+                        <input type = "radio" name = "Treats-accordion" id="acc-1" checked data-image="Assets\Local-market.png">        
+                        <label for="acc-1">1.Sourcing quality ingridients</label>
+                        <div class="content">
+                            <p>We begin by selecting ethically sourced cocoa and high-quality natural ingredients.
+                            <br>This ensures rich flavor while supporting responsible and sustainable practices.
+                            </p>
+                        </div>
+                    </li>
+                        
+                    <!-- Second one - Fresh Prep -->  
+                    <li>
+                        <input type="radio" name="Treats-accordion" id="acc-2" data-image="Assets\Kitchen-prep.png">
+                        <label for="acc-2">2.Fresh Peperation</label>
+                        <div class="content">
+                            <p>All of our desserts and baked goods are made fresh daily.
+                            <br>From melting chocolate to baking and decorating, each step is done with precision and care.</p>
+                        </div>
+                    </li>
+
+
+                    <!-- Third one - Crafting with care -->  
+                    <li>
+                        <input type = "radio" name = "Treats-accordion" id="acc-3" data-image="Assets\craftingwcare.png">
+                        <label for="acc-3">3.Crafting with care</label>
+                        <div class="content">
+                            <p>Our team carefully prepares each item to balance flavor, texture, and presentation.
+                            <br>Whether it’s a drink or a dessert, we make sure every product meets our standards.</p>
+                        </div>
+                    </li>
+                            
+                    <!-- Fouth one - Serving with purpose -->  
+                    <li>
+                        <input type="radio" name="Treats-accordion" id="acc-4" data-image="Assets\serving.png">
+                        <label for="acc-4">4.Serving with Care</label>
+                        <div class="content">
+                            <p>Before serving, we ensure each item looks as good as it tastes.
+                            <br>We also provide clear ingredient information so customers can enjoy their treats with confidence.</p>
+                        </div>                    
+                    </li>
+                </ul>
+            </div>    
         </div>
     </section>
+   
     
+
+
     
     <!---------- Our Values Section page ----------->
     <section class=" OurValues">
@@ -166,7 +178,7 @@
             </div>
 
             <div class="Customer-Section">
-                <img src="Assets\heart.png"alt="Customer Ecperience" class="Val-Icons">
+                <img src="Assets\heart.png"alt="Customer Experience" class="Val-Icons">
                 <h4>Customer Experience</h4>
                 <p>Creating a cozy, enjoyable environment for everyone</p>
             </div>
@@ -175,18 +187,17 @@
     </section>
     
     
+
+
     
-    <!------- Frequently asked questions/accordion section page ------>
-    <section class="Story-section>
-        <h2>Frequently Asked Questions"</h2>
-        <!---This accordion format is in subject to change => this format or Ericak format --->
+    <!------- Frequently asked questions/2.accordion section page ------>
+    <section class="Story-section">
         <div class="Asked-Questions">
-            <h2>How We make our Treats</h2>
-
-
+            <h2>Frequently Asked Questions</h2>
+            
                 <!-----Sections accordion-------->  
                 <ul class="Frequent-QNA">
-               
+
                     <!-- Fist one - ingridients  origin -->    
                     <li>
                         <input type = "radio" name = "Frequent-QNA" id="first" checked>        

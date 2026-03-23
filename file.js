@@ -185,7 +185,7 @@ if (backToTop) {
     });
 }
 
-//----------- Accordion or Tabbed Content -----//
+//----------- Accordion or Tabbed Content (DOM Attribute)-----//
 
 //----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
 document.addEventListener('DOMContentLoaded', function() {
@@ -204,6 +204,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If you want them to behave independently, let me know!
                 accordionRadios.forEach(r => r.dataset.wasChecked = 'false');
                 radio.dataset.wasChecked = 'true';
+            }
+        });
+    });
+});
+
+//-------ACCORDION IMAGE SWAP SET UP------///
+// 1. Wait for the HTML to fully load before running the script
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 2. Select all radio buttons inside your Treats Accordion
+    const accordionRadios = document.querySelectorAll('.Treats-accordion input[type="radio"]');
+    
+    // 3. Select the main image element by its ID
+    const mainDisplayImage = document.getElementById('main-accordion-img');
+
+    // 4. Loop through each radio button to set up a "Listener"
+    accordionRadios.forEach(radio => {
+        
+        // This function runs every time a radio button's state changes
+        radio.addEventListener('change', () => {
+            
+            // 5. Only act if this specific radio is the one that was just selected
+            if (radio.checked) {
+                
+                // 6. Pull the image path from the 'data-image' attribute
+                const newImagePath = radio.getAttribute('data-image');
+                
+                // 7. SMOOTH TRANSITION: Briefly hide the image
+                mainDisplayImage.style.opacity = '0'; 
+
+                // 8. Wait 300ms (matching your CSS transition) then swap the source
+                setTimeout(() => {
+                    if (newImagePath) {
+                        mainDisplayImage.src = newImagePath;
+                        // 9. Show the new image
+                        mainDisplayImage.style.opacity = '1'; 
+                    }
+                }, 400);
             }
         });
     });
