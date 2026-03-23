@@ -165,18 +165,17 @@ h1 {
 /* Main/Parent Container: Centers the accordion and sets its total width */
 .accordion-container {
     display: flex;
-    align-items: flex-start; /* Keeps the image from stretching */
+    align-items: flex-start; 
     justify-content: center;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 60px auto;
+    gap: 30px;          /* Reduced gap from 40px to 30px */
+    max-width: 850px;  
+    margin: 40px auto;  /* Reduced vertical margin from 60px */
     padding: 0 20px;
-    height:auto-fit
 }
 
 /* THE IMAGE SIDE */
 .accordion-image-side {
-    flex: 1;
+    flex: 1;   /* Takes up a bit more space (shirking the list side) */
     background-color: #dabfa9dc;
     border-radius: 13px;
     overflow: hidden;/* Keep the image inside the rounded corners */
@@ -200,8 +199,8 @@ h1 {
 
 .Treats-accordion li {
     list-style: none;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 12px;
+    padding: 7px;
     border-radius: 7px;
     background-color: #f2ecde;
     box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
@@ -211,7 +210,7 @@ h1 {
 .Treats-accordion li{
     list-style: none;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 9px  13px;
     border-radius: 7px;
     background-color:#f2ecde;
     box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358); /* the shadow on the right of botton*/
@@ -224,7 +223,7 @@ h1 {
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    font-size:large;
+    font-size:medium;
     font-weight: bold;
     color: #651010;
     font-family: "Jost";
@@ -244,8 +243,8 @@ input[type="radio"]{
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
     color: rgb(134, 98, 98);
-    padding: 0 20px; /* Base horizontal padding */
-    line-height: 26px;
+    padding: 0 15px; /* Base horizontal padding */
+    line-height: 24px;
     max-height: 0;
     overflow: hidden;
     background-color: #ffffffa9; /* Makes the inside slightly lighter/different from the label */
@@ -255,8 +254,8 @@ input[type="radio"]{
 
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
 .Treats-accordion input[type='radio']:checked + label + .content{
-    max-height: 500px;
-    padding:10px 10px 20px 10px;
+    max-height: 450px;
+    padding:7px 15px 10px 15px;
 }
 
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
@@ -270,7 +269,7 @@ input[type="radio"]{
     transition: color 0.3s ease; /* Makes the color change smooth */
 }
 
-/* This targets the <li> container when the radio inside it is checked */
+/* This targets the container when the radio inside it is checked */
 .Treats-accordion li:has(input[type='radio']:checked) {
     background-color: #ffecc1;
     transition: background-color 0.4s ease; /* Makes the color fade in nicely */
@@ -278,8 +277,8 @@ input[type="radio"]{
 
 /* Inner Text: Styles the paragraph inside the opened content area */
 .Treats-accordion .content p {
-    margin: 20px 10px 1px 13px ; /* vertical space and horizontal space*/
-    font-weight: normal; /* Ensures the description isn't bold like the label */
+    margin: 15px 10px 1px 13px ; /* vertical space and horizontal space*/
+    font-weight: smaller; /* Ensures the description isn't bold like the label */
 }
 
 @media (max-width: 768px) {
@@ -357,8 +356,8 @@ h4{
 
 /*The FAQ List: This is where the 'gap' fix happens */
 .Frequent-QNA {
-    width: 100%;               /* Fill the parent flex container */
-    max-width: 1100px;         /* The "Sweet spot" for readability */
+    width: 90%;               /* Fill the parent flex container */
+    max-width: 750px;         /* The "Sweet spot" for readability */
     margin: 0 auto;           /* Redundant but safe for centering */
     padding: 0;
     list-style: none;
@@ -380,7 +379,7 @@ h4{
 .Frequent-QNA li label {
     display: flex;
     align-items: center;
-    padding: 20px;            /* Increased padding for better touch/click targets */
+    padding: 15px 20px;            /* Increased padding for better touch/click targets */
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
@@ -415,8 +414,8 @@ input[type="radio"]{
 
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
 .Frequent-QNA input[type='radio']:checked + label + .content {
-    max-height: 500px;
-    padding:10px 10px 20px 10px;          /* Adds padding only when open */
+   max-height: 500px;
+   padding: 0 20px 20px 20px; /* Matches the horizontal padding of the label */
 }
 
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
@@ -466,14 +465,16 @@ input[type="radio"]{
     background-size: cover;
     background-position: center;
     font-family: 'Jost';
+    padding: 40px 0 0 0; /* Reduced top padding from 80px to 40px */
 }
 
 .footer-top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 80px 165px;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 40px 40px; /* Reduced side padding to keep it wide and short */
+    gap: 30px;
 }
 
 .footer-column {

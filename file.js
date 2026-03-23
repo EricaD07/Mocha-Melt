@@ -190,19 +190,26 @@ if (backToTop) {
 //----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
 
 // Allows QnA radio buttons to be toggled off by clicking them again
-document.querySelectorAll('input[name="Frequent-QNA"]').forEach(radio => {
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
     radio.addEventListener('click', () => {
-        // If the radio was already checked, uncheck it
+        // If this specific radio was already checked...
         if (radio.dataset.wasChecked === 'true') {
             radio.checked = false;
             radio.dataset.wasChecked = 'false';
         } else {
-            // Mark this one as checked and reset others in the group
-            document.querySelectorAll('input[name="Frequent-QNA"]').forEach(r => r.dataset.wasChecked = 'false');
+            // 1. Find all other radios with the SAME name (the group)
+            const groupName = radio.getAttribute('name');
+            document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+                r.dataset.wasChecked = 'false';
+            });
+
+            // 2. Mark this one as the active one
+            radio.checked = true;
             radio.dataset.wasChecked = 'true';
         }
     });
 });
+
 
 //------- ACCORDION IMAGE SWAP SET UP ------//
 document.addEventListener('DOMContentLoaded', () => {
