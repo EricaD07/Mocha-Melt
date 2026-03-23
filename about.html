@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MochaMelt - About</title>
+    <title>MochaMelt Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <!------------------NAVIGATION--------------->
-   <nav class="navbar">
-        <a href="index.html"> 
-            <h1>MochaMelt</h1></a> 
-        
+
+
+
+<!------- Navigation attributes ------->
+<header
+ <nav class="navbar">
+        <a href="index.html">
+            <h1>MochaMelt</h1></a>
+       
         <ul class="nav-menu">
             <li class="nav-item">
                 <a href="index.html" >Home</a></li>
 
+
             <li class="nav-item">
                 <a href="index.html#Location">Location</a></li>
+
 
             <li class="nav-item">
                 <a href="about.html">About</a></li>
 
+
             <li class="nav-item">
                 <a href="menu.html">Menu</a></li>
+
 
             <li class="nav-item">
                 <a href="contacts.html">Contact</a></li>
@@ -37,13 +44,199 @@
         </div>
    </nav>
 </header>
-<!---------------------Hero---------------------->
-<section class="extra-hero">
-  <div class="circle">
-    <h2>-About Us-</h2>
-    <p>At Mocha Melt, we believe chocolate is more than a treat — it's an experience meant to be shared and savored.</p>
-  </div>
-</section>
+
+
+
+
+
+
+<!----------- About Page Elements ------------>
+<main>
+    
+    
+    <!--------- Our homepage section ------>
+    <section class="extra-hero">
+        <div class="circle">
+            <h2>-About Us-</h2>
+            <p>At Mocha Melt, we believe chocolate is more than a treat — it's an experience meant to be shared and savored.</p>
+        </div>
+    </section>
+ 
+     <!-------- Next page Our story section page -------->
+    <section class="Story-section>
+        <h2>Our Story"</h2>
+
+
+         <!--- First section - Our story --->
+        <div class="OurStory">                    
+            <img src=Assets\team.png alt="Mocha melt Team">
+            <p>
+                Mocha Melt was founded with the idea that dessert can be more than just a treat—it can be an experience. Our goal is to bring people together through rich flavors, comforting drinks, and a warm, welcoming atmosphere.
+                <p></p>
+                <br>We’re passionate about creating desserts that not only taste amazing but also reflect our values. What started as a simple love for chocolate has grown into a café dedicated to quality, creativity, and sustainability.
+                <p></p>
+                <br>We specialize in chocolate-based desserts, baked goods, and specialty drinks, all crafted with carefully selected ingredients. By using ethically sourced cocoa and natural products, we ensure that every item we serve is both delicious and responsibly made.
+                <p></p>
+        </div>
+    </section>    
+
+
+
+    <section>
+        <!--- Second section - Making Treats --->    
+        <div  class="MakingTreats">
+            <!--First image place holder, adding its js later-->
+            <img src="Assets\craftingwcare.png" alt="Crafting with care">        
+            <h3>How We make our Treats</h3>
+            <p>At Mocha Melt, every dessert and drink is crafted with care from start to finish.
+            <br>We focus on quality, freshness, and attention to detail in every step of our process.
+            </p>
+
+
+            <!--- Sections accordion --->  
+            <ul class="Treats-accordion">
+                <!-- Fist one - Sourcing quality ingridients -->    
+                <li>
+                    <input type = "radio" name = "Treats-accordion" id="acc-1" checked>        
+                    <label for="acc-1">1.Sourcing quality infridients</label>
+                    <div class="content">
+                        <p>We begin by selecting ethically sourced cocoa and high-quality natural ingredients.
+                        <br>This ensures rich flavor while supporting responsible and sustainable practices.
+                        </p>
+                    </div>
+                </li>
+                       
+                <!------ Second one- Sourcing quality ingridients ------->  
+                <li>
+                    <input type="radio" name="Treats-accordion" id="acc-2">
+                    <label for="acc-2">2.Fresh Peperation</label>
+                    <div class="content">
+                        <p>All of our desserts and baked goods are made fresh daily.
+                        <br>From melting chocolate to baking and decorating, each step is done with precision and care.</p>
+                    </div>
+                </li>
+
+
+                <!-- Third one - Sourcing quality ingridients -->  
+                <li>
+                    <input type = "radio" name = "Treats-accordion" id="acc-3">
+                    <label for="acc-3">3.Crafting with care</label>
+                    <div class="content">
+                        <p>Our team carefully prepares each item to balance flavor, texture, and presentation.
+                        <br>Whether it’s a drink or a dessert, we make sure every product meets our standards.</p>
+                    </div>
+                </li>
+                           
+                <!-- Fouth one  - Sourcing quality ingridients -->  
+                <li>
+                    <input type="radio" name="Treats-accordion" id="acc-4">
+                    <label for="acc-4">4.Serving with Care</label>
+                    <div class="content">
+                        <p>Before serving, we ensure each item looks as good as it tastes.
+                        <br>We also provide clear ingredient information so customers can enjoy their treats with confidence.</p>
+                    </div>                    
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
+    <!---------- Our Values Section page ----------->
+    <section class=" OurValues">
+        <h3>Our Values</h3>
+        <p> Here at MochaMelt, we belive in....</p>
+            
+        <div class="Values-grid">        
+            <div class="Quality-section">
+                <img src="Assets\star.png" alt="Quality" class="Val-Icons">
+                <h4>Quality</h4>
+                <p>Using premium ingredients to create the best flavors</p>
+            </div>
+                
+            <div class="Ethical-section">
+                <img src="Assets\leaf.png" alt="Ethical Sourcing" class="Val-Icons">
+                <h4>Ethical Sourcing</h4>
+                <p>Supporting responsible cocoa farming practicess</p>
+            </div>
+                    
+            <div class="Transperency-Section">
+                <img src="Assets\magnifyingglass.png" alt="Transperency" class="Val-Icons">
+                <h4>Transparency</h4>
+                <p>Helping customers understand what goes into their food</p>
+            </div>
+
+            <div class="Customer-Section">
+                <img src="Assets\heart.png"alt="Customer Ecperience" class="Val-Icons">
+                <h4>Customer Experience</h4>
+                <p>Creating a cozy, enjoyable environment for everyone</p>
+            </div>
+
+        </div>
+    </section>
+    
+    
+    
+    <!------- Frequently asked questions/accordion section page ------>
+    <section class="Story-section>
+        <h2>Frequently Asked Questions"</h2>
+        <!---This accordion format is in subject to change => this format or Ericak format --->
+        <div class="Asked-Questions">
+            <h2>How We make our Treats</h2>
+
+
+                <!-----Sections accordion-------->  
+                <ul class="Frequent-QNA">
+               
+                    <!-- Fist one - ingridients  origin -->    
+                <li>
+                    <input type = "radio" name = "Frequent-QNA" id="first" checked>        
+                    <label for="first">Where do your ingridients come from?</label>
+                    <div class="content">
+                        <p>We believe great dessert starts at the source. Our cocoa beans are ethically sourced from sustainable farms in West Africa and South America, while our dairy and seasonal fruits are delivered fresh from local farmers every morning here in Ontario.</p>
+                    </div>
+                </li>
+                       
+                <!------ Second one - offors for people w/ allergies ------->  
+                <li>
+                    <input type="radio" name="Frequent-QNA" id="second">
+                    <label for="second">Do you offer options for people with allergies?</label>
+                    <div class="content">
+                       <p>Everyone deserves a treat! We offer a variety of gluten-free pastries and nut-free chocolate options. Please inform our staff of any specific allergies so we can ensure your order is prepared with the utmost safety.</p>
+                    </div>
+                </li>
+
+
+                <!-- Third one - reservation -->  
+                <li>
+                    <input type = "radio" name = "Frequent-QNA" id="third">
+                    <label for="third">How can I make a reservation?</label>
+                    <div class="content">
+                       <p>While we love walk-ins, you can secure a cozy corner by visiting our 'Location' page or giving us a call. For large groups or special chocolate-tasting events, we recommend booking at least 48 hours in advance.</p>
+                    </div>
+                </li>
+                           
+                <!-- Fouth one - Are your products made fresh?-->  
+                <li>
+                    <input type="radio" name= "Frequent-QNA" id="fourth">
+                    <label for="fourth">Are your products made fresh?</label>
+                    <div class="content">
+                        <p>"Absolutely. Our ovens start warming up long before our doors open. Every croissant is laminated by hand, and every ganache is whipped fresh daily to ensure that 'melt-in-your-mouth' quality we’re named for.</p>
+                    </div>                    
+                </li>
+
+
+                 <!-- Fifth one - Do you offer takeaway or online ordering? -->  
+                <li>
+                    <input type="radio" name= "Frequent-QNA" id="Fifth">
+                    <label for="Fifth"><h2> Do you offer takeaway or online ordering?</h2></label>
+                    <div class="content">
+                        <p>Yes! You can take the MochaMelt experience home. Most of our menu is available for takeaway, and you can place online orders through our website for quick, contact-free pickup.</p>
+                    </div>                  
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
 
 
 
@@ -51,68 +244,78 @@
 
 
 
-
-<!---------------------FOOTER---------------------->
+<!---------------------FOOTER Elements Page---------------------->
 <footer class="footer">
-  <div class="footer-top">
+    <div class="footer-top">
+        <!-- Brand attributes -->
+        <div class="footer-column">
+            <h3>Mocha Melt</h3>
+            <p>Making your chocolate dreams come true with natural cocoa since 2026.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </div>
 
-    <!-- Brand -->
-    <div class="footer-column">
-      <h3>Mocha Melt</h3>
-      <p>Making your chocolate dreams come true with natural cocoa since 2026.</p>
-    </div>
+        <!-- Visit attributes  -->
+        <div class="footer-column">
+            <h4>Visit Us</h4>
+            <ul>
+                <li>1159 Choco Ave, CA K1S 5B6</li>
+                <li>Mon–Fri: 9 AM – 8 PM</li>
+                <li>Sat–Sun: 10 AM – 9 PM</li>
+            </ul>
+        </div>
 
-    <!-- Quick Links -->
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Our Menu</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contacts.html">Contact</a></li>
-      </ul>
-    </div>
 
-    <!-- Visit -->
-    <div class="footer-column">
-      <h4>Visit Us</h4>
-      <ul>
-        <li>1159 Choco Ave, CA K1S 5B6</li>
-        <li>Mon–Fri: 9 AM – 8 PM</li>
-        <li>Sat–Sun: 10 AM – 9 PM</li>
-      </ul>
-    </div>
+        <!----- Contact Attributes ----->
 
-    <!-- Contact -->
-    <div class="footer-column">
-      <h4>Contact</h4>
-      <ul>
-        <li>✉ hello@mochamelt.com</li>
-        <li>✆ (613) 555-5555</li>
-      </ul>
+        <!-- Contact Section -->
+        <div class="footer-column">
+            <h4>Contact</h4>
+            <ul>
+                <li>✉ hello@mochamelt.com</li>
+                <li>✆ (613) 555-5555</li>
+            </ul>
 
-      <div class="socials">
-        <a href="#"><img src="Assets/facebook.png"></a>
-        <a href="#"><img src="Assets/insta.png"></a>
-        <a href="#"><img src="Assets/youtube.png"></a>
-      </div>
-    </div>
 
-  </div>
+            <!-- Socials section -->
+             <div class="socials">
+                    <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="Assets/insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="Assets/youtube.png" alt="Youtube"></a>
+                </div>
+        </div>
+                </div>
 
-  <div class="footer-bottom">
-    <p>© 2026 Mocha Melt. All rights reserved.</p>
-    <div class="policies">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
-      <a href="#">Cookies</a>
-    </div>
-  </div>
-</footer>
+        <!----- Copyright Section ----->
+        <div class="footer-bottom">
+            <p>© 2026 Mocha Melt. All rights reserved.</p>
+            <div class="policies">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+            </div>
+        </div>
+ </footer>
+
+
+
+
+
+
+
+ <!-----JAVA SCRIPT LINK FOR FEAATURES ----->
 
 <!-- Back to top -->
 <button id="back-to-top">↑</button>
-
+<!--JS Link-->
 <script src="file.js"></script>
 
 </body>

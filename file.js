@@ -184,3 +184,25 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+//----------- Accordion or Tabbed Content -----//
+
+//----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all radio buttons inside the Treats-accordion
+    const accordionRadios = document.querySelectorAll('.Treats-accordion input[type="radio"]');
+
+    accordionRadios.forEach((radio) => {
+        radio.addEventListener('click', () => {
+            // Logic to allow "unchecking" a radio button
+            if (radio.dataset.wasChecked === 'true') {
+                radio.checked = false;
+                radio.dataset.wasChecked = 'false';
+            } else {
+                // Clear state for all others and set this one to true
+                accordionRadios.forEach(r => r.dataset.wasChecked = 'false');
+                radio.dataset.wasChecked = 'true';
+            }
+        });
+    });
+});
