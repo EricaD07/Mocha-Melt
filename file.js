@@ -184,3 +184,58 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+//----------- Accordion or Tabbed Content (DOM Attribute)-----//
+
+//----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
+
+// Allows QnA radio buttons to be toggled off by clicking them again
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener('click', () => {
+        // If this specific radio was already checked...
+        if (radio.dataset.wasChecked === 'true') {
+            radio.checked = false;
+            radio.dataset.wasChecked = 'false';
+        } else {
+            // 1. Find all other radios with the SAME name (the group)
+            const groupName = radio.getAttribute('name');
+            document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+                r.dataset.wasChecked = 'false';
+            });
+
+            // 2. Mark this one as the active one
+            radio.checked = true;
+            radio.dataset.wasChecked = 'true';
+        }
+    });
+});
+
+
+//------- ACCORDION IMAGE SWAP SET UP ------//
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all radio buttons inside your Treats Accordion
+    const accordionRadios = document.querySelectorAll('.Treats-accordion input[type="radio"]');
+    const mainDisplayImage = document.getElementById('main-accordion-img');
+
+    if (mainDisplayImage) {
+        accordionRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    // Pull the image path from the 'data-image' attribute
+                    const newImagePath = radio.getAttribute('data-image');
+                    
+                    if (newImagePath) {
+                        // 1. Fade out
+                        mainDisplayImage.style.opacity = '0.3'; 
+
+                        // 2. Wait for fade, then swap and fade back in
+                        setTimeout(() => {
+                            mainDisplayImage.src = newImagePath;
+                            mainDisplayImage.style.opacity = '1'; 
+                        }, 250); // Matches halfway through a standard transition
+                    }
+                }
+            });
+        });
+    }
+});

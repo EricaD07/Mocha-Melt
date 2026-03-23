@@ -38,7 +38,6 @@ h3{
 
 
 
-
 /********* NAV ****************/
 h1 {
     color: #6b1a21;
@@ -144,6 +143,319 @@ h1 {
 
 
 
+/*Philipians 4:13*/
+/********************* ABOUT PAGE ATTRIBUTES ********************/
+
+
+
+/*------------ Story Section CSS attributes --------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/********************* First Accordion - Section: Making Treats *****************/
+
+/* Main/Parent Container: Centers the accordion and sets its total width */
+.accordion-container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    gap: 30px;          /* Reduced gap from 40px to 30px */
+    max-width: 850px;  
+    margin: 40px auto;  /* Reduced vertical margin from 60px */
+    padding: 0 20px;
+}
+
+/* THE IMAGE SIDE */
+.accordion-image-side {
+    flex: 1;   /* Takes up a bit more space (shirking the list side) */
+    background-color: #dabfa9dc;
+    border-radius: 13px;
+    overflow: hidden;/* Keep the image inside the rounded corners */
+}
+
+.accordion-image-side img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
+    transition: opacity 0.5s ease;
+}
+
+/* THE ACCORDION LIST SIDE */
+.Treats-accordion {
+    flex: 1; 
+    padding: 0;
+    margin: 0;
+}
+
+/*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
+
+.Treats-accordion li {
+    list-style: none;
+    margin-bottom: 12px;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: #f2ecde;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
+}
+
+/* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
+.Treats-accordion li{
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 9px  13px;
+    border-radius: 7px;
+    background-color:#f2ecde;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358); /* the shadow on the right of botton*/
+}
+
+
+/* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
+.Treats-accordion li label{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size:medium;
+    font-weight: bold;
+    color: #651010;
+    font-family: "Jost";
+} 
+
+/* Icon: Adds the '+' sign before the label text */
+label::before{
+    content: '+';
+    margin-right: 10px;
+}
+
+/* Functional: Hides the actual radio button circles so they don't clutter the design */
+input[type="radio"]{
+    display: none;
+}
+
+/* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
+.Treats-accordion .content{
+    color: rgb(134, 98, 98);
+    padding: 0 15px; /* Base horizontal padding */
+    line-height: 24px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #ffffffa9; /* Makes the inside slightly lighter/different from the label */
+    border-radius: 7px;
+    transition:max-height 0.7s ease;
+}
+
+/* Opening Logic: When a radio button is clicked, expand the content box below it */
+.Treats-accordion input[type='radio']:checked + label + .content{
+    max-height: 450px;
+    padding:7px 15px 10px 15px;
+}
+
+/* Icon Change: Swaps the '+' for '---' when the section is active/open */
+.Treats-accordion input[type='radio']:checked + label::before{
+    content: '---';
+}
+
+/* Word Color Change: Changes the label text color when the radio is checked */
+.Treats-accordion input[type='radio']:checked + label {
+    color: #c84d00; /* This changes the text color */
+    transition: color 0.3s ease; /* Makes the color change smooth */
+}
+
+/* This targets the container when the radio inside it is checked */
+.Treats-accordion li:has(input[type='radio']:checked) {
+    background-color: #ffecc1;
+    transition: background-color 0.4s ease; /* Makes the color fade in nicely */
+}
+
+/* Inner Text: Styles the paragraph inside the opened content area */
+.Treats-accordion .content p {
+    margin: 15px 10px 1px 13px ; /* vertical space and horizontal space*/
+    font-weight: smaller; /* Ensures the description isn't bold like the label */
+}
+
+@media (max-width: 768px) {
+    /* 1. Stack accordion vertically */
+    .accordion-container {
+        flex-direction: column; 
+        align-items: center;    /* Centers items horizontally in the column */
+        gap: 20px;             /* Reduces space between image and list */
+        margin: 20px auto;     /* Tightens up the vertical margins */
+    }
+
+    /* 2. image side take full width */
+    .accordion-image-side {
+        width: 100%;
+        max-width: 400px;      /* Prevents the image from getting TOO huge on tablets */
+        order: 1;              /* Force image to the TOP */
+    }
+
+    /* 3. accordion list side take full width */
+    .Treats-accordion {
+        width: 100%;
+        order: 2;              /* Force list to the BOTTOM */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************** Values section Attributes  ********************/
+
+h4{
+    font-family: 'Jost';
+    font-size: 15px;
+    color: #6b1a21
+}
+
+
+
+
+
+
+
+
+
+
+
+/************ Second Accordion- Section: Frequent asked question **********/
+
+
+/* Main/parent Container: Centers the accordion and sets its total width */
+.Asked-Questions {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;      /* Centers horizontally (X-axis) */
+    justify-content: center;   /* Centers vertically (Y-axis) */
+    
+    min-height: 100vh;        /* Forces the section to be at least full-screen height */
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fefcfa;
+}
+
+/*--------- INDIVIDUAL ITEMS labels of the accordion ----------*/
+
+/*The FAQ List: This is where the 'gap' fix happens */
+.Frequent-QNA {
+    width: 90%;               /* Fill the parent flex container */
+    max-width: 750px;         /* The "Sweet spot" for readability */
+    margin: 0 auto;           /* Redundant but safe for centering */
+    padding: 0;
+    list-style: none;
+    text-align: left;         /* Keeps text inside the boxes aligned left */
+}
+
+/* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
+.Frequent-QNA li {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #f2ecde;
+    border-radius: 7px;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.2);
+}
+
+/* The Clickable Label */
+.Frequent-QNA li label {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;            /* Increased padding for better touch/click targets */
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #651010;
+    font-family: "Jost";
+    width: 100%;              /* Ensures the whole bar is clickable */
+}
+
+
+/* Icon: Adds the '+' sign before the label text */
+label::before{
+    content: '+';
+    margin-right: 10px;
+}
+
+/* Functional: Hides the actual radio button circles so they don't clutter the design */
+input[type="radio"]{
+    display: none;
+}
+
+/* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
+.Frequent-QNA .content{
+    color: rgb(134, 98, 98);
+    padding: 0 20px; /* Base horizontal padding */
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #ffffffa9; /* Makes the inside slightly lighter/different from the label */
+    border-radius: 7px;
+    transition:max-height 0.7s ease-out;
+}
+
+/* Opening Logic: When a radio button is clicked, expand the content box below it */
+.Frequent-QNA input[type='radio']:checked + label + .content {
+   max-height: 500px;
+   padding: 0 20px 20px 20px; /* Matches the horizontal padding of the label */
+}
+
+/* Icon Change: Swaps the '+' for '---' when the section is active/open */
+.Frequent-QNA input[type='radio']:checked + label::before{
+    content: '---';
+}
+
+/* Word Color Change: Changes the label text color when the radio is checked */
+.Frequent-QNA input[type='radio']:checked + label {
+    color: #a33f00; /* This changes the text color */
+    transition: color 0.3s ease; /* Makes the color change smooth */
+}
+
+/* This targets the <li> container when the radio inside it is checked */
+.Frequent-QNA li:has(input[type='radio']:checked) {
+    background-color: #ffecc1;
+    transition: background-color 0.4s ease; /* Makes the color fade in nicely */
+}
+
+/* Inner Text: Styles the paragraph inside the opened content area */
+.Frequent-QNA .content p {
+    margin: 20px 10px 1px 13px ; /* vertical space and horizontal space*/
+    font-weight: normal; /* Ensures the description isn't bold like the label */
+}
+
+@media (max-width: 768px) {
+    .Asked-Questions {
+        margin: 20px auto;
+        padding: 60 20px;    /* Slightly tighter padding for small phones */
+    }
+
+    .Frequent-QNA {
+        width: 100%;        /* Ensures it fills the phone screen */
+    }
+}
+
+
+
+
 
 
 
@@ -154,14 +466,16 @@ h1 {
     background-size: cover;
     background-position: center;
     font-family: 'Jost';
+    padding: 40px 0 0 0; /* Reduced top padding from 80px to 40px */
 }
 
 .footer-top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 80px 165px;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 40px 40px; /* Reduced side padding to keep it wide and short */
+    gap: 30px;
 }
 
 .footer-column {
@@ -311,6 +625,7 @@ h1 {
     }
 }
 
+/********* CONTACTS ****************/
 .contact-hero {
     background: #b89d7d;
     height: 330px;
