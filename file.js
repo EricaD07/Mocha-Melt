@@ -193,60 +193,91 @@ if (backToTop) {
     });
 }
 
-//----------- Accordion or Tabbed Content (DOM Attribute)-----//
 
+
+
+
+//----------- Accordion or Tabbed Content (DOM Attribute)-----//
 //----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
 
-// Allows QnA radio buttons to be toggled off by clicking them again
-document.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.addEventListener('click', () => {
-        // If this specific radio was already checked...
-        if (radio.dataset.wasChecked === 'true') {
-            radio.checked = false;
-            radio.dataset.wasChecked = 'false';
-        } else {
-            // 1. Find all other radios with the SAME name (the group)
-            const groupName = radio.getAttribute('name');
-            document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
-                r.dataset.wasChecked = 'false';
-            });
+// Allows QnA radio buttons to be toggled off by clicking them again --- Ai helped to correct my code attributes and error //
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Target ALL accordions (FAQ and Treats)
+    const allRadios = document.querySelectorAll('input[name="Frequent-QNA"], input[name="Treats-accordion"]');
+    const mainImg = document.getElementById('main-accordion-img');
 
-            // 2. Mark this one as the active one
-            radio.checked = true;
-            radio.dataset.wasChecked = 'true';
-        }
+    allRadios.forEach(radio => {
+        // We use 'click' but with a special toggle logic
+        radio.addEventListener('click', function(e) {
+            // Check if this specific radio was ALREADY checked before this click
+            if (this.getAttribute('data-state') === 'active') {
+                this.checked = false;
+                this.setAttribute('data-state', 'inactive');
+            } else {
+                // Reset all others in the same group so only one is 'active'
+                const groupName = this.getAttribute('name');
+                document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+                    r.setAttribute('data-state', 'inactive');
+                });
+                this.setAttribute('data-state', 'active');
+
+                // 2. IMAGE SWAP LOGIC (Only for Treats)
+                if (groupName === "Treats-accordion" && mainImg) {
+                    const newSrc = this.getAttribute('data-image');
+                    if (newSrc) {
+                        mainImg.style.opacity = '0';
+                        setTimeout(() => {
+                            mainImg.src = newSrc;
+                            mainImg.onload = () => mainImg.style.opacity = '1';
+                            if (mainImg.complete) mainImg.style.opacity = '1';
+                        }, 300);
+                    }
+                }
+            }
+        });
     });
 });
 
 
-//------- ACCORDION IMAGE SWAP SET UP ------//
-document.addEventListener('DOMContentLoaded', () => {
-    // Select all radio buttons inside your Treats Accordion
-    const accordionRadios = document.querySelectorAll('.Treats-accordion input[type="radio"]');
-    const mainDisplayImage = document.getElementById('main-accordion-img');
 
-    if (mainDisplayImage) {
-        accordionRadios.forEach(radio => {
+
+
+//------- ACCORDION IMAGE SWAP SET UP ------//
+//----------- Unified Accordion & Image Swap - Ai helped to correct my code attributes and error---------//
+document.addEventListener('DOMContentLoaded', () => {
+    const mainImg = document.getElementById('main-accordion-img');
+    const radioButtons = document.querySelectorAll('input[name="Treats-accordion"]');
+
+    if (mainImg) {
+        radioButtons.forEach(radio => {
             radio.addEventListener('change', () => {
                 if (radio.checked) {
-                    // Pull the image path from the 'data-image' attribute
-                    const newImagePath = radio.getAttribute('data-image');
+                    const newSrc = radio.getAttribute('data-image');
                     
-                    if (newImagePath) {
-                        // 1. Fade out
-                        mainDisplayImage.style.opacity = '0.3'; 
-
-                        // 2. Wait for fade, then swap and fade back in
-                        setTimeout(() => {
-                            mainDisplayImage.src = newImagePath;
-                            mainDisplayImage.style.opacity = '1'; 
-                        }, 250); // Matches halfway through a standard transition
-                    }
+                    // 1. Fade out the current image
+                    mainImg.style.opacity = '0';
+                    
+                    // 2. Wait for the fade (300ms) then swap the source
+                    setTimeout(() => {
+                        mainImg.src = newSrc;
+                        
+                        // 3. Fade back in only after the new image has loaded
+                        mainImg.onload = () => {
+                            mainImg.style.opacity = '1';
+                        };
+                        
+                        // Fallback if the image is already in the browser cache
+                        if (mainImg.complete) {
+                            mainImg.style.opacity = '1';
+                        }
+                    }, 300);
                 }
             });
         });
     }
 });
+
+
 
 //------- CONTACT THANK YOU MESSAGE ------//
 const form = document.getElementById("contactForm");

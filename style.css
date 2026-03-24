@@ -265,31 +265,64 @@ h1 {
 
 
 
-/*--------------------- RESPONSIVENESS ---------------------------*/
 
 
 
 /*---------------------------------- ABOUT PAGE ---------------------------------*/
 
+/*------------------------------- Story Section ------------------------------------*/
 
-/*------------ Story Section --------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.Story-section{
+    display: flex;
+    flex-direction: row;                                                                                                          /* Side-by-Side---> default behavior for "row" is to place first item on the left and the second item on the right.*/
+    background-color: #ece7dd;
+    margin: 0 auto;
+    padding: 70px 10% 80px 10%;                                                                 /* Top and bottom padding, with more space on the sides for larger screens */
+    align-items: flex-start;                                                                                                           /* Vertically centers text and image */
+    justify-content: center;                                                                                                       /* Keeps the whole group centered in the page */
+    gap: 80px;                                                                                                                     /* Clean space between text and image */
+}
+/* LEFT SIDE: TEXT */
+.OurStory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;                                                                                                                /* Takes up slightly more room than the image */
+}
+.Story-section h2 {
+    font-size: 57px;
+    font-weight: 700;
+    color: #6b1a21;;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-top:0;
+}
+.Story-section p {
+    display:flex;
+    margin-top: 25px;
+    font-size: 22px;
+    color:#98562a;
+    text-align: justify;
+    max-width: 700px;
+    margin-bottom: 15px;
+}
+.story-image-container{
+    display:flex;                                                                                                                     /* Removes the small ghost gap at the bottom of images */
+    padding-left:3px;                                                                                                                  /* Takes up a balanced amount of space */       
+}
+.story-image-container img {
+    width: 100%;                                                      
+    max-width: 500px;          
+    height: auto;
+    border-radius: 15px;
+    border: 4px solid #673700;
+    border-radius: 10px;
+    box-shadow: 15px 15px 0px  #6d3d013a;                                                                                               
+    
+}
+.story-image-container img:hover{
+    transform: scale(1.05);
+    transition: transform 0.7s ease;  
+}
 
 
 /********************* First Accordion - Section: Making Treats *****************/
@@ -327,23 +360,31 @@ h1 {
 }
 /* THE IMAGE SIDE */
 .accordion-image-side {
-   flex: 1.2;                                                                                                          /* Takes up less space than the text, but scales up */
+   flex: 1.2;                                                                                                 /* Takes up less space than the text, but scales up */
    border-radius: 13px;
    overflow: hidden;
    padding-right:1px;
 }
 .accordion-image-side img {
-    margin-top: 0;                                                                                                      /* Align the top of the image with the top of the list */
+    margin-top: 0;                                                                                            /* Align the top of the image with the top of the list */
     width: 100%;
     height: auto;
     border: 2px solid #a45801;
     border-radius: 10px;
+}
+.accordion-image-side:hover{
+    transform: scale(1.05);
+    transition: transform 0.7s ease;  
 }
 /* THE ACCORDION LIST SIDE */
 .Treats-accordion {
     flex: 1;
     padding: 3px;
     margin: 0;
+}
+/*smooth fade*/
+.accordion-image-side img {
+    transition: opacity 0.3s ease-in-out;
 }
 
 /*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
@@ -419,7 +460,7 @@ input[type="radio"]{
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
     color: #c84d00;                                                                             /* This changes the text color */
-    transition: color 0.3s ease;                                                                  /* Makes the color change smooth */
+    transform: scale(1.05);
 }
 
 /* This targets the container when the radio inside it is checked */
@@ -963,5 +1004,42 @@ button:hover {
         animation-timeline: view();
         /* animation-range: entry [start] cover [end] */
         animation-range: entry 10% cover 30%; 
+    }
+
+
+    /* Story section for "PHONE" attributes*/
+    .Story-section {
+        flex-direction: column; /* Stacks the items vertically */
+        align-items: center;    /* Centers the image and text on the phone screen */
+        text-align: center;     /* Centers the headings and paragraphs */
+        padding: 40px 20px;     /* Reduces large side padding for small screens */
+        gap: 30px;              /* Tighter spacing between image and text */
+    }
+
+    .OurStory {
+        order: 2;               /* Pushes the text below the image */
+        align-items: center;    /* Centers the internal text elements */
+    }
+
+    .story-image-container {
+        order: 1;               /* Forces the image to the top of the stack */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .OurStory {
+        order: 1;               /* Forces the text to the top---> Order 1: The browser looks for this first and puts it at the top of the column & Order 2: The browser puts this underneath. */
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .story-image-container img {
+        width: 200%;
+        max-width: 350px;      /* Limits the image size on larger phones */
+        height: auto;
+    }
+    .Story-section h2, 
+    .Story-section p {
+        text-align: center;     /* Overrides the 'left' alignment from desktop */
     }
 }
