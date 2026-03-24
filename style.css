@@ -865,7 +865,13 @@ button:hover {
   background: #5c1f1f;
 }
 
-
+.thank-you-message {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  display: none;
+}
 
 
 

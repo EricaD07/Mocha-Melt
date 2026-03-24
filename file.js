@@ -281,10 +281,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //------- CONTACT THANK YOU MESSAGE ------//
 const form = document.getElementById("contactForm");
+const message = document.getElementById("thankYouMessage");
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  alert("Thank you for your message! We will get back to you soon.");
+  message.textContent = "Thank you for your message! We will get back to you soon.";
+  message.style.display = "block";
 
   form.reset();
+
+  // hide message after 5 seconds
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 5000);
 });
