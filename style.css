@@ -122,8 +122,10 @@ h1 {
     background-color: #f2ecde; 
     width: 600px;
     height: 250px;
-    border-radius: 500px 500px 0 0; 
-    border: 2px solid #926f1b ;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border: 5px solid #9a7c39;
+    border-bottom: none; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,7 +277,7 @@ h1 {
 .Story-section{
     display: flex;
     flex-direction: row;                                                                                                          /* Side-by-Side---> default behavior for "row" is to place first item on the left and the second item on the right.*/
-    background-color: #ece7dd;
+    background-color: #f2ecde;
     margin: 0 auto;
     padding: 70px 10% 80px 10%;                                                                 /* Top and bottom padding, with more space on the sides for larger screens */
     align-items: flex-start;                                                                                                           /* Vertically centers text and image */
@@ -481,7 +483,7 @@ input[type="radio"]{
 
 /*Values parent fex container:*/ 
 .OurValues {
-    background-color: #ece7dd;
+    background-color: #f2ecde;
     display: flex;
     flex-direction: column;
     align-items: center; 
