@@ -27,11 +27,16 @@ h2 {
 }
 p {
     font-family: 'Jost';
-    font-size: 16px;
+    font-size: 17px;
 }
 h3{
     font-family: 'The Seasons';
     font-size: 45px;
+    text-align: center;
+}
+h4 {
+    font-family: 'Jost';
+    color: #802301;
     text-align: center;
 }
 
@@ -130,7 +135,7 @@ h1 {
 
 
 
-/*other code here
+/*other code here*/
 
 
 
@@ -143,16 +148,35 @@ h1 {
 
 
 
-/*Philipians 4:13*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********************* ABOUT PAGE ATTRIBUTES ********************/
-
-
 
 /*------------ Story Section CSS attributes --------------*/
 
+/*Box flex*/ 
+.Story-section {
+    background-color:#efebe3;
+    padding: 20px;
+    display: flex;
+    align-items: 40px; /* This pushes the content down to create space for the hero circle */
+    justify-content: center;
+    gap: 40px
 
-
-
+}
 
 
 
@@ -163,45 +187,48 @@ h1 {
 
 /********************* First Accordion - Section: Making Treats *****************/
 
+
 /* Main/Parent Container: Centers the accordion and sets its total width */
 .accordion-container {
     display: flex;
     align-items: flex-start; 
     justify-content: center;
-    gap: 30px;          /* Reduced gap from 40px to 30px */
+    gap: 30px;                                                                                     /* Reduced gap from 40px to 30px */
     max-width: 850px;  
-    margin: 40px auto;  /* Reduced vertical margin from 60px */
+    margin: 40px auto;                                                                             /* Reduced vertical margin from 60px */
     padding: 0 20px;
 }
 
 /* THE IMAGE SIDE */
 .accordion-image-side {
-    flex: 1;   /* Takes up a bit more space (shirking the list side) */
-    background-color: #dabfa9dc;
+    flex: 1;                                                                                       /* Takes up a bit more space (shirking the list side) */
     border-radius: 13px;
-    overflow: hidden;/* Keep the image inside the rounded corners */
+    overflow: hidden;                                                                              /* Keep the image inside the rounded corners */
 }
 
 .accordion-image-side img {
+    margin-top: 48px; ;
     width: 100%;
+    border: 2px solid #a45801;
     border-radius: 10px;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
     transition: opacity 0.5s ease;
 }
 
 /* THE ACCORDION LIST SIDE */
 .Treats-accordion {
     flex: 1; 
-    padding: 0;
+    padding: 3px;
     margin: 0;
 }
 
 /*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
 
 .Treats-accordion li {
+    /*Philipians 4:13*/
     list-style: none;
     margin-bottom: 12px;
     padding: 7px;
+    border: 2px solid #9632004d;
     border-radius: 7px;
     background-color: #f2ecde;
     box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
@@ -210,13 +237,12 @@ h1 {
 /* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
 .Treats-accordion li{
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 9px  13px;
     border-radius: 7px;
     background-color:#f2ecde;
     box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);                                      /* the shadow on the right of botton*/
 }
-
 
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
 .Treats-accordion li label{
@@ -230,9 +256,9 @@ h1 {
     font-family: "Jost";
 } 
 
-/* Icon: Adds the '+' sign before the label text */
+/* Icon: Adds the '+' sign before the label text, what it looks before being cliked/checked */
 label::before{
-    content: '+';
+    content: url('Assets/Plus-sign.png');
     margin-right: 10px;
 }
 
@@ -244,11 +270,11 @@ input[type="radio"]{
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
     color: rgb(134, 98, 98);
-    padding: 0 15px;                                                                             /* Base horizontal padding */
+    padding: 0 15px;                                                                                 /* Base horizontal padding */
     line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;                                                               /* Makes the inside slightly lighter/different from the label */
+    background-color: #ffffffa9;                                                                   /* Makes the inside slightly lighter/different from the label */
     border-radius: 7px;
     transition:max-height 0.7s ease;
 }
@@ -256,18 +282,19 @@ input[type="radio"]{
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
 .Treats-accordion input[type='radio']:checked + label + .content{
     max-height: 450px;
-    padding:7px 15px 10px 15px;
+    padding: 10px 15px 25px 15px;
 }
 
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
 .Treats-accordion input[type='radio']:checked + label::before{
-    content: '---';
+    content: url('Assets/minus-sign.png');
+    color: #c84d00;        
 }
 
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
-    color: #c84d00;                                              /* This changes the text color */
-    transition: color 0.3s ease;                                   /* Makes the color change smooth */
+    color: #c84d00;                                                                             /* This changes the text color */
+    transition: color 0.3s ease;                                                                  /* Makes the color change smooth */
 }
 
 /* This targets the container when the radio inside it is checked */
@@ -291,13 +318,77 @@ input[type="radio"]{
 
 
 
-
 /*********************** Values section Attributes  ********************/
 
-h4{
-    font-family: 'Jost';
+/*Values parent fex container:*/ 
+.OurValues {
+    background-color: #ece7dd;
+    display: flex;
+    flex-direction: column;                                                                        /* Stacks header on top of grid */
+    align-items: center;                                                                           /* Centers everything horizontally */
+    gap: 40px;
+    padding: 80px 20px;                                                                            /* Space on the top/bottom and sides */
+}
+
+.Values-header h3 {
+    margin-top: 30px;
+    font-size: 57px;
+    font-weight: 700;
+    color: #6b1a21;;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+
+.Values-header p {
+    margin-top: 25px;
+    font-size: 17px;
+    color:#9b6a49;
+    text-align: center;
+    max-width: 970px;
+    margin-bottom: 25px;
+}
+
+/* The Actual Grid: Handles the 4 columns */
+.Values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;                                                       /* Equal columns */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;                                                                            /* Limits width on big screens */
+}
+
+.Values-grid h4 {
+    margin-top: 21px;
+    font-size: 17px;
+    color: #9d3e0a;
+}
+
+.Values-grid p {
+    margin-top: 12px;
+    font-weight: 450;
+    max-width: 850px;  
     font-size: 15px;
-    color: #6b1a21
+    color: #a8836b;
+    line-height: 22px;
+}
+/*The Individual Items: Center the icon and text inside each box */
+.Values-grid div {
+    display: flex;
+    max-width: 230px;  
+    flex-direction: column;
+    align-items: center;                                                                          /* Centers the icons and text */
+    text-align: center;
+    padding-left: 53px;
+}
+
+.Val-Icons {
+    margin:center;
+    max-width: 180px;  
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border:#a16d4fdb 3.37px solid;
 }
 
 
@@ -310,50 +401,73 @@ h4{
 
 
 
-/************ Second Accordion- Section: Frequent asked question **********/
 
+/*--------- INDIVIDUAL ITEMS labels + the accordion ----------*/
 
 /* Main/parent Container: Centers the accordion and sets its total width */
 .Asked-Questions {
     display: flex;
     flex-direction: column; 
-    align-items: center;                                                                     /* Centers horizontally (X-axis) */
-    justify-content: center;                                                                 /* Centers vertically (Y-axis) */
-    min-height: 100vh;                                                                       /* Forces the section to be at least full-screen height */
+    align-items: center;                                                                           /* Centers children horizontally */
+    justify-content: center;                                                                       /* Centers children vertically */
     width: 100%;
     padding: 60px 20px;
-    text-align: center;
-    background-color: #fefcfa;
+    background-color: #fefcfa;;
 }
 
-/*--------- INDIVIDUAL ITEMS labels of the accordion ----------*/
+/*--------- INDIVIDUAL ITEMS labels + the accordion ----------*/
 
 /*The FAQ List: This is where the 'gap' fix happens */
 .Frequent-QNA {
     width: 90%;               
     max-width: 750px;         
-    margin: 0 auto;           
+    margin: 0 auto;
     padding: 0;
     list-style: none;
-    text-align: left;                                                                         /* Keeps text inside the boxes aligned left */
+    text-align: center;
+    padding: 24px;                                                                                 /* Keeps text inside the boxes aligned left */
 }
+/*The Header: Styles the title and description above the accordion */
+.questions-header {
+    padding: 27px 20px;                                                                            /* Even padding on both sides */
+    text-align: center;
+}
+.questions-header h3 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #6b1a21;
+    font-family: 'The Seasons';
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    padding-left: 18px;
+    text-align: center;
+}
+.questions-header p {
+    padding-left: 15px;
+    font-size: 18px;
+    color:#bba186;
+    font-family: 'Jost';
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 870px;
+    
 
+}
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
 .Frequent-QNA li {
     width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 30px;
+    padding: 7px;
     border-radius: 7px;
     background-color: #f2ecde;
-    border-radius: 7px;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.2);
+    border: 2px solid #d7b389;
 }
-
 /* The Clickable Label */
 .Frequent-QNA li label {
     display: flex;
     align-items: center;
-    padding: 20px 20px;                                                                       /* Increased padding for better touch/click targets */
+    padding: 20px 10px;                                                                              /* Increased padding for better touch/click targets */
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
@@ -362,11 +476,10 @@ h4{
     width: 100%;              
 }
 
-
 /* Icon: Adds the '+' sign before the label text */
 label::before{
-    content: '+';
-    margin-right: 10px;
+    content: url('Assets/Plus-sign.png');
+    margin-right: 12px;
 }
 
 /* Functional: Hides the actual radio button circles so they don't clutter the design */
@@ -376,9 +489,9 @@ input[type="radio"]{
 
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Frequent-QNA .content{
-    color: rgb(134, 98, 98);
+    color: rgb(113, 76, 76);
     padding: 0 20px;                                                                         /* Base horizontal padding */
-    line-height: 26px;
+    line-height: 25px;
     max-height: 0;
     overflow: hidden;
     background-color: #ffffffa9;                                                           /* Makes the inside slightly lighter/different from the label */
@@ -389,12 +502,13 @@ input[type="radio"]{
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
 .Frequent-QNA input[type='radio']:checked + label + .content {
    max-height: 500px;
-   padding: 0 20px 20px 20px;                                                                /* Matches the horizontal padding of the label */
+   padding: 10px 15px 25px 15px;                                                                /* Matches the horizontal padding of the label */
 }
 
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
 .Frequent-QNA input[type='radio']:checked + label::before{
-    content: '---';
+   content: url('Assets/minus-sign.png');
+    color: #c84d00;  
 }
 
 /* Word Color Change: Changes the label text color when the radio is checked */
@@ -414,6 +528,14 @@ input[type="radio"]{
     margin: 20px 10px 1px 13px ;                                                             /* vertical space and horizontal space*/
     font-weight: normal;                                                                     /* Ensures the description isn't bold like the label */
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -558,6 +680,15 @@ input[type="radio"]{
 
 
 
+
+
+
+
+
+
+
+
+
 /*--------------------- RESPONSIVENESS ---------------------------*/
 
 @media (max-width: 768px) {   /* PHONES */
@@ -596,6 +727,23 @@ input[type="radio"]{
     }
 
 
+    
+    /* This targets the container for your 4 icons */
+    .Values-grid {
+        display: grid;
+        /* 1fr means 1 column. All 4 will stack in a straight line */
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .Values-grid div {
+        max-width: 100%; /* Allows the text to use the full phone width */
+        padding: 10px;
+    }
+
+
+
 
     /******** Accordion attributes ******/
     
@@ -625,7 +773,7 @@ input[type="radio"]{
     /*--------------- Second Accordion-Treats --------------*/ 
     .Asked-Questions {
         margin: 20px auto;
-        padding: 60 20px;    /* Slightly tighter padding for small phones */
+        padding: 40px 20px;    /* Slightly tighter padding for small phones */
     }
     .Frequent-QNA {
         width: 100%;        /* Ensures it fills the phone screen */
@@ -633,6 +781,8 @@ input[type="radio"]{
 
 
     
+
+
     /************ footer **********/
     .footer-top {
         grid-template-columns: 1fr;
@@ -645,6 +795,17 @@ input[type="radio"]{
         text-align: center;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /********* CONTACTS ****************/
 .contact-wrapper {

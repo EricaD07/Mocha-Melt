@@ -242,7 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //------- CONTACT THANK YOU MESSAGE ------//
 const form = document.getElementById("contactForm");
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
