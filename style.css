@@ -293,41 +293,64 @@ h1 {
 
 
 /********************* First Accordion - Section: Making Treats *****************/
-
-/* Main/Parent Container: Centers the accordion and sets its total width */
+.Treats-header{
+    margin-Top: 77px;
+}
+.Treats-header h3 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 57px;
+    font-weight: 1000;
+    color: #6b1a21;;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    margin-left: 33px;
+}
+.Treats-header p {
+    margin-top: 55px;
+    font-size: 17px;
+    color:#9b6a49;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 53px;
+}
 .accordion-container {
     display: flex;
+    padding-top: 50px;
     align-items: flex-start; 
     justify-content: center;
-    gap: 30px;                                                                                     /* Reduced gap from 40px to 30px */
-    max-width: 850px;  
-    margin: 40px auto;                                                                             /* Reduced vertical margin from 60px */
-    padding: 0 20px;
+    gap: 60px;                                                                                     
+    max-width: 1100px;  
+    margin: 40px auto;                                                                             
+    padding: 0 40px;
+    padding-bottom: 50px;
 }
 /* THE IMAGE SIDE */
 .accordion-image-side {
-    flex: 1;                                                                                       /* Takes up a bit more space (shirking the list side) */
-    border-radius: 13px;
-    overflow: hidden;                                                                              /* Keep the image inside the rounded corners */
+   flex: 1.2;                                                                                                          /* Takes up less space than the text, but scales up */
+   border-radius: 13px;
+   overflow: hidden;
+   padding-right:1px;
 }
 .accordion-image-side img {
-    margin-top: 48px; ;
+    margin-top: 0;                                                                                                      /* Align the top of the image with the top of the list */
     width: 100%;
+    height: auto;
     border: 2px solid #a45801;
     border-radius: 10px;
-    transition: opacity 0.5s ease;
 }
 /* THE ACCORDION LIST SIDE */
 .Treats-accordion {
-    flex: 1; 
+    flex: 1;
     padding: 3px;
     margin: 0;
 }
+
 /*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
 .Treats-accordion li {
     /*Philipians 4:13*/
     list-style: none;
-    margin-bottom: 12px;
+    margin-bottom: px;
     padding: 7px;
     border: 2px solid #9632004d;
     border-radius: 7px;
@@ -336,13 +359,13 @@ h1 {
 }
 
 /* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
-.Treats-accordion li{
+.Treats-accordion li {
     list-style: none;
-    margin-bottom: 25px;
-    padding: 9px  13px;
+    margin-bottom: 20px;
+    padding: 12px 5px; 
     border-radius: 7px;
-    background-color:#f2ecde;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);                                      /* the shadow on the right of botton*/
+    background-color: #f2ecde;
+    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
 }
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
 .Treats-accordion li label{
@@ -355,6 +378,11 @@ h1 {
     color: #651010;
     font-family: "Jost";
 } 
+.Treats-accordion li label:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;  
+        
+}
 /* Icon: Adds the '+' sign before the label text, what it looks before being cliked/checked */
 label::before{
     content: url('Assets/Plus-sign.png');
@@ -474,7 +502,22 @@ input[type="radio"]{
     border: #a16d4fdb 3.37px solid;
     object-fit: cover; /* Keeps images from stretching */
 }
-
+.Quality-section:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s ease;  
+}
+.Ethical-section:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s ease;  
+}
+.Transperency-Section:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s ease;  
+}
+.Customer-Section:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s ease;  
+}
 
 
 /********** Second Accordion- Section: FAQ  **********/
@@ -485,7 +528,7 @@ input[type="radio"]{
     align-items: center; 
     justify-content: center; 
     width: 100%;
-    padding: 60px 20px;
+    padding: 70px 20px 70px 20px;
     background-color: #fefcfa;
 }
 /*--------- INDIVIDUAL ITEMS labels of the accordion ----------*/
@@ -500,18 +543,20 @@ input[type="radio"]{
 .questions-header h3 {
     margin-top: 20px;
     font-size: 57px;
-    font-weight: 900;
+    font-weight: 1000;
     color: #710a13;;
     letter-spacing: 4px;
-    padding-bottom: 57px ;
+    padding-bottom: 49px ;
+    padding-left: 24px;
 }
 .questions-header p {
     font-size: 17px;
     color:#a07b62;
     text-align: center;
-    max-width: 670px;
+    max-width: 800px;
     margin-bottom: 15px;
-    padding-bottom: 43px ;
+    padding-bottom: 53px ;
+    padding-left: 57px;
 }
 .Frequent-QNA li {
     width: 100%;
@@ -524,6 +569,7 @@ input[type="radio"]{
     border-radius: 7px;
     
 }
+
 .Frequent-QNA li label {
     display: flex;
     align-items: center;
@@ -533,7 +579,12 @@ input[type="radio"]{
     font-weight: bold;
     color: #651010;
     font-family: "Jost";
-    width: 100%;              
+    width: 100%;
+}
+.Frequent-QNA li label:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;  
+        
 }
 /* Icon: Adds the '+' sign before the label text */
 label::before{ content:
@@ -558,17 +609,17 @@ input[type="radio"]{
 .Frequent-QNA input[type='radio']:checked + label + .content {
    max-height: 500px;
    padding: 0 20px 20px 20px;
-    border: 2px solid #c3690352;
-    border-radius: 10px;
+   border: 2px solid #c3690352;
+   border-radius: 10px;
 }
 /* sSwaps the '+' for '---' when the section is active/open */
 .Frequent-QNA input[type='radio']:checked + label::before{
     content: url('Assets/minus-sign.png');
     color: #c84d00;        
 }
+
 .Frequent-QNA input[type='radio']:checked + label {
     color: #a33f00;
-    transition: color 0.3s ease;
 }
 .Frequent-QNA li:has(input[type='radio']:checked) {
     background-color: #ffecc1;
@@ -822,7 +873,31 @@ button:hover {
     .nav-menu.active{
         left: 0;
     }
-    /* About */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*------------ About Section ------------*/
     .accordion-container {
         flex-direction: column; 
         align-items: center;    
@@ -852,5 +927,41 @@ button:hover {
 
     .Frequent-QNA {
         width: 100%; /* Take up more space on mobile */
+    }
+    .Val-Icons {
+        width: 180px;  /* Increased from 150px to fill the screen better */
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    
+    /*Disable the scale for a cleaner mobile experience */
+    .Quality-section:hover, 
+    .Ethical-section:hover, 
+    .Transperency-Section:hover, 
+    .Customer-Section:hover {
+        transform: none; 
+    }
+    .Frequent-QNA li label:hover,
+    .Treats-accordion li label:hover  {
+        transform: none; 
+    }
+    
+    /*Scroll-Driven Animations (using animation-timeline: view()) currently work best in Chrome and Edge*/
+    @keyframes appear {
+        from { 
+            opacity: 0;
+            transform: translateY(30px) scale(0.8); /* Starts lower and smaller */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1); /* Ends at natural position and size */
+        }
+    }
+    .Values-grid div {
+        /* This tells the browser to animate based on scroll position */
+        animation: appear linear both;
+        animation-timeline: view();
+        /* animation-range: entry [start] cover [end] */
+        animation-range: entry 10% cover 30%; 
     }
 }
