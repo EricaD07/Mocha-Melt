@@ -23,9 +23,8 @@ h2 {
     color: #6b1a21;
     line-height: 2;
     text-align: center;
-    font-weight: 30;
+    font-weight: 50;
     font-family: 'The Seasons';
-    letter-spacing: 3px;
 }
 p {
     font-family: 'Jost';
@@ -33,8 +32,10 @@ p {
 }
 h3{
     font-family: 'The Seasons';
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
+    color: #802301;
+    font-weight: 20;
 }
 h4 {
     font-family: 'Jost';
@@ -291,9 +292,8 @@ h1 {
     flex-direction: column;
     align-items: flex-start; 
 }
-.Story-section h2 {
-    font-size: 57px;
-    color: #6b1a21;;
+.Story-section h3 {
+    color: #6b1a21;
     letter-spacing: 3px;
     text-align: left;
     margin-top:0;
@@ -301,7 +301,6 @@ h1 {
 .Story-section p {
     display:flex;
     margin-top: 25px;
-    font-size: 22px;
     color:#98562a;
     text-align: justify;
     max-width: 700px;
@@ -334,8 +333,6 @@ h1 {
 .Treats-header h3 {
     text-align: center;
     margin-top: 30px;
-    font-size: 57px;
-    color: #6b1a21;;
     letter-spacing: 3px;
     margin-bottom: 30px;
     margin-left: 33px;
@@ -487,12 +484,10 @@ input[type="radio"]{
     flex-direction: column;
     align-items: center; 
     gap: 40px;
-    padding: 80px 50px; /* Reduced side padding for mobile */
+    padding: 80px 50px;
 }
 .Values-header h3 {
     margin-top: 30px;
-    font-size: 57px;
-    color: #6b1a21;;
     letter-spacing: 3px;
 }
 
@@ -507,7 +502,7 @@ input[type="radio"]{
 /* The Actual Grid: Handles the 4 columns */
 .Values-grid {
     display: grid;
-    grid-template-columns: repeat (4,1fr);
+    grid-template-columns:repeat(4, 1fr);
     gap: 30px;
     width: 100%;
     max-width: 1200px;
@@ -535,10 +530,12 @@ input[type="radio"]{
     padding-left: 0;
 }
 .Val-Icons {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: auto;
     margin-bottom: 15px;
     border-radius: 50%;
+    padding: 30px;
+    background-color: #fefcfa;
     border: #a16d4fdb 3.37px solid;
     object-fit: cover;
 }
@@ -582,8 +579,6 @@ input[type="radio"]{
 }
 .questions-header h3 {
     margin-top: 20px;
-    font-size: 57px;
-    color: #710a13;;
     letter-spacing: 4px;
     padding-bottom: 49px ;
     padding-left: 24px;
@@ -1030,16 +1025,12 @@ button:hover {
         gap: 40px;
     }
 
-    .Values-header h3 {
-        font-size: 40px;
-    }
-
     .Frequent-QNA {
         width: 100%;
     }
     .Val-Icons {
         width: 180px; 
-        height: 180px;
+        height: auto;
         margin-bottom: 20px;
     }
     
