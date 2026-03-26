@@ -277,19 +277,19 @@ h1 {
 
 .Story-section{
     display: flex;
-    flex-direction: row;                                                                                                          /* Side-by-Side---> default behavior for "row" is to place first item on the left and the second item on the right.*/
+    flex-direction: row; 
     background-color: #f2ecde;
     margin: 0 auto;
-    padding: 70px 10% 80px 10%;                                                                 /* Top and bottom padding, with more space on the sides for larger screens */
-    align-items: flex-start;                                                                                                           /* Vertically centers text and image */
-    justify-content: center;                                                                                                       /* Keeps the whole group centered in the page */
-    gap: 80px;                                                                                                                     /* Clean space between text and image */
+    padding: 70px 10% 80px 10%;  
+    align-items: flex-start;  
+    justify-content: center;
+    gap: 80px;    
 }
 /* LEFT SIDE: TEXT */
 .OurStory {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;                                                                                                                /* Takes up slightly more room than the image */
+    align-items: flex-start; 
 }
 .Story-section h2 {
     font-size: 57px;
@@ -308,8 +308,8 @@ h1 {
     margin-bottom: 15px;
 }
 .story-image-container{
-    display:flex;                                                                                                                     /* Removes the small ghost gap at the bottom of images */
-    padding-left:3px;                                                                                                                  /* Takes up a balanced amount of space */       
+    display:flex;                    
+    padding-left:3px;                       
 }
 .story-image-container img {
     width: 100%;                                                      
@@ -361,13 +361,13 @@ h1 {
 }
 /* THE IMAGE SIDE */
 .accordion-image-side {
-   flex: 1.2;                                                                                                 /* Takes up less space than the text, but scales up */
+   flex: 1.2;                             
    border-radius: 13px;
    overflow: hidden;
    padding-right:1px;
 }
 .accordion-image-side img {
-    margin-top: 0;                                                                                            /* Align the top of the image with the top of the list */
+    margin-top: 0;           
     width: 100%;
     height: auto;
     border: 2px solid #a45801;
@@ -437,11 +437,11 @@ input[type="radio"]{
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
     color: rgb(134, 98, 98);
-    padding: 0 15px;                                                                                 /* Base horizontal padding */
+    padding: 0 15px;      
     line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;                                                                   /* Makes the inside slightly lighter/different from the label */
+    background-color: #ffffffa9;       
     border-radius: 7px;
     transition:max-height 0.7s ease;
 }
@@ -460,20 +460,20 @@ input[type="radio"]{
 
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
-    color: #c84d00;                                                                             /* This changes the text color */
+    color: #c84d00;
     transform: scale(1.05);
 }
 
 /* This targets the container when the radio inside it is checked */
 .Treats-accordion li:has(input[type='radio']:checked) {
     background-color: #ffecc1;
-    transition: background-color 0.3s ease;                        /* Makes the color fade in*/
+    transition: background-color 0.3s ease; 
 }
 
 /* Inner Text: Styles the paragraph inside the opened content area */
 .Treats-accordion .content p {
-    margin: 15px 10px 1px 13px ;                                                                   /* vertical space and horizontal space*/
-    font-weight: smaller;                                                                          /* Ensures the description isn't bold like the label */
+    margin: 15px 10px 1px 13px ;  
+    font-weight: smaller;  
 }
 
 
@@ -507,10 +507,10 @@ input[type="radio"]{
 /* The Actual Grid: Handles the 4 columns */
 .Values-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;                                                       /* Equal columns */
+    grid-template-columns: repeat (4,1fr);
     gap: 30px;
     width: 100%;
-    max-width: 1200px;                                                                            /* Limits width on big screens */
+    max-width: 1200px;
 }
 .Values-grid h4 {
     margin-top: 21px;
@@ -524,15 +524,15 @@ input[type="radio"]{
     color: #a8836b;
     line-height: 22px;
 }
-/*The Individual Items: Center the icon and text inside each box */
+/*Individual Items: Center the icon and text inside each box */
 .Values-grid div {
     display: flex;
     flex-direction: column;
     align-items: center; 
     text-align: center;
     max-width: 280px; 
-    margin: 0 auto; /* Centers the div inside its grid cell */
-    padding-left: 0; /* REMOVED the 53px padding that was breaking the center */
+    margin: 0 auto; 
+    padding-left: 0;
 }
 .Val-Icons {
     width: 150px;
@@ -540,7 +540,7 @@ input[type="radio"]{
     margin-bottom: 15px;
     border-radius: 50%;
     border: #a16d4fdb 3.37px solid;
-    object-fit: cover; /* Keeps images from stretching */
+    object-fit: cover;
 }
 .Quality-section:hover{
     transform: scale(1.05);
@@ -1006,21 +1006,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /*------------ About Section ------------*/
     .accordion-container {
         flex-direction: column; 
@@ -1031,34 +1016,34 @@ button:hover {
     .accordion-image-side {
         width: 100%;
         max-width: 400px;
-        order: 1;              /* Force image to top */
+        order: 1;  
     }
     .Treats-accordion {
         width: 100%;
-        order: 2;              /* Force list to bottom */
+        order: 2;
     }
     .Treats-accordion li {
         margin-bottom: 15px;
     }
     .Values-grid {
-        grid-template-columns: 1fr; /* Stacks all 4 in order */
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .Values-header h3 {
-        font-size: 40px; /* Shrink slightly for mobile screens */
+        font-size: 40px;
     }
 
     .Frequent-QNA {
-        width: 100%; /* Take up more space on mobile */
+        width: 100%;
     }
     .Val-Icons {
-        width: 180px;  /* Increased from 150px to fill the screen better */
+        width: 180px; 
         height: 180px;
         margin-bottom: 20px;
     }
     
-    /*Disable the scale for a cleaner mobile experience */
+    /*Removed transitions for a better mobile experience */
     .Quality-section:hover, 
     .Ethical-section:hover, 
     .Transperency-Section:hover, 
@@ -1082,47 +1067,43 @@ button:hover {
         }
     }
     .Values-grid div {
-        /* This tells the browser to animate based on scroll position */
         animation: appear linear both;
         animation-timeline: view();
-        /* animation-range: entry [start] cover [end] */
         animation-range: entry 10% cover 30%; 
     }
 
-
-    /* Story section for "PHONE" attributes*/
     .Story-section {
-        flex-direction: column; /* Stacks the items vertically */
-        align-items: center;    /* Centers the image and text on the phone screen */
-        text-align: center;     /* Centers the headings and paragraphs */
-        padding: 40px 20px;     /* Reduces large side padding for small screens */
-        gap: 30px;              /* Tighter spacing between image and text */
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
     }
 
     .OurStory {
-        order: 2;               /* Pushes the text below the image */
-        align-items: center;    /* Centers the internal text elements */
+        order: 2; 
+        align-items: center;
     }
 
     .story-image-container {
-        order: 1;               /* Forces the image to the top of the stack */
+        order: 1; 
         width: 100%;
         display: flex;
         justify-content: center;
     }
     .OurStory {
-        order: 1;               /* Forces the text to the top---> Order 1: The browser looks for this first and puts it at the top of the column & Order 2: The browser puts this underneath. */
+        order: 1;          
         width: 100%;
         max-width: 600px;
     }
 
     .story-image-container img {
         width: 200%;
-        max-width: 350px;      /* Limits the image size on larger phones */
+        max-width: 350px; 
         height: auto;
     }
     .Story-section h2, 
     .Story-section p {
-        text-align: center;     /* Overrides the 'left' alignment from desktop */
+        text-align: center;
     }
 }
