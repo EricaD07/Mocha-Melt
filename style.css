@@ -433,37 +433,37 @@ input[type="radio"]{
 }
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
-    color: rgb(134, 98, 98);
+    color: #98562a;
     padding: 0 15px;      
     line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;       
+    background-color: #fffde8a7;       
     border-radius: 7px;
     transition:max-height 0.7s ease;
 }
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
 .Treats-accordion input[type='radio']:checked + label + .content{
-    max-height: 450px;
+   max-height: 450px;
     padding: 10px 15px 25px 15px;
-    border: 2px solid #c3690352;
+    border: 2px solid #87401c82;
     border-radius: 10px;
 }
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
 .Treats-accordion input[type='radio']:checked + label::before{
     content: url('Assets/minus-sign.png');
-    color: #c84d00;        
+    color: #080300;        
 }
 
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
-    color: #c84d00;
+    color: #ffffff;
     transform: scale(1.05);
 }
 
 /* This targets the container when the radio inside it is checked */
 .Treats-accordion li:has(input[type='radio']:checked) {
-    background-color: #ffecc1;
+    background-color:#C1A485;
     transition: background-color 0.3s ease; 
 }
 
@@ -557,6 +557,8 @@ input[type="radio"]{
 }
 
 
+
+
 /********** Second Accordion- Section: FAQ  **********/
 
 .Asked-Questions {
@@ -630,21 +632,21 @@ input[type="radio"]{
 }
 /* Hidden content*/
 .Frequent-QNA .content{
-    color: rgb(134, 98, 98);
-    padding: 0 20px;
-    line-height: 26px;
+color: #98562a;
+    padding: 0 15px;      
+    line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;
+    background-color: #fffde8a7;       
     border-radius: 7px;
-    transition:max-height 0.7s ease-out;
+    transition:max-height 0.7s ease;
 }
 /* Opening Logic*/
 .Frequent-QNA input[type='radio']:checked + label + .content {
-   max-height: 500px;
-   padding: 0 20px 20px 20px;
-   border: 2px solid #c3690352;
-   border-radius: 10px;
+    max-height: 450px;
+    padding: 10px 15px 25px 15px;
+    border: 2px solid #87401c82;
+    border-radius: 10px;
 }
 /* sSwaps the '+' for '---' when the section is active/open */
 .Frequent-QNA input[type='radio']:checked + label::before{
@@ -653,31 +655,16 @@ input[type="radio"]{
 }
 
 .Frequent-QNA input[type='radio']:checked + label {
-    color: #a33f00;
+    color: #ffffff;
 }
 .Frequent-QNA li:has(input[type='radio']:checked) {
-    background-color: #ffecc1;
-    transition: background-color 0.4s ease;  /* Makes the color fade in*/
+   background-color:#C1A485;
+    transition: background-color 0.3s ease;
 }
 .Frequent-QNA .content p {
     margin: 20px 10px 1px 13px ; 
     font-weight: normal;                                                                     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
