@@ -204,14 +204,14 @@ if (backToTop) {
 
 // Allows QnA radio buttons to be toggled off by clicking them again --- Ai helped to correct my code attributes and error //
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Target ALL accordions (FAQ and Treats)
+    //(FAQ and Treats)
     const allRadios = document.querySelectorAll('input[name="Frequent-QNA"], input[name="Treats-accordion"]');
     const mainImg = document.getElementById('main-accordion-img');
 
     allRadios.forEach(radio => {
-        // We use 'click' but with a special toggle logic
+        // 'click' but with a special toggle logic
         radio.addEventListener('click', function(e) {
-            // Check if this specific radio was ALREADY checked before this click
+            //  specific radiochecked before 
             if (this.getAttribute('data-state') === 'active') {
                 this.checked = false;
                 this.setAttribute('data-state', 'inactive');
@@ -222,19 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     r.setAttribute('data-state', 'inactive');
                 });
                 this.setAttribute('data-state', 'active');
-
-                // 2. IMAGE SWAP LOGIC (Only for Treats)
-                if (groupName === "Treats-accordion" && mainImg) {
-                    const newSrc = this.getAttribute('data-image');
-                    if (newSrc) {
-                        mainImg.style.opacity = '0';
-                        setTimeout(() => {
-                            mainImg.src = newSrc;
-                            mainImg.onload = () => mainImg.style.opacity = '1';
-                            if (mainImg.complete) mainImg.style.opacity = '1';
-                        }, 300);
-                    }
-                }
             }
         });
     });
@@ -245,11 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //------- ACCORDION IMAGE SWAP SET UP ------//
-//----------- Unified Accordion & Image Swap - Ai helped to correct my code attributes and error---------//
+//----------- Unified Accordion & Image Swap ---------//
 document.addEventListener('DOMContentLoaded', () => {
     const mainImg = document.getElementById('main-accordion-img');
     const radioButtons = document.querySelectorAll('input[name="Treats-accordion"]');
 
+    //Ai helped to correct my code attributes and error of this first if//
     if (mainImg) {
         radioButtons.forEach(radio => {
             radio.addEventListener('change', () => {
