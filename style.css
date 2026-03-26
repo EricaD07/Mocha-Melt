@@ -5,7 +5,7 @@
     src: url('fonts/Jost-VariableFont_wght.ttf');
 
     font-family: 'The Seasons';
-    src: url('fonts/Fontspring-DEMO-theseasons-reg.otf');
+    src: url('fonts/Fontspring-DEMO-theseasons-it.otf');
 
     font-family: 'The Seasons bdit';
     src: url('fonts/Fontspring-DEMO-theseasons-bdit.otf');
@@ -118,6 +118,7 @@ h1 {
     color: #a38b54;
     max-width: 500px;
     margin: 0 auto;
+    font-style: italic;
 }
 .circle {
     background-color: #f2ecde; 
@@ -284,13 +285,15 @@ h1 {
     padding: 70px 10% 80px 10%;  
     align-items: flex-start;  
     justify-content: center;
-    gap: 80px;    
+    gap: 80px;  
 }
 /* LEFT SIDE: TEXT */
 .OurStory {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
+    max-width: 500px;  
+ 
 }
 .Story-section h3 {
     color: #6b1a21;
@@ -328,22 +331,19 @@ h1 {
 
 /********************* First Accordion - Section: Making Treats *****************/
 .Treats-header{
-    margin-Top: 77px;
+    margin-Top: 80px;
 }
 .Treats-header h3 {
     text-align: center;
-    margin-top: 30px;
     letter-spacing: 3px;
-    margin-bottom: 30px;
-    margin-left: 33px;
+    margin-bottom: 10px;
 }
 .Treats-header p {
-    margin-top: 55px;
-    font-size: 17px;
     color:#9b6a49;
+    margin: 0 auto 5px auto;
+    max-width: 1000px;
     text-align: center;
-    margin-bottom: 15px;
-    padding-bottom: 53px;
+    margin-bottom: 80px;
 }
 .accordion-container {
     display: flex;
@@ -387,7 +387,6 @@ h1 {
 
 /*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
 .Treats-accordion li {
-    /*Philipians 4:13*/
     list-style: none;
     margin-bottom: px;
     padding: 7px;
@@ -487,12 +486,10 @@ input[type="radio"]{
     padding: 80px 50px;
 }
 .Values-header h3 {
-    margin-top: 30px;
     letter-spacing: 3px;
 }
 
 .Values-header p {
-    margin-top: 25px;
     font-size: 17px;
     color:#9b6a49;
     text-align: center;
@@ -580,7 +577,7 @@ input[type="radio"]{
 .questions-header h3 {
     margin-top: 20px;
     letter-spacing: 4px;
-    padding-bottom: 49px ;
+    padding-bottom: 15px ;
     padding-left: 24px;
 }
 .questions-header p {
@@ -703,12 +700,37 @@ input[type="radio"]{
     font-size: 20px;
     text-align: center;
     color: #651010;
+    margin-top: 15px;
 }
 
 .text p a{
     color: #b72d2c;
     text-decoration: none;
+    font-weight: 500;
+    padding: 10;
 }
+
+/* --- Search Bar --- */
+.menu-search {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu-search input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #cda258;
+    outline: none;
+    width: 250px;
+    max-width: 90%;
+    font-family: 'Jost', sans-serif;
+    background-color: #fefcfa;
+}
+
 
 /* -------- FILTER BUTTONS -------- */
 .filter-buttons {
@@ -1001,7 +1023,7 @@ button:hover {
 
 
 
-    /*------------ About Section ------------*/
+    /*------------ About Page ------------*/
     .accordion-container {
         flex-direction: column; 
         align-items: center;    
@@ -1096,5 +1118,25 @@ button:hover {
     .Story-section h2, 
     .Story-section p {
         text-align: center;
+    }
+
+    /*------------ Menu Page ------------*/
+    .menu-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        margin: 40px auto;
+        justify-content: center; 
+    }
+
+    .menu-card {
+        max-width: 350px; 
+        margin: 0 auto;
+        display: flex;
+    }
+
+    /* Image */
+    .menu-card img {
+        width: 100%; 
+        aspect-ratio: 1; /* AI-Assisted: responsive sizing for square images */
     }
 }

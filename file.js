@@ -200,9 +200,8 @@ if (backToTop) {
 
 
 //----------- Accordion or Tabbed Content (DOM Attribute)-----//
-//----This JS is incase the user re-clicks the accordion content, it will make it to close again---//
 
-// Allows QnA radio buttons to be toggled off by clicking them again --- Ai helped to correct my code attributes and error //
+// Ai-Assisted: Allows QnA radio buttons to be toggled off by clicking them again, helped to correct my code attributes and error //
 document.addEventListener('DOMContentLoaded', () => {
     //(FAQ and Treats)
     const allRadios = document.querySelectorAll('input[name="Frequent-QNA"], input[name="Treats-accordion"]');
@@ -266,6 +265,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
 
 
 
