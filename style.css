@@ -288,7 +288,7 @@ h1 {
     flex-direction: column;
     align-items: flex-start;                                                                                                                /* Takes up slightly more room than the image */
 }
-.Story-section h2 {
+.Story-section h3 {
     font-size: 57px;
     font-weight: 700;
     color: #6b1a21;;
@@ -299,7 +299,7 @@ h1 {
 .Story-section p {
     display:flex;
     margin-top: 25px;
-    font-size: 22px;
+    font-size: 18px;
     color:#98562a;
     text-align: justify;
     max-width: 700px;
