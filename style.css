@@ -120,10 +120,12 @@ h1 {
 }
 .circle {
     background-color: #f2ecde; 
-    width: 600px;
+    width: 530px;
     height: 250px;
-    border-radius: 500px 500px 0 0; 
-    border: 2px solid #926f1b ;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border: 5px solid #9a7c39;
+    border-bottom: none; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,6 +229,7 @@ h1 {
     background-color: #651010;
     color: white;
     font-size: 25px;
+    padding: 40px;
     border: none;
     display: flex;
     align-items: center;
@@ -237,7 +240,7 @@ h1 {
 }
 
 #back-to-top:hover {
-    background-color: rgb(228, 61, 0);
+    background-color: #b72d2c;
 }
 
 #back-to-top.active {
@@ -274,23 +277,22 @@ h1 {
 
 .Story-section{
     display: flex;
-    flex-direction: row;                                                                                                          /* Side-by-Side---> default behavior for "row" is to place first item on the left and the second item on the right.*/
-    background-color: #ece7dd;
+    flex-direction: row; 
+    background-color: #f2ecde;
     margin: 0 auto;
-    padding: 70px 10% 80px 10%;                                                                 /* Top and bottom padding, with more space on the sides for larger screens */
-    align-items: flex-start;                                                                                                           /* Vertically centers text and image */
-    justify-content: center;                                                                                                       /* Keeps the whole group centered in the page */
-    gap: 80px;                                                                                                                     /* Clean space between text and image */
+    padding: 70px 10% 80px 10%;  
+    align-items: flex-start;  
+    justify-content: center;
+    gap: 80px;    
 }
 /* LEFT SIDE: TEXT */
 .OurStory {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;                                                                                                                /* Takes up slightly more room than the image */
+    align-items: flex-start; 
 }
 .Story-section h3 {
     font-size: 57px;
-    font-weight: 700;
     color: #6b1a21;;
     letter-spacing: 3px;
     text-align: left;
@@ -306,8 +308,8 @@ h1 {
     margin-bottom: 15px;
 }
 .story-image-container{
-    display:flex;                                                                                                                     /* Removes the small ghost gap at the bottom of images */
-    padding-left:3px;                                                                                                                  /* Takes up a balanced amount of space */       
+    display:flex;                    
+    padding-left:3px;                       
 }
 .story-image-container img {
     width: 100%;                                                      
@@ -333,7 +335,6 @@ h1 {
     text-align: center;
     margin-top: 30px;
     font-size: 57px;
-    font-weight: 1000;
     color: #6b1a21;;
     letter-spacing: 3px;
     margin-bottom: 30px;
@@ -360,13 +361,13 @@ h1 {
 }
 /* THE IMAGE SIDE */
 .accordion-image-side {
-   flex: 1.2;                                                                                                 /* Takes up less space than the text, but scales up */
+   flex: 1.2;                             
    border-radius: 13px;
    overflow: hidden;
    padding-right:1px;
 }
 .accordion-image-side img {
-    margin-top: 0;                                                                                            /* Align the top of the image with the top of the list */
+    margin-top: 0;           
     width: 100%;
     height: auto;
     border: 2px solid #a45801;
@@ -436,11 +437,11 @@ input[type="radio"]{
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
     color: rgb(134, 98, 98);
-    padding: 0 15px;                                                                                 /* Base horizontal padding */
+    padding: 0 15px;      
     line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;                                                                   /* Makes the inside slightly lighter/different from the label */
+    background-color: #ffffffa9;       
     border-radius: 7px;
     transition:max-height 0.7s ease;
 }
@@ -459,20 +460,20 @@ input[type="radio"]{
 
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
-    color: #c84d00;                                                                             /* This changes the text color */
+    color: #c84d00;
     transform: scale(1.05);
 }
 
 /* This targets the container when the radio inside it is checked */
 .Treats-accordion li:has(input[type='radio']:checked) {
     background-color: #ffecc1;
-    transition: background-color 0.3s ease;                        /* Makes the color fade in*/
+    transition: background-color 0.3s ease; 
 }
 
 /* Inner Text: Styles the paragraph inside the opened content area */
 .Treats-accordion .content p {
-    margin: 15px 10px 1px 13px ;                                                                   /* vertical space and horizontal space*/
-    font-weight: smaller;                                                                          /* Ensures the description isn't bold like the label */
+    margin: 15px 10px 1px 13px ;  
+    font-weight: smaller;  
 }
 
 
@@ -481,7 +482,7 @@ input[type="radio"]{
 
 /*Values parent fex container:*/ 
 .OurValues {
-    background-color: #ece7dd;
+    background-color: #f2ecde;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -491,7 +492,6 @@ input[type="radio"]{
 .Values-header h3 {
     margin-top: 30px;
     font-size: 57px;
-    font-weight: 700;
     color: #6b1a21;;
     letter-spacing: 3px;
 }
@@ -507,10 +507,10 @@ input[type="radio"]{
 /* The Actual Grid: Handles the 4 columns */
 .Values-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;                                                       /* Equal columns */
+    grid-template-columns: repeat (4,1fr);
     gap: 30px;
     width: 100%;
-    max-width: 1200px;                                                                            /* Limits width on big screens */
+    max-width: 1200px;
 }
 .Values-grid h4 {
     margin-top: 21px;
@@ -519,21 +519,20 @@ input[type="radio"]{
 }
 .Values-grid p {
     margin-top: 12px;
-    font-weight: 450;
     max-width: 850px;  
     font-size: 15px;
     color: #a8836b;
     line-height: 22px;
 }
-/*The Individual Items: Center the icon and text inside each box */
+/*Individual Items: Center the icon and text inside each box */
 .Values-grid div {
     display: flex;
     flex-direction: column;
     align-items: center; 
     text-align: center;
     max-width: 280px; 
-    margin: 0 auto; /* Centers the div inside its grid cell */
-    padding-left: 0; /* REMOVED the 53px padding that was breaking the center */
+    margin: 0 auto; 
+    padding-left: 0;
 }
 .Val-Icons {
     width: 150px;
@@ -541,7 +540,7 @@ input[type="radio"]{
     margin-bottom: 15px;
     border-radius: 50%;
     border: #a16d4fdb 3.37px solid;
-    object-fit: cover; /* Keeps images from stretching */
+    object-fit: cover;
 }
 .Quality-section:hover{
     transform: scale(1.05);
@@ -584,7 +583,6 @@ input[type="radio"]{
 .questions-header h3 {
     margin-top: 20px;
     font-size: 57px;
-    font-weight: 1000;
     color: #710a13;;
     letter-spacing: 4px;
     padding-bottom: 49px ;
@@ -705,76 +703,27 @@ input[type="radio"]{
 
 
 /*---------------------------------- MENU PAGE ---------------------------------*/
-/*CARDS*/
-.menu-gallery {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    margin-top: 40px;
-}
-.menu-card {
-    background: rgb(255, 254, 249);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: left;
-    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
-    display: flex;
-    flex-direction: column;
-}
-.menu-card img {
-    width: 300px; 
-    height: 300px;
-    object-fit: cover;
-    background-color: #651010;
-    border-radius: 10px;
-    margin-bottom: 16px;
-    align-self: center;
-}
-.menu-card .button {
-    align-self: center;
-    padding: 15px 130px;
+/*text*/
+.text p {
+    font-size: 20px;
+    text-align: center;
+    color: #651010;
 }
 
-/********INFO********/
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6px;
-}
-.menu-header h4 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #651010;
-}
-.calories {
-    color: #651010;
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-.price{
-    color: #651010;
-    font-size: 17px;
-    font-family: 'Jost';
-}
-.desc{
-    color: #651010;
-    font-size: 16px;    
+.text p a{
+    color: #b72d2c;
+    text-decoration: none;
 }
 
-
-/*** Filter buttons container ****/
+/* -------- FILTER BUTTONS -------- */
 .filter-buttons {
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left; 
-    gap: 10px;
+    justify-content: center; 
+    gap: 20px;
 }
 
-/* Filter buttons */
 .filter-btn {
     padding: 8px 16px;
     background-color: #c1a485;
@@ -782,13 +731,141 @@ input[type="radio"]{
     border: none;
     border-radius: 7px;
     cursor: pointer;
+    font-family: 'Jost';
+    font-size: 14px;
+    transition: 0.2s;
 }
+
 .filter-btn:hover {
     background-color: #8c6d4c;
+    transform: scale(1.1);
 }
+
 .filter-btn.active {
     background-color: #c1a485;
 }
+
+
+
+
+/*------CARDS----------*/
+#menu {
+    padding: 100px 20px;
+    background-color: #f2ecde;
+}
+
+.menu-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 30px;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+.menu-card {
+    background: #fefcfa;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* ------ Image -------- */
+.menu-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    background-color: #651010;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+/* -------- INFO -------- */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+}
+
+.menu-header h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #651010;
+    text-align: left;
+}
+
+.price {
+    color: #651010;
+    font-size: 16px;
+    font-family: 'Jost';
+}
+
+/* TEXT ROWS */
+.calories {
+    color: #651010;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 20px;
+    padding: 5px 0;
+}
+
+.desc {
+    color: #98562a;
+    font-size: 15px;
+    min-height: 60px;
+    padding: 5px 0;
+}
+
+/* AI-Assisted: remove uneven spacing */
+.menu-header,
+.calories,
+.desc {
+    margin-bottom: 5px;
+}
+
+/* -------- BUTTON -------- */
+.button {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    border: solid 2px #cda258;
+    border-radius: 30px;
+    color: #b72d2c;
+    background-color: #fdfbf4;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #fdfbf4;
+    transform: scale(1.05);
+    border: solid 2px #98562a;
+}
+
+
+
+
+
 
 
 
@@ -863,7 +940,13 @@ button:hover {
   background: #5c1f1f;
 }
 
-
+.thank-you-message {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  display: none;
+}
 
 
 
@@ -923,21 +1006,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /*------------ About Section ------------*/
     .accordion-container {
         flex-direction: column; 
@@ -948,34 +1016,34 @@ button:hover {
     .accordion-image-side {
         width: 100%;
         max-width: 400px;
-        order: 1;              /* Force image to top */
+        order: 1;  
     }
     .Treats-accordion {
         width: 100%;
-        order: 2;              /* Force list to bottom */
+        order: 2;
     }
     .Treats-accordion li {
         margin-bottom: 15px;
     }
     .Values-grid {
-        grid-template-columns: 1fr; /* Stacks all 4 in order */
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .Values-header h3 {
-        font-size: 40px; /* Shrink slightly for mobile screens */
+        font-size: 40px;
     }
 
     .Frequent-QNA {
-        width: 100%; /* Take up more space on mobile */
+        width: 100%;
     }
     .Val-Icons {
-        width: 180px;  /* Increased from 150px to fill the screen better */
+        width: 180px; 
         height: 180px;
         margin-bottom: 20px;
     }
     
-    /*Disable the scale for a cleaner mobile experience */
+    /*Removed transitions for a better mobile experience */
     .Quality-section:hover, 
     .Ethical-section:hover, 
     .Transperency-Section:hover, 
@@ -999,47 +1067,43 @@ button:hover {
         }
     }
     .Values-grid div {
-        /* This tells the browser to animate based on scroll position */
         animation: appear linear both;
         animation-timeline: view();
-        /* animation-range: entry [start] cover [end] */
         animation-range: entry 10% cover 30%; 
     }
 
-
-    /* Story section for "PHONE" attributes*/
     .Story-section {
-        flex-direction: column; /* Stacks the items vertically */
-        align-items: center;    /* Centers the image and text on the phone screen */
-        text-align: center;     /* Centers the headings and paragraphs */
-        padding: 40px 20px;     /* Reduces large side padding for small screens */
-        gap: 30px;              /* Tighter spacing between image and text */
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
     }
 
     .OurStory {
-        order: 2;               /* Pushes the text below the image */
-        align-items: center;    /* Centers the internal text elements */
+        order: 2; 
+        align-items: center;
     }
 
     .story-image-container {
-        order: 1;               /* Forces the image to the top of the stack */
+        order: 1; 
         width: 100%;
         display: flex;
         justify-content: center;
     }
     .OurStory {
-        order: 1;               /* Forces the text to the top---> Order 1: The browser looks for this first and puts it at the top of the column & Order 2: The browser puts this underneath. */
+        order: 1;          
         width: 100%;
         max-width: 600px;
     }
 
     .story-image-container img {
         width: 200%;
-        max-width: 350px;      /* Limits the image size on larger phones */
+        max-width: 350px; 
         height: auto;
     }
     .Story-section h2, 
     .Story-section p {
-        text-align: center;     /* Overrides the 'left' alignment from desktop */
+        text-align: center;
     }
 }
