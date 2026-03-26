@@ -25,7 +25,7 @@ const menu_items = [
     desc: "Rich chocolate cake layered with smooth fudge and silky ganache"
   },
   {
-    name: "Raspberry Chocolate Cream",
+    name: "Raspberry Choco Cake",
     category: ["cakes", "fruit"],
     calories: "480 cal",
     price: "$6.75",
@@ -34,7 +34,7 @@ const menu_items = [
   },
   {
     name: "Caramel Chocolate Cheesecake",
-    category: ["cakes"],
+    category: ["cakes", "fruit"],
     calories: "540 cal",
     price: "$7.00",
     img: "Assets/cake3.png",
@@ -65,7 +65,7 @@ const menu_items = [
     desc: "Buttery tart filled with silky chocolate and coated in glossy chocolate glaze"
   },
   {
-    name: "Blackberry Chocolate Cream Donut",
+    name: "Blackberry Cocoa Cream Donut",
     category: ["pastries", "fruit"],
     calories: "430 cal",
     price: "$5.25",
@@ -110,7 +110,7 @@ const menu_items = [
     calories: "250 cal",
     price: "$3.95 each",
     img: "Assets/icecream.png",
-    desc: "Creamy ice cream bars coated in a rich chocolate shell, available in a variety of indulgent flavours for the perfect refreshing treat."
+    desc: "Creamy ice cream bars coated in a rich chocolate shell, available in a variety of indulgent flavours."
   }
 ];
 
@@ -127,14 +127,16 @@ function renderMenu(items) {
 
       card.innerHTML = `
         <img src="${items[i].img}" alt="${items[i].name}">
-        
-        <div class="menu-header">
-          <h4>${items[i].name}</h4>
-          <span class="price">${items[i].price}</span>
-        </div>
+        <div class="content">
+          <div class="menu-header">
+            <h4>${items[i].name}</h4>
+            <span class="price">${items[i].price}</span>
+          </div>
 
-        <p class="calories">${items[i].calories}</p>
-        <p class="desc">${items[i].desc}</p>
+          <p class="calories">${items[i].calories}</p>
+          <p class="desc">${items[i].desc}</p>
+          <button class="button">Nutrition</button>
+        </div>
       `;
 
       gallery.appendChild(card);
