@@ -907,6 +907,7 @@ input[type="radio"]{
 
 
 /*---------------------------------- CONTACT PAGE ---------------------------------*/
+
 .contact-wrapper {
     background-color: #f2ecde;
     display: flex;
@@ -977,7 +978,10 @@ button {
     border-radius: 4px;
     cursor: pointer;
     width: 130px;
-    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;    
     transition: ease-in 0.1s;
 }
 
@@ -988,12 +992,14 @@ button:hover {
 
 .thank-you-message {
     margin-top: 20px;
+}
+
+#thankYouMessage{
     font-size: 16px;
     font-family: 'Jost';
     color: #6b1a21;
     text-align: center;
 }
-
 
 
 
