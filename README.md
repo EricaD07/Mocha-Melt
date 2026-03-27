@@ -51,4 +51,5 @@ Gemini and ChatGPT
     content: none !important;}`
 - Learned how to maintain image sizing for phones with `aspect-ratio: 1`
 - Fixed responsive spacing to buttons with `flex: 1 1 auto;`
+- Helped implement thank you message and solved the problem of form not resetting on Reserve page
 
