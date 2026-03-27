@@ -233,7 +233,7 @@ const gallery = document.querySelector(".menu-gallery"); /*AI-Assisted: Helped s
 
 if (searchInput && filterButtons.length > 0 && gallery) {
 
-  let activeCategory = "all";   // AI assisted: Helped make my original fitering code more concise 
+  let activeCategory = "all";   // AI-assisted: Helped make my original fitering code more concise 
 
   // filter buttons
   filterButtons.forEach(button => {
@@ -283,24 +283,26 @@ renderMenu(menu_items);
 /*---------------------------------- CONTACT PAGE ---------------------------------*/
 
 //------- CONTACT THANK YOU MESSAGE ------//
-//------- Ai-Assisted: Helped implement thank you message and solved the problem of form not resetting//
+//------- Ai-Assisted: Helped implement thank you message and solved the problem of form not resetting -------//
 const form = document.getElementById("contactForm");
 const message = document.getElementById("thankYouMessage");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  message.textContent = "Thank you for reserving at MochaMelt! You will recieve an email upon confirmation.";
-  message.style.display = "block";
+if (form && message) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  form.reset();
+    message.textContent = "Thank you for reserving at MochaMelt! You will recieve an email upon confirmation.";
+    message.style.display = "block";
 
-  // hide message after 10 seconds
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 10000);
-});
+    form.reset();
 
+    // hide message after 10 seconds
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 10000);
+  });
+}
 
 
 
