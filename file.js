@@ -98,7 +98,7 @@ const menu_items = [
     category: ["cakes"],
     calories: "520 cal",
     price: "$6.50",
-    img: "Assets/cake1.png",
+    img: "Assets/cake1.webp",
     desc: "Rich chocolate cake layered with smooth fudge and silky ganache"
   },
   {
@@ -106,7 +106,7 @@ const menu_items = [
     category: ["cakes", "fruit"],
     calories: "480 cal",
     price: "$6.75",
-    img: "Assets/cake2.png",
+    img: "Assets/cake2.webp",
     desc: "Smooth dark chocolate filling topped with light cream and fresh raspberry"
   },
   {
@@ -114,7 +114,7 @@ const menu_items = [
     category: ["cakes", "fruit"],
     calories: "540 cal",
     price: "$7.00",
-    img: "Assets/cake3.png",
+    img: "Assets/cake3.webp",
     desc: "Creamy chocolate cheesecake finished with a luscious caramel drizzle"
   },
   {
@@ -122,7 +122,7 @@ const menu_items = [
     category: ["cakes"],
     calories: "510 cal",
     price: "$6.80",
-    img: "Assets/cake4.png",
+    img: "Assets/cake4.webp",
     desc: "Soft chocolate layers filled with velvety chocolate cream and glaze"
   },
   {
@@ -130,7 +130,7 @@ const menu_items = [
     category: ["cakes", "fruit"],
     calories: "500 cal",
     price: "$6.95",
-    img: "Assets/cake6.png",
+    img: "Assets/cake6.webp",
     desc: "Rich chocolate base topped with fresh berries and smooth chocolate cream"
   },
   {
@@ -138,7 +138,7 @@ const menu_items = [
     category: ["pastries"],
     calories: "470 cal",
     price: "$6.60",
-    img: "Assets/cake7.png",
+    img: "Assets/cake7.webp",
     desc: "Buttery tart filled with silky chocolate and coated in glossy chocolate glaze"
   },
   {
@@ -146,7 +146,7 @@ const menu_items = [
     category: ["pastries", "fruit"],
     calories: "430 cal",
     price: "$5.25",
-    img: "Assets/cake8.png",
+    img: "Assets/cake8.webp",
     desc: "Fluffy donut filled with rich chocolate cream and finished with drizzle"
   },
   {
@@ -154,7 +154,7 @@ const menu_items = [
     category: ["drinks", "hot"],
     calories: "320 cal",
     price: "$4.50",
-    img: "Assets/drink1.png",
+    img: "Assets/drink1.webp",
     desc: "Warm, velvety melted chocolate blended into a rich and comforting drink"
   },
   {
@@ -162,7 +162,7 @@ const menu_items = [
     category: ["drinks", "hot"],
     calories: "350 cal",
     price: "$5.25",
-    img: "Assets/drink2.png",
+    img: "Assets/drink2.webp",
     desc: "Bold espresso mixed with smooth chocolate and creamy steamed milk"
   },
   {
@@ -170,7 +170,7 @@ const menu_items = [
     category: ["drinks", "cold"],
     calories: "420 cal",
     price: "$5.75",
-    img: "Assets/drink3.png",
+    img: "Assets/drink3.webp",
     desc: "Thick and creamy chocolate shake made with rich cocoa and ice"
   },
   {
@@ -178,7 +178,7 @@ const menu_items = [
     category: ["drinks", "cold"],
     calories: "450 cal",
     price: "$5.95",
-    img: "Assets/drink4.png",
+    img: "Assets/drink4.webp",
     desc: "Icy blended drink loaded with chocolate cookies and smooth chocolate cream"
   },
   {
@@ -186,7 +186,7 @@ const menu_items = [
     category: ["cold"],
     calories: "250 cal",
     price: "$3.95 each",
-    img: "Assets/icecream.png",
+    img: "Assets/icecream.webp",
     desc: "Creamy ice cream bars coated in a rich chocolate shell, available in a variety of indulgent flavours."
   }
 ];
@@ -233,7 +233,7 @@ const gallery = document.querySelector(".menu-gallery"); /*AI-Assisted: Helped s
 
 if (searchInput && filterButtons.length > 0 && gallery) {
 
-  let activeCategory = "all";   // AI assisted: Helped make my original fitering code more concise 
+  let activeCategory = "all";   // AI-assisted: Helped make my original fitering code more concise 
 
   // filter buttons
   filterButtons.forEach(button => {
@@ -286,20 +286,21 @@ renderMenu(menu_items);
 const form = document.getElementById("contactForm");
 const message = document.getElementById("thankYouMessage");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+if (form && message) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  message.textContent = "Thank you for reserving at MochaMelt! You will recieve an email upon confirmation.";
-  message.style.display = "block";
+    message.textContent = "Thank you for reserving at MochaMelt! You will recieve an email upon confirmation.";
+    message.style.display = "block";
 
-  form.reset();
+    form.reset();
 
-  // hide message after 10 seconds
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 10000);
-});
-
+    // hide message after 10 seconds
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 10000);
+  });
+}
 
 
 
