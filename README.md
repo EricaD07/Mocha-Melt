@@ -25,10 +25,10 @@ HTML + CSS
 - Home: Linhan, Ashley
 - About: Ashley
 - Menu: Erica
-- Contact: Weiyi
+- Reserve: Weiyi
 
 JS
-- Ashley, Erica, Weiyi
+- All
 
 ## AI Usage
 -  Generated filler paragraphs in the site
