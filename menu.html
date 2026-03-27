@@ -8,62 +8,71 @@
 </head>
 <body>
 
+
+<!------------------NAVIGATION--------------->
+<nav class="navbar">
+    <a href="index.html"> 
+        <h1>MochaMelt</h1></a> 
+    
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" >Home</a></li>
+
+        <li class="nav-item">
+            <a href="index.html#Location">Location</a></li>
+
+        <li class="nav-item">
+            <a href="about.html">About</a></li>
+
+        <li class="nav-item">
+            <a href="menu.html">Menu</a></li>
+
+        <li class="nav-item">
+            <a href="contacts.html">Reserve</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+
+
 <header>
-    <!------------------NAVIGATION--------------->
-   <nav class="navbar">
-        <a href="index.html"> 
-            <h1>MochaMelt</h1></a> 
-        
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.html" >Home</a></li>
-
-            <li class="nav-item">
-                <a href="index.html#Location">Location</a></li>
-
-            <li class="nav-item">
-                <a href="about.html">About</a></li>
-
-            <li class="nav-item">
-                <a href="menu.html">Menu</a></li>
-
-            <li class="nav-item">
-                <a href="contacts.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-   </nav>
+    <!---------------------Hero---------------------->
+    <section class="extra-hero">
+    <div class="circle">
+        <h2>-Our Menu-</h2>
+        <p>Explore our selection of handcrafted drinks, rich chocolates, and sweet treats made to satisfy every craving.</p>
+    </div>
+    </section>
 </header>
 
 
-
-<!---------------------Hero---------------------->
-<section class="extra-hero">
-  <div class="circle">
-    <h2>-Our Menu-</h2>
-    <p>Explore our selection of handcrafted drinks, rich chocolates, and sweet treats made to satisfy every craving.</p>
-  </div>
-</section>
-
-
+<main>
 <!---------------------Menu Cards---------------------->
 <section id="menu">
-    <div class="text">
-        <h3>Ready to Order?</h3>
-        <p> Order online at 613-555-5555, or at <a href ="index.html#location"> our store!</a></p>
+    <div class="Menu-text">
+        <h3>Ready to Order?</h3> 
+        <p> Order online at  <a href="#"> 613 - 555 - 5555 </a>, or in-person at <a href ="index.html#location"> Our Store!</a></p>
     </div>
-    <!-- Filter Buttons -->
-    <div class="filter-buttons">
-        <button class="filter-btn" keyword="all">All</button>
-        <button class="filter-btn" keyword="cakes">Cakes</button>
-        <button class="filter-btn" keyword="pastries">Pastries</button>
-        <button class="filter-btn" keyword="fruit">Fruits</button>
-        <button class="filter-btn" keyword="drinks">Drinks</button>
-        <button class="filter-btn" keyword="cold">Cold</button>
-        <button class="filter-btn" keyword="hot">Hot</button>
+
+    <div class="JS-Menu-controls">
+        <!--Search bar-->
+        <div class="menu-search">
+            <input type="text" id="searchInput" placeholder="🔎︎ Search menu items..."> <!--AI-Assisted: How to properly format search bar with placeholder text-->
+        </div>
+        <!-- Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn" keyword="all">All</button>
+            <button class="filter-btn" keyword="cakes">Cakes</button>
+            <button class="filter-btn" keyword="pastries">Pastries</button>
+            <button class="filter-btn" keyword="fruit">Fruits</button>
+            <button class="filter-btn" keyword="drinks">Drinks</button>
+            <button class="filter-btn" keyword="cold">Cold</button>
+            <button class="filter-btn" keyword="hot">Hot</button>
+        </div>
     </div>
 
     <!-- Menu Cards -->
@@ -71,7 +80,7 @@
     <!-- Cards-->
     </div>
 </section>
-
+</main>
 
 
 <!-------------Footer--------------->
@@ -91,7 +100,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Our Menu</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="contacts.html">Reserve</a></li>
             </ul>
         </div>
 
@@ -107,7 +116,7 @@
 
         <!-- Contact -->
         <div class="footer-column">
-            <h4>Contact</h4>
+            <h4>Reserve</h4>
             <ul>
                 <li>✉ hello@mochamelt.com</li>
                 <li>✆ (613) 555-5555</li>
@@ -138,7 +147,7 @@
 <!-- Back to top -->
 <button id="back-to-top">↑</button>
 <!--JS Link-->
-<script src="file.js"></script>
+<script src="file.js" defer></script>
 
 </body>
 </html>

@@ -3,83 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MochaMelt - Contact</title>
+    <title>MochaMelt - Reserve</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!------------------NAVIGATION--------------->
+<nav class="navbar">
+    <a href="index.html"> 
+        <h1>MochaMelt</h1></a> 
+    
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" >Home</a></li>
+
+        <li class="nav-item">
+            <a href="index.html#Location">Location</a></li>
+
+        <li class="nav-item">
+            <a href="about.html">About</a></li>
+
+        <li class="nav-item">
+            <a href="menu.html">Menu</a></li>
+
+        <li class="nav-item">
+            <a href="contacts.html">Reserve</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
 <header>
-    <!------------------NAVIGATION--------------->
-   <nav class="navbar">
-        <a href="index.html"> 
-            <h1>MochaMelt</h1></a> 
-        
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.html" >Home</a></li>
-
-            <li class="nav-item">
-                <a href="index.html#Location">Location</a></li>
-
-            <li class="nav-item">
-                <a href="about.html">About</a></li>
-
-            <li class="nav-item">
-                <a href="menu.html">Menu</a></li>
-
-            <li class="nav-item">
-                <a href="contacts.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-   </nav>
+    <!---------------------Hero---------------------->
+    <section class="extra-hero">
+    <div class="circle">
+        <h2>-Reserve-</h2>
+        <p>Have a large party? MochaMelt can set up a reservation. We'd love to hear from you!</p>
+    </div>
+    </section>
 </header>
 
-<!---------------------Hero---------------------->
-<section class="extra-hero">
-  <div class="circle">
-    <h2>-Contact-</h2>
-    <p>Have a large party? Mocha Melt can set up a reservation. We'd love to hear from you!</p>
-  </div>
-</section>
+<main class="contact-page">
 
-<section class="contact-wrapper">
+    <section class="contact-wrapper">
+            <div class="form-card">
+                <h3>Get in Touch!</h3>
+                <p>Interested in making a reservation at MochaMelt?<br>
+                Fill out the form below!
+                </p>
 
-    <div class="form-card">
+                <form id="contactForm">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
 
-        <h2>Get in touch!</h2>
-        <p class="subtitle">
-            Interested in hosting an event at MochaMelt?<br>
-            Fill out the form below!
-        </p>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
 
-    <form id="contactForm">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
 
-        <name>Name</name>
-        <input type="text" required>
+                    <label for="date-time">Select a Date and Time</label>
+                    <input type="datetime-local" id="date-time" name="date-time" required>
 
-        <name>Email</name>
-        <input type="email" required>
-
-        <name>Phone Number</name>
-        <input type="tel" required>
-
-        <name>Select a Date and Time</name>
-        <input type="datetime-local" required>
-
-        <name>Message</name>
-        <textarea rows="5"></textarea>
-
-        <button type="submit">Submit</button>
-        <p id="thankYouMessage" class="thank-you-message"></p>
-    </form>
-
-    </div> 
-</section>
-
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    
+                    <button type="submit">Submit</button>
+                    
+                    <p id="thankYouMessage" class="thank-you-message"></p>
+                </form>
+            </div> 
+        </section>
+</main>
 
 
 <!-------------Footer--------------->
@@ -99,7 +97,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Our Menu</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="contacts.html">Reserve</a></li>
             </ul>
         </div>
 
@@ -115,7 +113,7 @@
 
         <!-- Contact -->
         <div class="footer-column">
-            <h4>Contact</h4>
+            <h4>Reserve</h4>
             <ul>
                 <li>✉ hello@mochamelt.com</li>
                 <li>✆ (613) 555-5555</li>
@@ -145,7 +143,7 @@
 <!-- Back to top -->
 <button id="back-to-top">↑</button>
 <!--JS Link-->
-<script src="file.js"></script>
+<script src="file.js" defer></script>
 
 </body>
 </html>

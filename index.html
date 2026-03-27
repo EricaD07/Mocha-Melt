@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MochaMelt - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mocha Melt | Home page</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <!------------------NAVIGATION--------------->
-   <nav class="navbar">
-        <a href="index.html"> 
-            <h1>MochaMelt</h1></a> 
-        
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.html" >Home</a></li>
+<!--update check-->
+<!------------------NAVIGATION--------------->
+<nav class="navbar">
+  <a href="index.html"> 
+      <h1>MochaMelt</h1></a> 
+  
+  <ul class="nav-menu">
+      <li class="nav-item">
+          <a href="index.html" >Home</a></li>
 
-            <li class="nav-item">
-                <a href="#Location">Location</a></li>
+      <li class="nav-item">
+          <a href="index.html#Location">Location</a></li>
 
-            <li class="nav-item">
-                <a href="about.html">About</a></li>
+      <li class="nav-item">
+          <a href="about.html">About</a></li>
 
-            <li class="nav-item">
-                <a href="menu.html">Menu</a></li>
+      <li class="nav-item">
+          <a href="menu.html">Menu</a></li>
 
-            <li class="nav-item">
-                <a href="contacts.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-   </nav>
-</header>
-
-
-
-
+      <li class="nav-item">
+          <a href="contacts.html">Reserve</a></li>
+  </ul>
+  <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+  </div>
+</nav>
 
 <main>
+<<<<<<< HEAD
   <!--Hero section (img + text)-->
   <section class="hero">
     <div class="hero-image">
       <img src="Mocha-Melt/Assets/Choco_hero.png" alt="Handcrafted chocolate dessert">
+=======
+  <!-- Hero Section (home) -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">✦ handmade with love ✦</div>
+          <h1 class="hero-title">Your Daily<br>Dose of<br>Decadence</h1>
+          <p class="hero-desc">Handcrafted chocolate desserts made with natural ingredients.</p>
+          <a href="#menu-highlight" class="btn">View Our Menu <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+        <div class="hero-img">
+          <img src="Assets/Choco_hero.png" alt="Decadent chocolate dessert">
+        </div>
+      </div>
+>>>>>>> 1ee6fed0ff77405c780dca35a45b2bc46124027f
     </div>
 
+<<<<<<< HEAD
     <div class="home-container">
       <h2>Your Daily<br>Dose of<br>Decadence</h2>
       <p>Handcrafted chocolate desserts made with natural ingredients.</p>
@@ -72,6 +87,9 @@
     </section>    
 
     
+=======
+  
+>>>>>>> 1ee6fed0ff77405c780dca35a45b2bc46124027f
   <!-- Philosophy block (the meaningful ingredients paragraph) -->
   <section class="philosophy">
     <div class="container">
@@ -169,7 +187,7 @@
         <div class="reservation-card">
           <h3><i class="fas fa-champagne-glasses"></i> Group Celebrations</h3>
           <p>Have a large party? Mocha Melt can set up a reservation with custom dessert tastings and a private cocoa bar.</p>
-          <a href="contacts.html" class="btn btn-light">Contact Us Here <i class="fas fa-envelope"></i></a>
+          <a href="#contact" class="btn btn-light">Contact Us Here <i class="fas fa-envelope"></i></a>
           <p style="font-size: 0.85rem; margin-top: 1.5rem;">✨ Book 48h in advance for groups of 6+ ✨</p>
         </div>
       </div>
@@ -178,72 +196,68 @@
 
 </main>
 
-
-
-<!-------------Footer--------------->
 <footer class="footer">
-    <div class="footer-top">
+  <div class="footer-top">
 
-        <!-- Brand -->
-        <div class="footer-column">
-            <h3>Mocha Melt</h3>
-            <p>Making your chocolate dreams come true with natural cocoa since 2026.</p>
-        </div>
-        
-        <!-- Quick Links -->
-        <div class="footer-column">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Our Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contacts.html">Contact</a></li>
-            </ul>
-        </div>
+      <!-- Brand -->
+      <div class="footer-column">
+          <h3>Mocha Melt</h3>
+          <p>Making your chocolate dreams come true with natural cocoa since 2026.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Our Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contacts.html">Reserve</a></li>
+          </ul>
+      </div>
 
-        <!-- Visit -->
-        <div class="footer-column">
-            <h4>Visit Us</h4>
-            <ul>
-                <li>1159 Choco Ave, CA K1S 5B6</li>
-                <li>Mon–Fri: 9 AM – 8 PM</li>
-                <li>Sat–Sun: 10 AM – 9 PM</li>
-            </ul>
-        </div>
+      <!-- Visit -->
+      <div class="footer-column">
+          <h4>Visit Us</h4>
+          <ul>
+              <li>1159 Choco Ave, CA K1S 5B6</li>
+              <li>Mon–Fri: 9 AM – 8 PM</li>
+              <li>Sat–Sun: 10 AM – 9 PM</li>
+          </ul>
+      </div>
 
-        <!-- Contact -->
-        <div class="footer-column">
-            <h4>Contact</h4>
-            <ul>
-                <li>✉ hello@mochamelt.com</li>
-                <li>✆ (613) 555-5555</li>
-            </ul>
+      <!-- Contact -->
+      <div class="footer-column">
+          <h4>Reserve</h4>
+          <ul>
+              <li>✉ hello@mochamelt.com</li>
+              <li>✆ (613) 555-5555</li>
+          </ul>
 
-            <div class="socials">
-                <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="Assets/insta.png" alt="Instagram"></a>
-                <a href="#"><img src="Assets/youtube.png" alt="Youtube"></a>
-            </div>
-        </div>
-    </div>    
+          <div class="socials">
+              <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
+              <a href="#"><img src="Assets/insta.png" alt="Instagram"></a>
+              <a href="#"><img src="Assets/youtube.png" alt="Youtube"></a>
+          </div>
+      </div>
+  </div>    
 
-    <div class="footer-bottom">
-        <p>© 2026 MochaMelt. All rights reserved.</p>
-        <div>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
-            <a href="#">Cookies</a>
-        </div>
-    </div>
+  <div class="footer-bottom">
+      <p>© 2026 MochaMelt. All rights reserved.</p>
+      <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+      </div>
+  </div>
 </footer>
 
 
- <!-----JS Extras ----->
 
-<!-- Back to top -->
 <button id="back-to-top">↑</button>
 <!--JS Link-->
 <script src="file.js"></script>
+<script src="file.js" defer></script>
 
 </body>
 </html>
