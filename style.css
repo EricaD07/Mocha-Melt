@@ -106,6 +106,114 @@ h1 {
     background-color: #6b1a21;
 }
 
+/* ===== HERO SECTION =====/* ===== HERO SECTION – circle centered on text ===== */
+  /* ===== HERO SECTION with circle centered on text ===== */
+  .hero {
+    background: linear-gradient(107deg, #F9EFE2 0%, #FCF5EA 100%);
+    padding: 4rem 0 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  /* Use CSS Grid for precise column control */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* text column / image column */
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    /* ensure content stays above circle */
+  }
+  
+  .hero-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* KEY: fills area like a background */
+    object-position: center right; /* keeps chocolate focus */
+  }
+  
+  /* WHITE CIRCLE – placed relative to the text column */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25%; /* center of left column */
+    transform: translate(-50%, -50%);
+    
+    width: min(70vw, 650px);
+    aspect-ratio: 1 / 1;
+    
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    
+    z-index: 1;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Adjust for smaller screens: center circle on whole hero and keep it behind everything */
+  @media (max-width: 800px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .hero::before {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85vw;
+      top: 45%;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .hero-img {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+  
+    .hero-img img {
+      object-position: center;
+    }
+  }
+  
+
+  /* Keep remaining hero content styles (badge, title, desc) unchanged */
+  .hero-badge {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C47A44;
+    font-weight: 600;
+  }
+  .hero-title {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin: 1rem 0 1rem 0;
+    color: #2C1810;
+  }
+  .hero-desc {
+    font-size: 1.2rem;
+    color: #4F3527;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
 /*------Hero for all non-home pages--------*/
 .extra-hero {
     background-color: #c1a485; 
