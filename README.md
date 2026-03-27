@@ -9,13 +9,12 @@ Mocha Melt is a chocolate-themed dessert café that showcases a variety of choco
 The website is designed for chocolate enthusiasts, students, adults, and those who appreciate ethically sourced and natural ingredients.
 
 ## How to Navigate the Site
-- Use the navigation bar at the top to access the main pages: Home, Location(connects to Home), About, Menu, and Contact.
-- The Home page provides an overview - a brief About, location + hours, and call-to-actions. 
-- The About page shares information about the café, its team, and its process.
-- The Menu page allows users to browse and filter chocolate products and drinks that contain prices and descriptions.
-- The Contact Us page includes a form for inquiries on reservations.
-- A “back to top” button will appear for easy navigation.
-- Footer with extra information and links located at the bottom
+- Use the top navigation bar to access Home, Location, About, Menu, and Reserve.
+- Home gives an overview with key info and call-to-actions.
+- About shares details about the café and team.
+- Menu lets you browse and filter items with prices and descriptions.
+- Reserve includes a form for reservations.
+- A “back to top” button and footer provide easy navigation and extra info.
 
 ##  Team Member Contribution
 - Design Document: Erica, Weiyi, Ashley
@@ -23,14 +22,15 @@ The website is designed for chocolate enthusiasts, students, adults, and those w
   
 HTML + CSS
 - Nav/Footer: Erica
-- Home: Linhan
+- Home: Linhan, Ashley
 - About: Ashley
 - Menu: Erica
 - Contact: Weiyi
 
 JS
-- abc
+- Ashley, Erica, Weiyi
 
 ## AI Usage
 -  Generated filler paragraphs in the site
+-  tbc
 
