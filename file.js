@@ -14,6 +14,83 @@ const navLinks = document.querySelectorAll(".nav-item a").forEach(n=> n.addEvent
 
 
 
+
+
+/*---------------------------------- ABOUT PAGE ---------------------------------*/
+
+
+//----------- Accordions (DOM Attribute)-----//
+// Ai-Assisted: Allows QnA radio buttons to be toggled off by clicking them again, helped to correct my code attributes and error //
+document.addEventListener('DOMContentLoaded', () => {
+    //(FAQ and Treats)
+    const allRadios = document.querySelectorAll('input[name="Frequent-QNA"], input[name="Treats-accordion"]');
+    const mainImg = document.getElementById('main-accordion-img');
+
+    allRadios.forEach(radio => {
+        // 'click' but with a special toggle logic
+        radio.addEventListener('click', function(e) {
+            //  specific radiochecked before 
+            if (this.getAttribute('data-state') === 'active') {
+                this.checked = false;
+                this.setAttribute('data-state', 'inactive');
+            } else {
+                // Reset all others in the same group so only one is 'active'
+                const groupName = this.getAttribute('name');
+                document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+                    r.setAttribute('data-state', 'inactive');
+                });
+                this.setAttribute('data-state', 'active');
+            }
+        });
+    });
+});
+
+
+
+
+
+//------- ACCORDION IMAGE SWAP SET UP ------//
+//----------- Unified Accordion & Image Swap ---------//
+document.addEventListener('DOMContentLoaded', () => {
+    const mainImg = document.getElementById('main-accordion-img');
+    const radioButtons = document.querySelectorAll('input[name="Treats-accordion"]');
+
+    //Ai helped to correct my code attributes and error of this first if//
+    if (mainImg) {
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    const newSrc = radio.getAttribute('data-image');
+                    
+                    // 1. Fade out the current image
+                    mainImg.style.opacity = '0';
+                    
+                    // 2. Wait for the fade (300ms) then swap the source
+                    setTimeout(() => {
+                        mainImg.src = newSrc;
+                        
+                        // 3. Fade back in only after the new image has loaded
+                        mainImg.onload = () => {
+                            mainImg.style.opacity = '1';
+                        };
+                        
+                        // Fallback if the image is already in the browser cache
+                        if (mainImg.complete) {
+                            mainImg.style.opacity = '1';
+                        }
+                    }, 300);
+                }
+            });
+        });
+    }
+});
+
+
+
+
+    
+/*---------------------------------- MENU PAGE ---------------------------------*/
+
 //----------- Dynamic Content Rendering ---------//
 const menu_items = [
   {
@@ -114,66 +191,116 @@ const menu_items = [
   }
 ];
 
-// Render Menu Items
+//----------- RENDER MENU ---------//
 function renderMenu(items) {
-  const gallery = document.querySelector(".menu-gallery");
 
-  if (gallery) {
-    gallery.innerHTML = "";
+  if (!gallery) return;
 
-    for (let i = 0; i < items.length; i++) {
-      const card = document.createElement("div");
-      card.classList.add("card", "menu-card");
+  gallery.innerHTML = "";
 
-      card.innerHTML = `
-        <img src="${items[i].img}" alt="${items[i].name}">
-        <div class="content">
-          <div class="menu-header">
-            <h4>${items[i].name}</h4>
-            <span class="price">${items[i].price}</span>
-          </div>
+  if (items.length === 0) {
+    gallery.innerHTML = "<p>No items found 😢</p>";
+    return;
+  }
 
-          <p class="calories">${items[i].calories}</p>
-          <p class="desc">${items[i].desc}</p>
-          <button class="button">Nutrition</button>
+  items.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card", "menu-card");
+
+    card.innerHTML = `
+      <img src="${item.img}" alt="${item.name}">
+      <div class="content">
+        <div class="menu-header">
+          <h4>${item.name}</h4>
+          <span class="price">${item.price}</span>
         </div>
-      `;
 
-      gallery.appendChild(card);
-    }}
+        <p class="calories">${item.calories}</p>
+        <p class="desc">${item.desc}</p>
+        <button class="button">Nutrition</button>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
 }
+
+
+//----------- Filtering ---------//
+const filterButtons = document.querySelectorAll(".filter-btn");
+const searchInput = document.getElementById("searchInput");
+const gallery = document.querySelector(".menu-gallery"); /*AI-Assisted: Helped solved bug of of items not rendering after implementing search feature. Solved by moving this variable here*/
+
+if (searchInput && filterButtons.length > 0 && gallery) {
+
+  let activeCategory = "all";   // AI assisted: Helped make my original fitering code more concise 
+
+  // filter buttons
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      activeCategory = button.getAttribute("keyword");
+
+      applyFilters();
+    });
+  });
+
+
+//----------- Search Button ---------//
+  searchInput.addEventListener("input", applyFilters);
+
+  function applyFilters() {
+    const searchValue = searchInput.value.toLowerCase(); // AI assisted: Helped implement search
+
+    const filteredItems = menu_items.filter(item => {
+      const matchesSearch =
+        item.name.toLowerCase().includes(searchValue) ||
+        item.desc.toLowerCase().includes(searchValue);
+
+      const matchesCategory =
+        activeCategory === "all" ||
+        item.category.includes(activeCategory);
+
+      return matchesSearch && matchesCategory;
+    });
+
+    renderMenu(filteredItems);
+  }}
+
+
+//--render
 renderMenu(menu_items);
 
 
-//----------- Filter Buttons ---------//
-const filterButtons = document.querySelectorAll(".filter-btn");
 
-for (let i = 0; i < filterButtons.length; i++) {
-  filterButtons[i].addEventListener("click", function () {
 
-    // Remove active from all
-    for (let j = 0; j < filterButtons.length; j++) {
-      filterButtons[j].classList.remove("active");
-    }
 
-    // Add active to clicked
-    filterButtons[i].classList.add("active");
 
-    const category = filterButtons[i].getAttribute("keyword");
 
-    let filteredItems;
+/*---------------------------------- CONTACT PAGE ---------------------------------*/
 
-    if (category === "all") {
-      filteredItems = menu_items;
-    } else {
-      filteredItems = menu_items.filter(item =>
-        item.category.includes(category)
-      );
-    }
+//------- CONTACT THANK YOU MESSAGE ------//
+const form = document.getElementById("contactForm");
+const message = document.getElementById("thankYouMessage");
 
-    renderMenu(filteredItems);
-  });
-}
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  message.textContent = "Thank you for your message! We will get back to you soon.";
+  message.style.display = "block";
+
+  form.reset();
+
+  // hide message after 5 seconds
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 5000);
+});
+
+
 
 
 
@@ -194,97 +321,3 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
-
-
-
-
-
-//----------- Accordion or Tabbed Content (DOM Attribute)-----//
-
-// Ai-Assisted: Allows QnA radio buttons to be toggled off by clicking them again, helped to correct my code attributes and error //
-document.addEventListener('DOMContentLoaded', () => {
-    //(FAQ and Treats)
-    const allRadios = document.querySelectorAll('input[name="Frequent-QNA"], input[name="Treats-accordion"]');
-    const mainImg = document.getElementById('main-accordion-img');
-
-    allRadios.forEach(radio => {
-        // 'click' but with a special toggle logic
-        radio.addEventListener('click', function(e) {
-            //  specific radiochecked before 
-            if (this.getAttribute('data-state') === 'active') {
-                this.checked = false;
-                this.setAttribute('data-state', 'inactive');
-            } else {
-                // Reset all others in the same group so only one is 'active'
-                const groupName = this.getAttribute('name');
-                document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
-                    r.setAttribute('data-state', 'inactive');
-                });
-                this.setAttribute('data-state', 'active');
-            }
-        });
-    });
-});
-
-
-
-
-
-//------- ACCORDION IMAGE SWAP SET UP ------//
-//----------- Unified Accordion & Image Swap ---------//
-document.addEventListener('DOMContentLoaded', () => {
-    const mainImg = document.getElementById('main-accordion-img');
-    const radioButtons = document.querySelectorAll('input[name="Treats-accordion"]');
-
-    //Ai helped to correct my code attributes and error of this first if//
-    if (mainImg) {
-        radioButtons.forEach(radio => {
-            radio.addEventListener('change', () => {
-                if (radio.checked) {
-                    const newSrc = radio.getAttribute('data-image');
-                    
-                    // 1. Fade out the current image
-                    mainImg.style.opacity = '0';
-                    
-                    // 2. Wait for the fade (300ms) then swap the source
-                    setTimeout(() => {
-                        mainImg.src = newSrc;
-                        
-                        // 3. Fade back in only after the new image has loaded
-                        mainImg.onload = () => {
-                            mainImg.style.opacity = '1';
-                        };
-                        
-                        // Fallback if the image is already in the browser cache
-                        if (mainImg.complete) {
-                            mainImg.style.opacity = '1';
-                        }
-                    }, 300);
-                }
-            });
-        });
-    }
-});
-
-
-
-
-
-
-//------- CONTACT THANK YOU MESSAGE ------//
-const form = document.getElementById("contactForm");
-const message = document.getElementById("thankYouMessage");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  message.textContent = "Thank you for your message! We will get back to you soon.";
-  message.style.display = "block";
-
-  form.reset();
-
-  // hide message after 5 seconds
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 5000);
-});
