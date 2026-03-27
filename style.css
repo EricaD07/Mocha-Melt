@@ -249,7 +249,7 @@ h1 {
 
 /*---------------------------------- FOOTER ---------------------------------*/
 .footer {
-    background-image: url("Assets/Footerbg.png"); 
+    background-image: url("Assets/Footerbg.webp"); 
     background-size: cover;
     background-position: center;
     color: #c1a485;
@@ -456,23 +456,26 @@ h1 {
 .accordion-container {
     display: flex;
     padding-top: 50px;
-    align-items: flex-start; 
+    align-items: center; 
     justify-content: center;
-    gap: 60px;                                                                                     
+    gap: 50px;                                                                                     
     max-width: 1100px;  
-    margin: 40px auto;                                                                             
-    padding: 0 40px;
-    padding-bottom: 50px;
+    margin: 0px auto;                                                                             
+    padding: 40px 20px;
 }
 /* THE IMAGE SIDE */
 .accordion-image-side {
-   flex: 1.2;                             
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;              
    border-radius: 13px;
    overflow: hidden;
    padding-right:1px;
 }
 .accordion-image-side img {
-    margin-top: 0;           
+    margin-top: 0; 
+    max-width: 400px;
+    max-height: 550px;        
     width: 100%;
     height: auto;
     border: 2px solid #a45801;
@@ -486,7 +489,8 @@ h1 {
 .Treats-accordion {
     flex: 1;
     padding: 3px;
-    margin: 0;
+    margin: 3px;
+    text-align:left;
 }
 /*smooth fade*/
 .accordion-image-side img {
@@ -496,7 +500,7 @@ h1 {
 /*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
 .Treats-accordion li {
     list-style: none;
-    margin-bottom: px;
+    margin-bottom: 17px;
     padding: 7px;
     border: 2px solid #9632004d;
     border-radius: 7px;
@@ -504,20 +508,11 @@ h1 {
     box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
 }
 
-/* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
-.Treats-accordion li {
-    list-style: none;
-    margin-bottom: 20px;
-    padding: 12px 5px; 
-    border-radius: 7px;
-    background-color: #f2ecde;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
-}
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
-.Treats-accordion li label{
+.Treats-accordion label{
     display:flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size:medium;
     font-weight: bold;
@@ -541,7 +536,7 @@ input[type="radio"]{
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
     color: #98562a;
-    padding: 0 15px;      
+    padding: 0px 15px;      
     line-height: 24px;
     max-height: 0;
     overflow: hidden;
