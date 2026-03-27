@@ -20,7 +20,7 @@ const navLinks = document.querySelectorAll(".nav-item a").forEach(n=> n.addEvent
 
 
 //----------- Accordions (DOM Attribute)-----//
-// Ai-Assisted: Allows QnA radio buttons to be toggled off by clicking them again, helped to correct my code attributes and error //
+// Ai-Assisted: Allows FAQ radio buttons to be toggled off by clicking them again, helped to correct my code attributes and error //
 document.addEventListener('DOMContentLoaded', () => {
     //(FAQ and Treats)
     const allRadios = document.querySelectorAll('input[name="Frequent-QNA"], input[name="Treats-accordion"]');

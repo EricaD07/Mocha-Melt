@@ -8,75 +8,75 @@
 </head>
 <body>
 
+<!------------------NAVIGATION--------------->
+<nav class="navbar">
+    <a href="index.html"> 
+        <h1>MochaMelt</h1></a> 
+    
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" >Home</a></li>
+
+        <li class="nav-item">
+            <a href="index.html#Location">Location</a></li>
+
+        <li class="nav-item">
+            <a href="about.html">About</a></li>
+
+        <li class="nav-item">
+            <a href="menu.html">Menu</a></li>
+
+        <li class="nav-item">
+            <a href="contacts.html">Reserve</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
 <header>
-    <!------------------NAVIGATION--------------->
-   <nav class="navbar">
-        <a href="index.html"> 
-            <h1>MochaMelt</h1></a> 
-        
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.html" >Home</a></li>
-
-            <li class="nav-item">
-                <a href="index.html#Location">Location</a></li>
-
-            <li class="nav-item">
-                <a href="about.html">About</a></li>
-
-            <li class="nav-item">
-                <a href="menu.html">Menu</a></li>
-
-            <li class="nav-item">
-                <a href="contacts.html">Reserve</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-   </nav>
+    <!---------------------Hero---------------------->
+    <section class="extra-hero">
+    <div class="circle">
+        <h2>-Reserve-</h2>
+        <p>Have a large party? MochaMelt can set up a reservation. We'd love to hear from you!</p>
+    </div>
+    </section>
 </header>
 
+<main class="contact-page">
 
-<main>
-<!---------------------Hero---------------------->
-<section class="extra-hero">
-  <div class="circle">
-    <h2>-Reserve-</h2>
-    <p>Have a large party? MochaMelt can set up a reservation. We'd love to hear from you!</p>
-  </div>
-</section>
+    <section class="contact-wrapper">
+            <div class="form-card">
+                <h3>Get in Touch!</h3>
+                <p>Interested in making a reservation at MochaMelt?<br>
+                Fill out the form below!
+                </p>
 
-<section class="contact-wrapper">
-        <div class="form-card">
-            <h3>Get in Touch!</h3>
-            <p>Interested in making a reservation at MochaMelt?<br>
-            Fill out the form below!
-            </p>
+                <form id="contactForm">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
 
-            <form id="contactForm">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
+                    <label for="date-time">Select a Date and Time</label>
+                    <input type="datetime-local" id="date-time" name="date-time" required>
 
-                <label for="date-time">Select a Date and Time</label>
-                <input type="datetime-local" id="date-time" name="date-time" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-                
-                <button type="submit">Submit</button>
-                
-                <p id="thankYouMessage" class="thank-you-message"></p>
-            </form>
-        </div> 
-    </section>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    
+                    <button type="submit">Submit</button>
+                    
+                    <p id="thankYouMessage" class="thank-you-message"></p>
+                </form>
+            </div> 
+        </section>
 </main>
 
 
@@ -143,7 +143,7 @@
 <!-- Back to top -->
 <button id="back-to-top">↑</button>
 <!--JS Link-->
-<script src="file.js"></script>
+<script src="file.js" defer></script>
 
 </body>
 </html>
