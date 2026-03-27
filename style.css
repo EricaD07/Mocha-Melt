@@ -93,6 +93,8 @@ h1 {
 }
 .navbar a:hover {
     color: #651010;
+    transform: scale(1.05);
+    display:inline-block;
 }
 
 /* Responsive Hamburger */
@@ -108,7 +110,7 @@ h1 {
     background-color: #6b1a21;
 }
 
-/*---Animation---*/
+/*---Animation---*/ /*AI-Assisted: How to use keyframes*/
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -129,7 +131,16 @@ h1 {
         transform: translateX(0); 
     }
 }
-
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
 
 /*---------------------------------- HOME PAGE ---------------------------------*/
 
@@ -490,7 +501,7 @@ h1 {
     border-radius: 10px;
 }
 .accordion-image-side:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: transform 0.7s ease;  
 }
 /* THE ACCORDION LIST SIDE */
@@ -499,7 +510,6 @@ h1 {
     padding: 3px;
     margin: 0;
 }
-/*smooth fade*/
 .accordion-image-side img {
     transition: opacity 0.3s ease-in-out;
 }
@@ -780,6 +790,9 @@ color: #98562a;
 
 /*---------------------------------- MENU PAGE ---------------------------------*/
 /*text*/
+.Menu-text{
+    animation: slideInUp 1s ease-out forwards;
+}
 .Menu-text p {
     font-size: 20px;
     text-align: center;
@@ -1006,6 +1019,7 @@ color: #98562a;
     padding: 40px;
     border-radius: 6px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    animation: slideInUp 1s ease-out forwards;
 }
 
 
@@ -1165,7 +1179,6 @@ button:hover {
         max-width: 350px;
     }
 
-        /*Scroll-Driven Animations (using animation-timeline: view()) currently work best in Chrome and Edge*/
     @keyframes appear {
         from { 
             opacity: 0;
