@@ -283,6 +283,7 @@ renderMenu(menu_items);
 /*---------------------------------- CONTACT PAGE ---------------------------------*/
 
 //------- CONTACT THANK YOU MESSAGE ------//
+//------- Ai-Assisted: Helped implement thank you message and solved the problem of form not resetting//
 const form = document.getElementById("contactForm");
 const message = document.getElementById("thankYouMessage");
 

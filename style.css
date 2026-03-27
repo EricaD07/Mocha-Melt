@@ -564,13 +564,8 @@ input[type="radio"]{
 
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
-<<<<<<< HEAD
     color: #ffffff;
     transform: scale(1.05);
-=======
-    color: #c84d00;
-    transform: scale(1.03);
->>>>>>> 1ee6fed0ff77405c780dca35a45b2bc46124027f
 }
 
 /* This targets the container when the radio inside it is checked */
