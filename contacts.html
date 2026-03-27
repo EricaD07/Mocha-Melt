@@ -38,6 +38,8 @@
    </nav>
 </header>
 
+
+<main>
 <!---------------------Hero---------------------->
 <section class="extra-hero">
   <div class="circle">
@@ -47,39 +49,35 @@
 </section>
 
 <section class="contact-wrapper">
-
-    <div class="form-card">
-
-        <h2>Get in touch!</h2>
-        <p>
-            Interested in making a reservation at MochaMelt?<br>
+        <div class="form-card">
+            <h3>Get in Touch!</h3>
+            <p>Interested in making a reservation at MochaMelt?<br>
             Fill out the form below!
-        </p>
+            </p>
 
-    <form id="contactForm">
+            <form id="contactForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
 
-        <name>Name</name>
-        <input type="text" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
 
-        <name>Email</name>
-        <input type="email" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
 
-        <name>Phone Number</name>
-        <input type="tel" required>
+                <label for="date-time">Select a Date and Time</label>
+                <input type="datetime-local" id="date-time" name="date-time" required>
 
-        <name>Select a Date and Time</name>
-        <input type="datetime-local" required>
-
-        <name>Message</name>
-        <textarea rows="5"></textarea>
-
-        <button type="submit">Submit</button>
-        <p id="thankYouMessage" class="thank-you-message"></p>
-    </form>
-
-    </div> 
-</section>
-
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                
+                <button type="submit">Submit</button>
+                
+                <p id="thankYouMessage" class="thank-you-message"></p>
+            </form>
+        </div> 
+    </section>
+</main>
 
 
 <!-------------Footer--------------->

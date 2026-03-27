@@ -199,7 +199,7 @@ function renderMenu(items) {
   gallery.innerHTML = "";
 
   if (items.length === 0) {
-    gallery.innerHTML = "<p>No items found 😢</p>";
+    gallery.innerHTML = "<p class=apology> Sorry, we currently don't have what you're looking for.</p>";
     return;
   }
 
