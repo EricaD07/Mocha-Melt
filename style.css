@@ -175,8 +175,7 @@ body {
 /*---------------------------------- HOME PAGE ---------------------------------*/
 
 /* ===== HERO SECTION =====/* ===== HERO SECTION – circle centered on text ===== */
-  /* ===== HERO SECTION with circle centered on text ===== */
-  .hero {
+.hero {
     background: linear-gradient(107deg, #F9EFE2 0%, #FCF5EA 100%);
     padding: 4rem 0 5rem 0;
     position: relative;
@@ -225,13 +224,7 @@ body {
 .hero-content {
     margin-left: 25%;
     transform: translateY(-10%);
-    max-width: 1000px;
-}
-
-.hero-title {
-    font-size: 7rem;   
-    line-height: 1.05;
-    letter-spacing: -1px;
+    max-width: 1800px;
 }
 
 .hero-desc{
@@ -255,10 +248,7 @@ body {
     object-fit: cover;
     object-position: center right;
 }
-  
-  
 
-  
 .hero-badge {
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -266,9 +256,11 @@ body {
     color: #C47A44;
     font-weight: 600;
 }
-  .hero-title {
-    font-size: 3.8rem;
-    line-height: 1.2;
+
+.hero-title {
+    font-size: 4.2rem;   
+    line-height: 1.05;
+    letter-spacing: -1px;
     margin: 1rem 0 1rem 0;
     color: #2C1810;
 }
@@ -278,60 +270,6 @@ body {
     margin-bottom: 2rem;
     max-width: 500px;
 }
-
-/*------About for Homepage------*/
-.about-section {
-    padding: 5rem 0;
-    background: #F3EDE4; /* soft beige */
-}
-
-.about-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-    flex-wrap: wrap;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-  
-.about-image {
-    flex: 1;
-    max-width: 520px;
-}
-  
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-  
-.about-text {
-    flex: 1;
-    max-width: 520px;
-}
-  
-.about-text h3 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-family: "The Seasons";
-}
-  
-.about-text p {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    color: rgb(201, 165, 113);
-    font-family: "Jost";
-}
-  
-.button-group {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-}
-
   
 /*------Hero for all non-home pages--------*/
 .extra-hero {
@@ -480,6 +418,58 @@ body {
 
 
 
+/*------About for Homepage------*/
+.about-section {
+    padding: 5rem 0;
+    background: #F3EDE4; /* soft beige */
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+  
+.about-image {
+    flex: 1;
+    max-width: 520px;
+}
+  
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.about-text {
+    flex: 1;
+    max-width: 520px;
+}
+  
+.about-text h3 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-family: "The Seasons";
+}
+  
+.about-text p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: rgb(201, 165, 113);
+    font-family: "Jost";
+}
+  
+.button-group {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
 
 
 /*---------------------------------- Menu Homepage ---------------------------------*/
@@ -562,6 +552,80 @@ body {
     margin-top: 1rem;
     color: #9C7A4D;
 }
+
+/*----------------- Home Contact Section ------------------*/
+.visit-section {
+    background: #E9DFD2;
+    padding: 6rem 0 4rem;
+}
+
+.visit-grid {
+    display: grid;
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.visit-left h2 {
+    font-size: 3.5rem;
+    color: #7A1E1E;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+  
+.visit-desc {
+    font-size: 1.25rem;
+    color: #9C7A4D;
+    margin-bottom: 2.5rem;
+}
+  
+.visit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+  
+.visit-icon {
+    font-size: 3rem;
+    color: #C7342E;
+}
+  
+.visit-text h4 {
+    font-size: 1.2rem;
+    color: #7A1E1E;
+    margin-bottom: 0.5rem;
+}
+  
+.visit-text p {
+    font-size: 1.1rem;
+    color: #9C7A4D;
+    line-height: 1.6;
+}
+  
+.visit-right img {
+    width: 100%;
+    display: block;
+}
+  
+.visit-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+  
+.visit-cta p {
+    font-size: 1.2rem;
+    color: #7A1E1E;
+    margin-bottom: 1.5rem;
+}
+  
+.visit-cta .btn {
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+}
+
 
 /*------------------------Story Section -------------------------*/
 
@@ -1315,6 +1379,57 @@ button:hover {
         object-position: center;
     }
 
+    /* ------------ Home ------------ */
+    .about-wrapper {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+    
+    .about-text h2 {
+        font-size: 2.3rem;
+    }
+    
+    .about-text p {
+        font-size: 1.1rem;
+    }
+    
+    .button-group {
+        justify-content: center;
+    }
+    
+    .visit-grid {
+        grid-template-columns: 1fr;  
+        gap: 2rem;
+    }
+
+    .visit-left {
+        text-align: center;
+    }
+    
+    .visit-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .visit-text {
+        text-align: center;
+    }
+    
+      .visit-right img {
+        margin-top: 1rem;
+    }
+    
+    .visit-left h2 {
+        font-size: 2.3rem;
+    }
+    
+    .visit-desc {
+        font-size: 1.1rem;
+    }
     /* ------------ About Page ------------ */
     .accordion-container {
         flex-direction: column;
