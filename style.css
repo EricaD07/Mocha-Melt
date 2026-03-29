@@ -129,19 +129,6 @@ h1 {
     background-color: #6b1a21;
 }
 
-<<<<<<< HEAD
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #FFFCF7;
-    color: #2C1810;
-    line-height: 1.5;
-    scroll-behavior: smooth;
-}
-
-/* ===== HERO SECTION ===== */
-
-.hero {
-=======
 /*---Animation---*/ /*AI-Assisted: How to use keyframes*/
 @keyframes slideInLeft {
     from {
@@ -180,7 +167,6 @@ body {
   /* ===== HERO SECTION with circle centered on text ===== */
   .hero {
     background: linear-gradient(107deg, #F9EFE2 0%, #FCF5EA 100%);
->>>>>>> 89672328abd22358011c606e8431acd03fa84dd7
     padding: 4rem 0 5rem 0;
     position: relative;
     overflow: hidden;
@@ -196,7 +182,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url("Assets/Choco_hero.png");
+    background-image: url("Assets/Choco_hero.webp");
     background-size: 100%; 
     background-position: 600px center; 
     background-repeat: no-repeat;
@@ -260,31 +246,7 @@ body {
 }
   
   
-  /* Adjust for smaller screens: center circle on whole hero and keep it behind everything */
-@media (max-width: 800px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .hero::before {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85vw;
-        top: 45%;
-    }
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    .hero-img {
-        position: relative;
-        width: 100%;
-        height: 300px;
-    }
-  
-    .hero-img img {
-        object-position: center;
-    }
-}
+
   
 .hero-badge {
     font-size: 0.9rem;
@@ -358,30 +320,7 @@ body {
     gap: 1.2rem;
     flex-wrap: wrap;
 }
-  
-@media (max-width: 900px) {
-    .about-wrapper {
-        flex-direction: column;
-        gap: 3rem;
-    }
-  
-    .about-text,
-    .about-image {
-        max-width: 100%;
-    }
-  
-    .about-text h2 {
-        font-size: 2.5rem;
-    }
-  
-    .about-text p {
-        font-size: 1.1rem;
-    }
-  
-    .button-group {
-        justify-content: center;
-    }
-}
+
   
 /*------Hero for all non-home pages--------*/
 .extra-hero {
@@ -532,7 +471,86 @@ body {
 
 
 
-/*---------------------------------- ABOUT PAGE ---------------------------------*/
+/*---------------------------------- Menu Homepage ---------------------------------*/
+.menu-highlight {
+    padding: 6rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 3.5rem;
+    color: #7A1E1E;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #9C7A4D;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.home-menucard {
+    text-align: center;
+}
+
+.cards-grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    max-width: 280px; 
+    margin: 0 auto; 
+    padding-left: 0;
+}
+
+.homeMenuCircle {
+    width: 220px;
+    height: 220px;
+    background: #ffffff; 
+    border-radius: 50%;
+    border: #a16d4fdb, solid, 3px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-bottom: 1.5rem;
+}
+
+.homeMenuCircle img {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.home-menucard:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;        
+}
+
+.home-menucard h3 {
+    font-size: 1.3rem;
+    color: #9C7A4D;
+    font-weight: 500;
+}
+.home-menucard p {
+    margin-top: 1rem;
+    color: #9C7A4D;
+}
 
 /*------------------------Story Section -------------------------*/
 
@@ -1262,8 +1280,29 @@ button:hover {
         left: 0;
     }
 
+    /* ------------------ Hero ------------------ */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero::before {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85vw;
+        top: 45%;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-img {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
 
-
+    .hero-img img {
+        object-position: center;
+    }
 
     /* ------------ About Page ------------ */
     .accordion-container {
@@ -1396,8 +1435,6 @@ button:hover {
         font-size: 20px;
     }
 }
-
-
 
 /*---------------------------------- TABLET ---------------------------------*/
 @media (min-width: 768px) and (max-width: 1024px) {
