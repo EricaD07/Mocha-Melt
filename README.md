@@ -28,7 +28,7 @@ HTML + CSS
 - Reserve: Weiyi
 
 JS
-- All
+- Erica, Ashley, Weiyi
 
 ## AI Usage
 Gemini and ChatGPT
