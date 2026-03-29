@@ -28,9 +28,28 @@ HTML + CSS
 - Reserve: Weiyi
 
 JS
-- All
+- Erica, Ashley, Weiyi
 
 ## AI Usage
--  Generated filler paragraphs in the site
--  tbc
+Gemini and ChatGPT
+- Generated text on the site
+- How to properly format search bar with `placeholder` text-->
+- Helped debug FAQ radio buttons to be toggled off by clicking them again, corrected code for attributes
+- Helped solved bug of of items not rendering after implementing search feature. Solved by moving the menu-gallery variable on another line.
+- Learned hot to make original fitering code more concise
+- `align-items: flex-end;` Learned how to push the circle down in hero headers
+- In `.Menu-text a`, learned to add `display: inline-block;` which solved why animation was not working
+- Resolved height issue by using `align-items: flex-end` instead of `center`
+- Helped remove uneven spacing with
+`.menu-header,
+.calories,
+.desc {
+    margin-bottom: 5px;
+}`
+- Learned how to block + signs that were appearing with
+`.contact-page label::before {
+    content: none !important;}`
+- Learned how to maintain image sizing for phones with `aspect-ratio: 1`
+- Fixed responsive spacing to buttons with `flex: 1 1 auto;`
+- Helped implement thank you message and solved the problem of form not resetting on Reserve page
 

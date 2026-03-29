@@ -73,6 +73,8 @@ h1 {
     letter-spacing: 0.3px;
     font-family: 'The Seasons bdit';
     font-weight: 150;
+    animation: slideInLeft 1s ease-out forwards;
+    display: inline-block;
 }
 
 .navbar {
@@ -110,6 +112,8 @@ h1 {
 }
 .navbar a:hover {
     color: #651010;
+    transform: scale(1.05);
+    display:inline-block;
 }
 
 /* Responsive Hamburger */
@@ -125,6 +129,7 @@ h1 {
     background-color: #6b1a21;
 }
 
+<<<<<<< HEAD
 body {
     font-family: 'Inter', sans-serif;
     background-color: #FFFCF7;
@@ -136,6 +141,46 @@ body {
 /* ===== HERO SECTION ===== */
 
 .hero {
+=======
+/*---Animation---*/ /*AI-Assisted: How to use keyframes*/
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+/*---------------------------------- HOME PAGE ---------------------------------*/
+
+/* ===== HERO SECTION =====/* ===== HERO SECTION – circle centered on text ===== */
+  /* ===== HERO SECTION with circle centered on text ===== */
+  .hero {
+    background: linear-gradient(107deg, #F9EFE2 0%, #FCF5EA 100%);
+>>>>>>> 89672328abd22358011c606e8431acd03fa84dd7
     padding: 4rem 0 5rem 0;
     position: relative;
     overflow: hidden;
@@ -373,7 +418,7 @@ body {
 
 /*---------------------------------- FOOTER ---------------------------------*/
 .footer {
-    background-image: url("Assets/Footerbg.png"); 
+    background-image: url("Assets/Footerbg.webp"); 
     background-size: cover;
     background-position: center;
     color: #c1a485;
@@ -487,28 +532,9 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------------------------------- ABOUT PAGE ---------------------------------*/
 
-/*------------------------------- Story Section ------------------------------------*/
+/*------------------------Story Section -------------------------*/
 
 .Story-section{
     display: flex;
@@ -525,7 +551,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 500px;  
+    max-width: 500px;
+    animation: slideInLeft 1s ease-out forwards;
+    display: inline-block;     
  
 }
 .Story-section h3 {
@@ -552,13 +580,11 @@ body {
     border-radius: 15px;
     border: 4px solid #673700;
     border-radius: 10px;
-    box-shadow: 15px 15px 0px  #6d3d013a;                                                                                               
-    
+    box-shadow: 15px 15px 0px  #6d3d013a;
+    animation: slideInRight 1s ease-out forwards;
+    display: inline-block;                                                                                               
 }
-.story-image-container img:hover{
-    transform: scale(1.05);
-    transition: transform 0.7s ease;  
-}
+
 
 
 /********************* First Accordion - Section: Making Treats *****************/
@@ -580,39 +606,42 @@ body {
 .accordion-container {
     display: flex;
     padding-top: 50px;
-    align-items: flex-start; 
+    align-items: center; 
     justify-content: center;
-    gap: 60px;                                                                                     
+    gap: 50px;                                                                                     
     max-width: 1100px;  
-    margin: 40px auto;                                                                             
-    padding: 0 40px;
-    padding-bottom: 50px;
+    margin: 0px auto;                                                                             
+    padding: 40px 20px;
 }
 /* THE IMAGE SIDE */
 .accordion-image-side {
-   flex: 1.2;                             
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;              
    border-radius: 13px;
    overflow: hidden;
    padding-right:1px;
 }
 .accordion-image-side img {
-    margin-top: 0;           
+    margin-top: 0; 
+    max-width: 400px;
+    max-height: 550px;        
     width: 100%;
     height: auto;
     border: 2px solid #a45801;
     border-radius: 10px;
 }
 .accordion-image-side:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: transform 0.7s ease;  
 }
 /* THE ACCORDION LIST SIDE */
 .Treats-accordion {
     flex: 1;
     padding: 3px;
-    margin: 0;
+    margin: 3px;
+    text-align:left;
 }
-/*smooth fade*/
 .accordion-image-side img {
     transition: opacity 0.3s ease-in-out;
 }
@@ -620,7 +649,7 @@ body {
 /*-------------- INDIVIDUAL ITEMS labels of the accordion -------------*/
 .Treats-accordion li {
     list-style: none;
-    margin-bottom: px;
+    margin-bottom: 17px;
     padding: 7px;
     border: 2px solid #9632004d;
     border-radius: 7px;
@@ -628,20 +657,11 @@ body {
     box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
 }
 
-/* Individual List Items: Creates the 'cards' with the cream background and chocolate shadow */
-.Treats-accordion li {
-    list-style: none;
-    margin-bottom: 20px;
-    padding: 12px 5px; 
-    border-radius: 7px;
-    background-color: #f2ecde;
-    box-shadow: 4px 4px 10px rgba(172, 119, 101, 0.358);
-}
 /* Accordion Header: Styles the clickable title area (Jost font, dark red color) */
-.Treats-accordion li label{
+.Treats-accordion label{
     display:flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size:medium;
     font-weight: bold;
@@ -664,37 +684,37 @@ input[type="radio"]{
 }
 /* Hidden Content: The 'box' that holds the description. Starts at 0 height to stay hidden. */
 .Treats-accordion .content{
-    color: rgb(134, 98, 98);
-    padding: 0 15px;      
+    color: #98562a;
+    padding: 0px 15px;      
     line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;       
+    background-color: #fffde8a7;       
     border-radius: 7px;
     transition:max-height 0.7s ease;
 }
 /* Opening Logic: When a radio button is clicked, expand the content box below it */
 .Treats-accordion input[type='radio']:checked + label + .content{
-    max-height: 450px;
+   max-height: 450px;
     padding: 10px 15px 25px 15px;
-    border: 2px solid #c3690352;
+    border: 2px solid #87401c82;
     border-radius: 10px;
 }
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
 .Treats-accordion input[type='radio']:checked + label::before{
     content: url('Assets/minus-sign.png');
-    color: #c84d00;        
+    color: #080300;        
 }
 
 /* Word Color Change: Changes the label text color when the radio is checked */
 .Treats-accordion input[type='radio']:checked + label {
-    color: #c84d00;
-    transform: scale(1.03);
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 /* This targets the container when the radio inside it is checked */
 .Treats-accordion li:has(input[type='radio']:checked) {
-    background-color: #ffecc1;
+    background-color:#C1A485;
     transition: background-color 0.3s ease; 
 }
 
@@ -776,6 +796,8 @@ input[type="radio"]{
     transition: transform 0.3s ease;        
 }
 
+
+
 /********** Second Accordion- Section: FAQ  **********/
 
 .Asked-Questions {
@@ -849,21 +871,21 @@ input[type="radio"]{
 }
 /* Hidden content*/
 .Frequent-QNA .content{
-    color: rgb(134, 98, 98);
-    padding: 0 20px;
-    line-height: 26px;
+color: #98562a;
+    padding: 0 15px;      
+    line-height: 24px;
     max-height: 0;
     overflow: hidden;
-    background-color: #ffffffa9;
+    background-color: #fffde8a7;       
     border-radius: 7px;
-    transition:max-height 0.7s ease-out;
+    transition:max-height 0.7s ease;
 }
 /* Opening Logic*/
 .Frequent-QNA input[type='radio']:checked + label + .content {
-   max-height: 500px;
-   padding: 0 20px 20px 20px;
-   border: 2px solid #c3690352;
-   border-radius: 10px;
+    max-height: 450px;
+    padding: 10px 15px 25px 15px;
+    border: 2px solid #87401c82;
+    border-radius: 10px;
 }
 /* sSwaps the '+' for '---' when the section is active/open */
 .Frequent-QNA input[type='radio']:checked + label::before{
@@ -872,11 +894,11 @@ input[type="radio"]{
 }
 
 .Frequent-QNA input[type='radio']:checked + label {
-    color: #a33f00;
+    color: #ffffff;
 }
 .Frequent-QNA li:has(input[type='radio']:checked) {
-    background-color: #ffecc1;
-    transition: background-color 0.4s ease;  /* Makes the color fade in*/
+   background-color:#C1A485;
+    transition: background-color 0.3s ease;
 }
 .Frequent-QNA .content p {
     margin: 20px 10px 1px 13px ; 
@@ -889,35 +911,11 @@ input[type="radio"]{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------------------------------- MENU PAGE ---------------------------------*/
 /*text*/
+.Menu-text{
+    animation: slideInUp 1s ease-out forwards;
+}
 .Menu-text p {
     font-size: 20px;
     text-align: center;
@@ -1144,6 +1142,7 @@ input[type="radio"]{
     padding: 40px;
     border-radius: 6px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    animation: slideInUp 1s ease-out forwards;
 }
 
 
@@ -1303,7 +1302,6 @@ button:hover {
         max-width: 350px;
     }
 
-        /*Scroll-Driven Animations (using animation-timeline: view()) currently work best in Chrome and Edge*/
     @keyframes appear {
         from { 
             opacity: 0;
@@ -1334,7 +1332,7 @@ button:hover {
     .filter-buttons {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;   /* center them */
+        justify-content: center;
         gap: 10px;
         max-width: 320px;
         margin: 0 auto;
@@ -1348,7 +1346,7 @@ button:hover {
 
     .menu-card img {
         width: 100%;
-        aspect-ratio: 1; /*AI Assisted: Helped maintian image sizing*/
+        aspect-ratio: 1; /*AI-Assisted: Helped maintian image sizing*/
     }
 
     .menu-gallery {
