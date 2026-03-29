@@ -129,7 +129,6 @@ h1 {
     background-color: #6b1a21;
 }
 
-<<<<<<< HEAD
 body {
     font-family: 'Inter', sans-serif;
     background-color: #FFFCF7;
@@ -141,7 +140,6 @@ body {
 /* ===== HERO SECTION ===== */
 
 .hero {
-=======
 /*---Animation---*/ /*AI-Assisted: How to use keyframes*/
 @keyframes slideInLeft {
     from {
@@ -180,7 +178,6 @@ body {
   /* ===== HERO SECTION with circle centered on text ===== */
   .hero {
     background: linear-gradient(107deg, #F9EFE2 0%, #FCF5EA 100%);
->>>>>>> 89672328abd22358011c606e8431acd03fa84dd7
     padding: 4rem 0 5rem 0;
     position: relative;
     overflow: hidden;
@@ -1455,4 +1452,5 @@ button:hover {
         padding: 20px 60px;
     }
     
+}
 }
