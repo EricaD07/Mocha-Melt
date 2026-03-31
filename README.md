@@ -41,6 +41,7 @@ Gemini and ChatGPT
 - In `.Menu-text a`, learned to add `display: inline-block;` which solved why animation was not working
 - Resolved height issue by using `align-items: flex-end` instead of `center`
 - Helped remove uneven spacing with
+- Fixing the CSS of Hero on Homepage
 `.menu-header,
 .calories,
 .desc {
