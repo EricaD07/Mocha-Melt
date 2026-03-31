@@ -22,7 +22,7 @@ The website is designed for chocolate enthusiasts, students, adults, and those w
   
 HTML + CSS
 - Nav/Footer: Erica
-- Home: Linhan, Ashley
+- Home: Linhan
 - About: Ashley
 - Menu: Erica
 - Reserve: Weiyi
