@@ -242,7 +242,7 @@ if (searchInput && filterButtons.length > 0 && gallery) {
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
 
-      activeCategory = button.getAttribute("keyword");
+      activeCategory = button.getAttribute("data-keyword");
 
       applyFilters();
     });
