@@ -249,7 +249,7 @@ h1 {
 
 /* BOTTOM SECTION */
 .footer-bottom {
-    border-top: 1px solid #651010;
+    border-top: 1px solid #c1a485;
     display: flex;
     justify-content: space-between;
     padding: 20px 165px;
@@ -299,7 +299,7 @@ h1 {
 
 /*---------------------------------- HOME PAGE ---------------------------------*/
 
-/* ===== HERO SECTION – circle centered on text ===== */
+/* ===== HERO SECTION – circle centered on text - AI assisted ==== */
 .hero {
     background: linear-gradient(107deg, #F9EFE2 0%, #FCF5EA 100%);
     padding: 4rem 0 5rem 0;
@@ -794,7 +794,7 @@ h1 {
 }
 /* Icon: Adds the '+' sign before the label text, what it looks before being cliked/checked */
 label::before{
-    content: url('Assets/Plus-sign.png');
+    content: url('Assets/Plus-sign.webp');
     margin-right: 10px;
 }
 /* Functional: Hides the actual radio button circles so they don't clutter the design */
@@ -821,7 +821,7 @@ input[type="radio"]{
 }
 /* Icon Change: Swaps the '+' for '---' when the section is active/open */
 .Treats-accordion input[type='radio']:checked + label::before{
-    content: url('Assets/minus-sign.png');
+    content: url('Assets/minus-sign.webp');
     color: #080300;        
 }
 
@@ -980,7 +980,7 @@ input[type="radio"]{
 }
 /* Icon: Adds the '+' sign before the label text */
 label::before{ content:
-     url('Assets/Plus-sign.png');
+     url('Assets/Plus-sign.webp');
     margin-right: 10px;
 }
 input[type="radio"]{
@@ -1006,7 +1006,7 @@ color: #98562a;
 }
 /* sSwaps the '+' for '---' when the section is active/open */
 .Frequent-QNA input[type='radio']:checked + label::before{
-    content: url('Assets/minus-sign.png');
+    content: url('Assets/minus-sign.webp');
     color: #c84d00;        
 }
 
@@ -1444,7 +1444,7 @@ button:hover {
         justify-content: center;
     }
     
-.visit-grid {
+    .visit-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
         margin-left: 0; 
@@ -1503,10 +1503,14 @@ button:hover {
     }
 
     .Values-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr !important;
+        gap: 50px;
     }
 
+    .Treats-header p {
+        margin-bottom: 60px;
+        padding: 0 15px;
+    }
     .Story-section {
         flex-direction: column;
         align-items: center;
@@ -1514,12 +1518,13 @@ button:hover {
         padding: 40px 20px;
         gap: 30px;
     }
-
     .story-image-container img {
         width: 100%;
         max-width: 350px;
     }
-
+    .accordion-container {
+        padding-top: 20px;
+    }
     @keyframes appear {
         from { 
             opacity: 0;
