@@ -26,6 +26,8 @@ HTML + CSS
 - About: Ashley
 - Menu: Erica
 - Reserve: Weiyi
+  
+- Animation: Erica, Ashley
 
 JS
 - Erica, Ashley, Weiyi
@@ -53,4 +55,5 @@ Gemini and ChatGPT
 - Learned how to maintain image sizing for phones with `aspect-ratio: 1`
 - Fixed responsive spacing to buttons with `flex: 1 1 auto;`
 - Helped implement thank you message and solved the problem of form not resetting on Reserve page
+- Learned how to make scrolling animaiton on home page
 
