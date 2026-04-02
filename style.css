@@ -1710,4 +1710,10 @@ button:hover {
         padding: 20px 60px;
     }
     
+    .footer-top{
+        background-color:#511419;
+    }
+    .footer-bottom{
+        background-color:#511419;
+    }
 }
