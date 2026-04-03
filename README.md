@@ -21,7 +21,7 @@ The website is designed for chocolate enthusiasts, students, adults, and those w
 - Mockup: Erica, Weiyi, Ashley
   
 HTML + CSS
-- Nav/Footer: Erica
+- Nav/Footer: Erica, Ashley
 - Home: Linhan
 - About: Ashley
 - Menu: Erica
@@ -57,3 +57,5 @@ Gemini and ChatGPT
 - Helped implement thank you message and solved the problem of form not resetting on Reserve page
 - Learned how to make scrolling animaiton on home page
 - Fixing CSS for Hero on homepage
+- How to use nextElementSibling to display error messages without needing to create new elements for each input
+- In reserve page, used to apply previous condition to other inputs (just for time efficiency)
