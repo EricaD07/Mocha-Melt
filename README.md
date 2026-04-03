@@ -22,7 +22,7 @@ The website is designed for chocolate enthusiasts, students, adults, and those w
   
 HTML + CSS
 - Nav/Footer: Erica
-- Home: Linhan, Ashley
+- Home: Linhan
 - About: Ashley
 - Menu: Erica
 - Reserve: Weiyi
@@ -43,6 +43,7 @@ Gemini and ChatGPT
 - In `.Menu-text a`, learned to add `display: inline-block;` which solved why animation was not working
 - Resolved height issue by using `align-items: flex-end` instead of `center`
 - Helped remove uneven spacing with
+- Fixing the CSS of Hero on Homepage
 `.menu-header,
 .calories,
 .desc {
@@ -55,4 +56,4 @@ Gemini and ChatGPT
 - Fixed responsive spacing to buttons with `flex: 1 1 auto;`
 - Helped implement thank you message and solved the problem of form not resetting on Reserve page
 - Learned how to make scrolling animaiton on home page
-
+- Fixing CSS for Hero on homepage
