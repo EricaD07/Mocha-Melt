@@ -110,7 +110,7 @@ const menu_items = [
     desc: "Smooth dark chocolate filling topped with light cream and fresh raspberry"
   },
   {
-    name: "Caramel Chocolate Cheesecake",
+    name: "Berry Chocolate Cheesecake",
     category: ["cakes", "fruit"],
     calories: "540 cal",
     price: "$7.00",
@@ -134,12 +134,12 @@ const menu_items = [
     desc: "Rich chocolate base topped with fresh berries and smooth chocolate cream"
   },
   {
-    name: "Chocolate Glaze Tart",
+    name: "Caramel Glaze Tart",
     category: ["pastries"],
     calories: "470 cal",
     price: "$6.60",
     img: "Assets/cake7.webp",
-    desc: "Buttery tart filled with silky chocolate and coated in glossy chocolate glaze"
+    desc: "Buttery tart filled with silky chocolate and coated in glossy caramel glaze"
   },
   {
     name: "Blackberry Cocoa Cream Donut",
@@ -217,7 +217,6 @@ function renderMenu(items) {
 
         <p class="calories">${item.calories}</p>
         <p class="desc">${item.desc}</p>
-        <button class="button">Nutrition</button>
       </div>
     `;
 
@@ -281,27 +280,80 @@ renderMenu(menu_items);
 
 
 /*---------------------------------- CONTACT PAGE ---------------------------------*/
+//form validation//
+const form = document.querySelector("#contactForm");
 
-//------- CONTACT THANK YOU MESSAGE ------//
-//------- Ai-Assisted: Helped implement thank you message and solved the problem of form not resetting -------//
-const form = document.getElementById("contactForm");
-const message = document.getElementById("thankYouMessage");
+if (form) {
+    const nameInput = document.querySelector("#name");
+    const emailInput = document.querySelector("#email");
+    const phoneInput = document.querySelector("#phone");
+    const dateInput = document.querySelector("#reservation-date");
+    const timeInput = document.querySelector("#time");
+    const TYMessage = document.querySelector("#thankYouMessage");
+    const phonePattern = /^[\d\s\-]{10,15}$/;
 
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-if (form && message) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+        // Clear previous messages
+        const errorSpans = form.querySelectorAll(".error-message");
+        errorSpans.forEach(span => span.textContent = "");
+        TYMessage.textContent = "";
+        
+        let valid = true;
 
-    message.textContent = "Thank you for reserving at MochaMelt! You will recieve an email upon confirmation.";
-    message.style.display = "block";
+        if (nameInput.value.trim() === "") { //AI-Assisted: How to use nextElementSibling to display error messages without needing to create new elements for each input//
+            nameInput.nextElementSibling.textContent = "Please enter your full name";
+            valid = false;
+        }
+        //AI-Assisted: Apply previous condition to other inputs for time efficiency//
+        if (!emailInput.value.includes("@")) {
+            emailInput.nextElementSibling.textContent = "Please enter a valid email";
+            valid = false;
+        }
+        if (!phonePattern.test(phoneInput.value)) {
+            phoneInput.nextElementSibling.textContent = "Please enter a valid phone number";
+            valid = false;
+        }
+        if (dateInput.value === "") {
+            dateInput.nextElementSibling.textContent = "Please select a date";
+            valid = false;
+        }
+        if (timeInput.value === "") {
+            timeInput.nextElementSibling.textContent = "Please select a time";
+            valid = false;
+        }
+        // Thank you msg
+        if (valid) {
+            TYMessage.textContent = "Thank you for reserving at MochaMelt! You will receive an email upon confirmation.";
+            form.reset();
+            
+            setTimeout(() => {
+                TYMessage.textContent = "";
+            }, 10000);
+        }
+    });
 
-    form.reset();
+    // Error message disappears if fixed 
+    nameInput.addEventListener("input", () => {
+        if (nameInput.value.trim() !== "") nameInput.nextElementSibling.textContent = "";
+    });
 
-    // hide message after 10 seconds
-    setTimeout(() => {
-      message.style.display = "none";
-    }, 10000);
-  });
+    emailInput.addEventListener("input", () => {
+        if (emailInput.value.includes("@")) emailInput.nextElementSibling.textContent = "";
+    });
+
+    phoneInput.addEventListener("input", () => {
+        if (phonePattern.test(phoneInput.value)) phoneInput.nextElementSibling.textContent = "";
+    });
+
+    dateInput.addEventListener("change", () => {
+        if (dateInput.value !== "") dateInput.nextElementSibling.textContent = "";
+    });
+
+    timeInput.addEventListener("change", () => {
+        if (timeInput.value !== "") timeInput.nextElementSibling.textContent = "";
+    });
 }
 
 

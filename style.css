@@ -122,7 +122,7 @@ h1 {
     align-items: flex-end; /*AI-Assisted: how to push the circle down */
 }
 .circle p {
-    color: #a38b54;
+    color: #9a7c39;
     max-width: 500px;
     margin: 0 auto;
     font-style: italic;
@@ -263,6 +263,9 @@ h1 {
 .footer-bottom a:hover {
     color: #f7e2cb;
 }
+.footer-bottom p{
+    font-size: 15px;
+}
 
 /*---------------------------------- Back to Top button ---------------------------------*/
 #back-to-top {
@@ -395,7 +398,7 @@ h1 {
 }
 .hero-desc {
     font-size: 1.2rem;
-    color: #a38b54;
+    color: #8c5e21;
     margin-bottom: 2rem;
     max-width: 500px;
 }
@@ -473,7 +476,7 @@ h1 {
 .about-text p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    color: #a38b54;
+    color: #8c5e21;
     font-family: "Jost";
 }
   
@@ -497,7 +500,7 @@ h1 {
 }
 
 .section-header p {
-    color: #a38b54;
+    color: #8c5e21;
     max-width: 700px;
     margin: 0 auto 4rem;
 }
@@ -587,7 +590,7 @@ h1 {
 }
   
 .visit-desc {
-    color: #9C7A4D;
+    color: #8c5e21;
     margin-bottom: 2rem;
     max-width: 420px;
 }
@@ -616,7 +619,7 @@ h1 {
   
 .visit-text p {
     font-size: 1.1rem;
-    color: #9C7A4D;
+    color: #8c5e21;
 }
   
 .visit-right img {
@@ -640,7 +643,7 @@ h1 {
   
 .visit-cta p {
     font-size: 1.2rem;
-    color: #7A1E1E;
+    color: #6b1a21;
     margin-bottom: 1.5rem;
 }
   
@@ -684,7 +687,7 @@ h1 {
 .Story-section p {
     display:flex;
     margin-top: 25px;
-    color:#a38b54;
+    color:#8c5e21;
     text-align: justify;
     max-width: 700px;
 }
@@ -716,7 +719,7 @@ h1 {
     margin-bottom: 10px;
 }
 .Treats-header p {
-    color:#a38b54;
+    color:#8c5e21;
     margin: 0 auto 5px auto;
     max-width: 1100px;
     text-align: center;
@@ -861,7 +864,7 @@ input[type="radio"]{
 }
 
 .Values-header p {
-    color:#a38b54;
+    color:#8c5e21;
     text-align: center;
     max-width: 970px;
     margin-bottom: 15px;
@@ -883,7 +886,7 @@ input[type="radio"]{
     margin-top: 12px;
     max-width: 800px;  
     font-size: 17px;
-    color: #a8836b;
+    color: #8c5e21;
     line-height: 22px;
 }
 /*Individual Items: Center the icon and text inside each box */
@@ -943,7 +946,7 @@ input[type="radio"]{
     text-align: center;
 }
 .questions-header p {
-    color:#a38b54;
+    color:#8c5e21;
     text-align: center;
     max-width: 800px;
     margin: 0 auto 15px auto; 
@@ -1050,6 +1053,7 @@ color: #98562a;
 }
 .Menu-text a:hover{
     color: #651010;
+    transform: scale(1.05);
 }
 
 .JS-Menu-controls {
@@ -1126,6 +1130,7 @@ color: #98562a;
     gap: 30px;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .menu-card {
@@ -1139,9 +1144,12 @@ color: #98562a;
     flex-direction: column;
     height: 100%;
     margin: 0 auto;
+    transition: 0.3s;
 }
 .menu-card:hover{
-    box-shadow: 0px 15px 25px rgba(144, 80, 67, 0.25);
+    box-shadow: 0px 5px 10px rgba(118, 53, 0, 0.64);    
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 .menu-card img {
     width: 100%;
@@ -1151,6 +1159,7 @@ color: #98562a;
     border-radius: 10px;
     margin-bottom: 16px;
 }
+
 
 /* -------- INFO -------- */
 .content {
@@ -1203,40 +1212,43 @@ color: #98562a;
 }
 
 /* -------- BUTTON -------- */
-.button {
-    margin-top: auto;
-    width: 100%;
-    padding: 10px;
-    border: solid 2px #cda258;
-    border-radius: 30px;
-    color: #b72d2c;
-    background-color: #fdfbf4;
-
-    font-family: 'Jost';
-    font-size: 16px;
-    font-weight: 500;
-
-    cursor: pointer;
-    transition: 0.3s;
+.button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.Menu-text-secondary h3{
+    font-size: 2.5rem;
+}
+.Menu-text-secondary p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+    color: #8c5e21;
+}
+ a.menu-button {
+    display: inline-block;
+    width: auto;  
+    min-width: 280px;
+    padding: 12px 20px;
+    background-color: #b72d2c;
+    color: #fdfbf4;
+    text-decoration: none; 
+    
+    border-radius: 30px;
+    font-family: 'Jost';
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.button:hover {
-    background-color: #fdfbf4;
-    transform: scale(0.9);
-    border: solid 2px #98562a;
+a.menu-button:hover {
+    background-color: #7A1E1E;
+    color: #fdfbf4;
+    transform: scale(0.95);
+    border-color: #98562a;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1270,7 +1282,7 @@ color: #98562a;
 }
 .form-card p {
     margin-bottom: 20px;
-    color: #a38b54;
+    color: #8c5e21;
 }
 
 
@@ -1305,18 +1317,19 @@ input:focus, textarea:focus {
 }
 
 
-button {
+#contactForm button {
     margin-top: 30px;
     padding: 12px;
     border: none;
     background: #7b2b2b;
     color: white;
     font-family: 'Jost';
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 30px;
     cursor: pointer;
-    width: 130px;
+    width: 200px;
+
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1324,8 +1337,8 @@ button {
     transition: ease-in 0.1s;
 }
 
-button:hover {
-    background: #5c1f1f;
+#contactForm button:hover {
+    background: #b72d2c;
     transform: scale(0.9);
 }
 
@@ -1339,7 +1352,14 @@ button:hover {
     color: #6b1a21;
     text-align: center;
 }
-
+.error-message {
+    color: #b72d2c; 
+    font-size: 12px;
+    font-family: 'Jost';
+    display: block;
+    margin-top: 5px;
+    min-height: 15px;
+}
 
 
 /*---------------------------------- RESPONSIVENESS ---------------------------------*/
@@ -1369,6 +1389,8 @@ button:hover {
         text-align: center;
         transition: 0.3s;
         background-color: #fefcfa; 
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1.5px solid #b72d2c;    
     }
 
     .nav-item{
@@ -1576,7 +1598,8 @@ button:hover {
         grid-template-columns: 1fr;
         gap: 20px;
         max-width: 300px;
-        margin: 0 auto; 
+        margin: 0 auto;
+        margin-bottom: 50px;
     }
 
     /* ------------ Contact/Reserve Page ------------ */
@@ -1589,9 +1612,13 @@ button:hover {
         padding: 25px 20px;
     }
 
-    button {
-        width: 100%;
+    #contactForm button {
+        width: 190px;
     }
+    .form-card p {
+        font-size: 1rem;
+    }
+
 
     /* ------ Footer ----- */
     .footer-top {
